@@ -1,0 +1,3 @@
+# Entorno de preparación. Configure el dominio antes de indexar.
+User-agent: *
+Disallow: /

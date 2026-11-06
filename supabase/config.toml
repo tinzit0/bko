@@ -1,0 +1,5 @@
+project_id = "kxldsjodgfonrrlwjbws"
+
+[functions.contact]
+# Las claves sb_publishable no son JWT. La función aplica CORS y controles propios.
+verify_jwt = false
