@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none">
+<defs><linearGradient id="sea" x2="900" y2="700" gradientUnits="userSpaceOnUse"><stop stop-color="#245b6a"/><stop offset="1" stop-color="#071c2b"/></linearGradient><radialGradient id="light"><stop stop-color="#78b7b2" stop-opacity=".25"/><stop offset="1" stop-color="#78b7b2" stop-opacity="0"/></radialGradient></defs>
+<path fill="url(#sea)" d="M0 0h900v700H0z"/><ellipse cx="650" cy="120" rx="500" ry="370" fill="url(#light)"/>
+<g stroke="#a1cecd" stroke-opacity=".2"><path d="M-80 170Q150 70 380 170T920 170M-80 210Q150 110 380 210T920 210M-80 250Q150 150 380 250T920 250M-80 290Q150 190 380 290T920 290M-80 330Q150 230 380 330T920 330M-80 370Q150 270 380 370T920 370M-80 410Q150 310 380 410T920 410"/></g>
+<g stroke="#dbb98c" stroke-width="2"><ellipse cx="570" cy="220" rx="130" ry="47"/><ellipse cx="570" cy="207" rx="130" ry="47"/><ellipse cx="360" cy="310" rx="130" ry="47"/><ellipse cx="360" cy="297" rx="130" ry="47"/><path d="m440 220-210 90m470-90-210 90m-130 34v65m60-56v65m60-65v65m-210-75v65m340-175v65m60-56v65m60-65v65" opacity=".35"/></g>
+<circle cx="740" cy="95" r="35" stroke="#dbb98c" stroke-opacity=".3"/><path d="M710 95h60m-30-30v60" stroke="#dbb98c" stroke-opacity=".4"/>
+</svg>

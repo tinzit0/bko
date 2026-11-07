@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" fill="none">
+<defs><linearGradient id="paper" x2="900" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#193c4a"/><stop offset="1" stop-color="#0c242f"/></linearGradient></defs>
+<path fill="url(#paper)" d="M0 0h900v600H0z"/>
+<g transform="rotate(-12 450 300)" stroke="#dbb98c"><path d="M275 100h300v390H275z" fill="#c0956409"/><path d="M310 140h300v390H310z" fill="#102f44"/><path d="M350 195h200m-200 25h130m-130 65h200m-200 25h200m-200 25h175m-175 65h200m-200 25h145" stroke-opacity=".65"/><path d="M350 170h42" stroke-width="3"/></g>
+<path d="M75 90h65m-32-32v65m652 370h65m-32-32v65" stroke="#dbb98c" stroke-opacity=".4"/>
+</svg>

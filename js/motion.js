@@ -19,6 +19,7 @@ export function initMotion(preference) {
         if (entry.isIntersecting) visible.add(entry.target);
         else visible.delete(entry.target);
       }
+      requestAnimationFrame(updateMotionScroll);
     }, {rootMargin: '100px'});
     parallax.forEach(el => observer.observe(el));
   }
@@ -65,7 +66,7 @@ export function initMotion(preference) {
   finePointer.addEventListener('change', reset);
   document.addEventListener('visibilitychange', () => { if (document.hidden) reset(); });
 
-  return function updateMotionScroll() {
+  function updateMotionScroll() {
     if (preference.matches || document.hidden) return;
     const heroRect = hero.getBoundingClientRect();
     if (heroRect.bottom > 0) hero.style.setProperty('--hero-scroll', `${Math.min(1, Math.max(0, -heroRect.top / heroRect.height))}`);
@@ -79,5 +80,6 @@ export function initMotion(preference) {
       const shift = Math.max(-26, Math.min(26, (innerHeight / 2 - rect.top - rect.height / 2) * .06));
       el.style.setProperty('--scroll-shift', `${shift}px`);
     }
-  };
+  }
+  return updateMotionScroll;
 }

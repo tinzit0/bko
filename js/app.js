@@ -25,7 +25,7 @@ menu.addEventListener('click', () => {
 nav.addEventListener('click', e => { if (e.target.closest('a')) closeMenu(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenu(); } });
 document.addEventListener('click', e => { if (!header.contains(e.target)) closeMenu(); });
-matchMedia('(min-width:1001px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
+matchMedia('(min-width:1201px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
 
 if ('IntersectionObserver' in window && !motion.matches) {
   document.documentElement.classList.add('js-motion');

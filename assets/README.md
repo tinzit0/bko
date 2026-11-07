@@ -7,7 +7,9 @@ Las fotografías reales de Equipo y Oficinas, sus dimensiones, archivos original
 - `favicon.svg`: monograma BKO en vector nativo.
 - `social.svg`: composición tipográfica para redes; al configurar dominio, Open Graph usa la panorámica WebP por compatibilidad.
 
-Las dos ilustraciones se generaron con la herramienta integrada de imágenes y se copiaron al proyecto. Se optimizó su codificación a WebP con el codificador del navegador, sin cambiar la composición. La panorámica se reutiliza mediante recortes CSS para mantener una identidad coherente y reducir transferencias. No se descargaron ni se atribuyen fotografías de terceros sin verificar sus licencias.
+Las dos ilustraciones se generaron con la herramienta integrada de imágenes y se copiaron al proyecto. Se optimizó su codificación a WebP con el codificador del navegador, sin cambiar la composición. La panorámica se utiliza únicamente en el hero y el horizonte de Santiago solo en Inmobiliario. Cada fotografía local tiene un único uso visible. No se descargaron fotografías externas.
+
+`editorial/acuicultura.svg` y `editorial/turismo.svg` son composiciones vectoriales originales para las áreas sin fotografía propia. `editorial/actualidad.svg`, `editorial/analisis.svg` y `editorial/publicaciones.svg` son portadas editoriales distintas para los contenidos pendientes. No representan fotografías ni instalaciones reales. La franja territorial utiliza un fondo geométrico CSS, sin reutilizar el hero.
 
 Antes de publicar puede sustituirse cada ilustración por fotografías reales autorizadas de Chile y de las industrias. Mantener nombres de archivo o actualizar HTML/CSS; revisar textos alternativos y los créditos. La imagen de referencia original permanece en `como quiero la pagina/`.
 

@@ -12,12 +12,12 @@ Todos los recursos se inspeccionaron visualmente y mediante dimensiones y hashes
 | `assets/personas/camila.jpeg` | JPEG | 1280 × 1280 | Retrato anterior con tono azul, conservado sin utilizar |
 | `assets/personas/roxana.png` | PNG | 367 × 537 | Retrato de Roxana Ximena Oyarzún Bustamante |
 | `assets/oficinas/calama/WhatsApp Image 2026-11-05 at 22.49.38.jpeg` | JPEG | 960 × 1280 | Interior de Calama, utilizado |
-| `assets/oficinas/calama/WhatsApp Image 2026-11-05 at 22.51.17.jpeg` | JPEG | 960 × 1280 | Acceso exterior, conservado sin publicar en la tarjeta |
+| `assets/oficinas/calama/WhatsApp Image 2026-11-05 at 22.51.17.jpeg` | JPEG | 960 × 1280 | Acceso exterior; utilizado en la tarjeta del sector minero e industrial |
 | `assets/oficinas/santiago/WhatsApp Image 2026-11-05 at 22.48.40.jpeg` | JPEG | 1200 × 1600 | Sala de reuniones y recepción, utilizada |
-| `assets/oficinas/santiago/WhatsApp Image 2026-11-05 at 22.48.40 (1).jpeg` | JPEG | 960 × 1280 | Espacio de trabajo, conservado sin publicar en la tarjeta |
+| `assets/oficinas/santiago/WhatsApp Image 2026-11-05 at 22.48.40 (1).jpeg` | JPEG | 960 × 1280 | Espacio de trabajo; utilizado en La firma |
 | `assets/oficinas/santiago/WhatsApp Image 2026-11-05 at 22.48.40 (2).jpeg` | JPEG | 1200 × 1600 | Duplicado exacto del archivo sin sufijo; no se utiliza |
 | `assets/oficinas/puerto varas/WhatsApp Image 2026-11-05 at 22.48.52.jpeg` | JPEG | 1200 × 1600 | Interior con vista al lago, utilizado |
-| `assets/oficinas/puerto varas/WhatsApp Image 2026-11-05 at 22.48.53.jpeg` | JPEG | 1200 × 1600 | Terraza, conservada sin publicar en la tarjeta |
+| `assets/oficinas/puerto varas/WhatsApp Image 2026-11-05 at 22.48.53.jpeg` | JPEG | 1200 × 1600 | Terraza con vista al lago; utilizada en el sector marítimo y lacustre |
 
 No quedaron imágenes sin identificar según sus nombres, carpetas y contenido. Se respeta la clasificación de sedes entregada por la firma.
 
