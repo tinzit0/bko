@@ -3,6 +3,96 @@
     "title": "Donde se desarrolla Chile,estamos presentes.",
     "fields": [
       {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Sectores",
+        "label": "Página · Sectores"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
+      {
         "key": "#inicio>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
         "type": "text",
         "value": "TERRITORIO",
@@ -1906,12 +1996,109 @@
         "type": "text",
         "value": "Créditos visuales",
         "label": "Página · Créditos visuales"
+      },
+      {
+        "key": "#inicio|background",
+        "type": "image",
+        "value": "assets/hero.webp",
+        "alt": "Composición ilustrativa del lago Llanquihue y volcán Osorno junto a la minería del norte de Chile",
+        "label": "Fotografía principal del inicio"
       }
     ]
   },
   "seguros/index.html": {
     "title": "Protegemos tus negocios. Aseguramos tu crecimiento.",
     "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Sectores",
+        "label": "Página · Sectores"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
       {
         "key": "#solicitud-seguros>p:nth-of-type(1)|text:0",
         "type": "text",
@@ -2175,6 +2362,96 @@
   "equipo/camila-alejandra-kopplin-lanata.html": {
     "title": "Camila Alejandra Kopplin Lanata",
     "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Sectores",
+        "label": "Página · Sectores"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
       {
         "key": "#contenido>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
@@ -2818,6 +3095,96 @@
     "title": "Estefanía Benítez García",
     "fields": [
       {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Sectores",
+        "label": "Página · Sectores"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
+      {
         "key": "#contenido>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "← VOLVER AL EQUIPO",
@@ -3171,6 +3538,96 @@
   "equipo/fenella-reyes-gonzalo.html": {
     "title": "Dra. Fenella Reyes Gonzalo",
     "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Sectores",
+        "label": "Página · Sectores"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
       {
         "key": "#contenido>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
@@ -3531,6 +3988,96 @@
   "equipo/roxana-ximena-oyarzun-bustamante.html": {
     "title": "Roxana Ximena Oyarzún Bustamante",
     "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Sectores",
+        "label": "Página · Sectores"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
       {
         "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
         "type": "text",
