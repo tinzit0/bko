@@ -1,5 +1,7 @@
 # Recursos visuales
 
+Las fotografías reales de Equipo y Oficinas, sus dimensiones, archivos originales y derivados WebP se documentan en [Equipo y oficinas](../docs/equipo-y-oficinas.md). Los retratos y las tres tarjetas de oficinas utilizan exclusivamente esos recursos proporcionados por la firma.
+
 - `hero.webp`: composición ilustrativa original inspirada en la referencia aportada por el usuario. Puerto Varas, lago y volcán a la izquierda; minería del norte a la derecha, unidos en diagonal. No representa una fotografía documental ni una instalación de BKO.
 - `santiago.webp`: ilustración del horizonte de Santiago y la cordillera; no representa una oficina de BKO.
 - `favicon.svg`: monograma BKO en vector nativo.

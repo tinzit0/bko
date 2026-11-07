@@ -30,5 +30,43 @@
 .firm-image{position:relative;overflow:hidden}.sector-photo img,.firm-image img,.office-image img,.news-image img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.sector-photo:has(img),.firm-image:has(img),.office-image:has(img),.news-image:has(img){background-image:none}.photo-south img,.photo-lake img,.photo-water img{width:220%;max-width:none;right:auto;object-position:left center}.photo-mine img{width:220%;max-width:none;left:auto;right:0;object-position:right center}.photo-water img{object-position:left bottom}.firm-image img{width:230%;object-position:left center}
 .news-image{overflow:hidden}
 @media(max-width:380px){.contact h2{font-size:52px}.contact-phone{font-size:27px}.firm-copy h2{font-size:42px}.section-heading h2{font-size:39px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1;transform:none}.hero-landscape{will-change:auto}}
+/* Real team portraits and offices: preserve the firm's editorial identity. */
+.team{grid-template-columns:minmax(220px,.85fr) minmax(0,2fr);align-items:start;gap:clamp(32px,5vw,80px);background:var(--ivory)}
+.team-heading{padding-top:12px}.team-heading h2{font-size:clamp(40px,3.6vw,58px)}
+.team-heading p:not(.eyebrow){max-width:350px;font-size:14px;line-height:1.9}
+.team-heading-rule{display:block;width:72px;height:2px;background:var(--gold);margin-top:30px;transform-origin:left}
+.team-grid{gap:24px;align-items:stretch;min-width:0}.person{min-width:0;background:var(--white);border:1px solid #c095642b;box-shadow:0 8px 28px #071c2b06;position:relative}
+.person::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(.16);transform-origin:left;transition:transform .6s ease}
+.person-portrait{aspect-ratio:4/5;overflow:hidden;position:relative;background:var(--blue);border-bottom:1px solid #c0956440}
+.person-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.person-copy{padding:26px clamp(20px,2vw,32px) 30px}.person-copy .eyebrow{font-size:8px;letter-spacing:2px;margin-bottom:14px}
+.person-copy h3{font-size:clamp(28px,2.35vw,38px);line-height:1.13;margin:0 0 18px;letter-spacing:-.5px;min-height:2.26em}
+.person-copy .person-bio{font-size:13px;line-height:1.85;margin-bottom:0;color:var(--muted)}
+.presence{background:var(--white)}.presence .section-heading>p{font-size:14px;line-height:1.9;max-width:390px}
+.office-grid{gap:26px;align-items:stretch}.office{display:flex;flex-direction:column;min-width:0;border:1px solid #c0956438;background:var(--ivory);box-shadow:0 8px 30px #071c2b05}
+.office-image{height:auto;aspect-ratio:6/5;overflow:hidden;flex-shrink:0;background:var(--blue)}
+.office-image img{object-position:center 52%;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.office-image::after{background:linear-gradient(0deg,#071c2b8c,transparent 45%)}
+.office-image>span{font-size:9px;letter-spacing:2px;left:26px;bottom:20px}
+.office-body{display:flex;flex-direction:column;flex:1;padding:30px 26px}.office-body>.eyebrow{font-size:9px;margin-bottom:12px}
+.office h3{font-size:clamp(34px,3vw,46px);letter-spacing:-.6px;margin-bottom:24px}.office h3 span{font-size:11px}
+.office address{display:flex;gap:10px;font-size:12px;line-height:1.85;min-height:88px;color:#4e5e68}.office address svg{width:18px;height:20px;color:#946838;margin-top:2px}
+.office-description{font-size:13px;line-height:1.85;color:var(--muted);margin:22px 0 28px}
+.office-map{width:100%;margin-top:auto;justify-content:space-between;padding:15px 18px;min-height:48px;border:1px solid #c0956480;color:var(--navy);font-size:9px;letter-spacing:1.4px;background:transparent}
+.office-map:hover,.office-map:focus-visible{background:var(--navy);color:var(--ivory);border-color:var(--navy)}
+.js-motion .team-grid .person:nth-child(2){transition-delay:.14s}
+.js-motion .team-heading.is-visible .team-heading-rule{animation:team-rule 1s .2s both}
+@keyframes team-rule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(hover:hover) and (pointer:fine){
+  .person:hover::after{transform:scaleX(1)}
+  .person:hover .person-portrait img,.office:hover .office-image img{transform:scale(1.045)}
+  .person:hover,.office:hover{box-shadow:0 18px 45px #071c2b12;border-color:#c0956480}
+  .person.is-visible:hover,.office.is-visible:hover{transform:translateY(-6px);transition-delay:0s}
+}
+.person:focus-within::after{transform:scaleX(1)}
+@media(min-width:1101px){.team-heading{position:sticky;top:115px}}
+@media(max-width:1100px){.team{grid-template-columns:1fr;gap:36px}.team-heading p:not(.eyebrow){max-width:650px}.team-grid{gap:28px}.person-portrait{aspect-ratio:1/1}.person-copy h3{font-size:34px}.office-body{padding:26px 22px}.office-grid{gap:18px}}
+@media(max-width:900px){.office-grid{grid-template-columns:1fr;gap:30px}.office-image{aspect-ratio:3/2;max-height:420px}.office h3{font-size:42px}.office address{min-height:0;font-size:13px}.office-description{max-width:640px}.office-map{max-width:300px}.office-body{padding:28px}.office-description{margin:18px 0 24px}}
+@media(max-width:600px){.team-grid{grid-template-columns:1fr;gap:28px}.team-heading h2{font-size:42px}.person-portrait{aspect-ratio:4/5}.person-copy{padding:26px}.person-copy h3{font-size:34px;min-height:0}.person-copy .person-bio{font-size:14px}.office-image{aspect-ratio:6/5}.office-map{max-width:none}.office-description{font-size:14px}.presence .section-heading h2{font-size:42px}.office-body{padding:26px}.team-heading p:not(.eyebrow){font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1;transform:none}.hero-landscape{will-change:auto}.person.is-visible:hover,.office.is-visible:hover,.person:hover .person-portrait img,.office:hover .office-image img{transform:none}}
 

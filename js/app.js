@@ -1,5 +1,6 @@
 import { config } from './config.js';
 import { validateConsultation } from './validation.js';
+import { initMotion } from './motion.js';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -36,8 +37,9 @@ if ('IntersectionObserver' in window && !motion.matches) {
 motion.addEventListener('change', e => { if (e.matches) document.documentElement.classList.remove('js-motion'); });
 
 let ticking = false;
+const updateMotionScroll = initMotion(motion);
 const sectionLinks = $$('#navigation a');
-const sections = sectionLinks.map(link => $(link.getAttribute('href')));
+const sections = sectionLinks.map(link => $(link.getAttribute('href'))).sort((a,b) => a.offsetTop - b.offsetTop);
 function updateScroll() {
   const y = window.scrollY;
   header.classList.toggle('scrolled', y > 30);
@@ -52,9 +54,11 @@ function updateScroll() {
   }
   if (!motion.matches && innerWidth > 700 && y < $('#inicio').offsetHeight) $('.hero-landscape').style.transform = `translateY(${Math.min(y * .14, 85)}px)`;
   else $('.hero-landscape').style.transform = '';
+  updateMotionScroll();
   ticking = false;
 }
 window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateScroll); ticking = true; } }, { passive: true });
+window.addEventListener('resize', () => { if (!ticking) { requestAnimationFrame(updateScroll); ticking = true; } }, { passive: true });
 updateScroll();
 
 // Abrir el área correcta antes de que el navegador se desplace a su ancla.
