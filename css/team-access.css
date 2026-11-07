@@ -1,0 +1,58 @@
+/* Compact editorial portraits, individual profiles and a permanent owner entrance. */
+#equipo.team{background:radial-gradient(ellipse at 0 0,#c0956412,transparent 42%),var(--ivory);border-top:1px solid #c0956438}
+#equipo .team-heading{display:grid;grid-template-columns:1.3fr .8fr;gap:0 54px;max-width:1320px;margin:0 auto 38px;align-items:end}
+#equipo .team-heading>.eyebrow{grid-column:1/-1;margin-bottom:20px}
+#equipo .team-heading h2{font-size:clamp(38px,4vw,58px);line-height:1.06;letter-spacing:-1.2px;margin-bottom:0}
+#equipo .team-heading p:not(.eyebrow){font-size:15px;line-height:1.85;margin:0;max-width:430px}
+#equipo .team-heading-rule{grid-column:1/-1;margin-top:28px;width:100%;height:1px;background:linear-gradient(90deg,var(--gold),#c0956420)}
+#equipo .team-grid{max-width:1320px;margin:auto;gap:28px;counter-reset:team-profile}
+#equipo .person{grid-template-columns:minmax(240px,.72fr) minmax(0,1.4fr);counter-increment:team-profile;border:1px solid #c0956445;box-shadow:0 16px 40px #071c2b08;overflow:hidden;background:var(--ivory);color:var(--navy);position:relative}
+#equipo .person::before{content:'0' counter(team-profile);position:absolute;top:25px;right:27px;z-index:2;font:28px/1 var(--serif);color:#a575435c;pointer-events:none}
+#equipo .person-portrait{position:relative;min-height:330px;height:auto;aspect-ratio:auto;border:12px solid #e6dfd2;background:#e6dfd2;align-self:stretch}
+#equipo .person-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 27%}
+#equipo .person-copy{padding:32px clamp(28px,3vw,46px);justify-content:center}
+#equipo .person-copy::before{position:absolute;right:27px;top:60px;width:24px;margin:0;background:#c0956450}
+#equipo .person-copy>.eyebrow{font-size:11px;line-height:1.8;letter-spacing:.6px;text-transform:none;margin:0 36px 13px 0;color:#946838}
+#equipo .person-copy h3{font-size:clamp(32px,3.2vw,45px);line-height:1.08;letter-spacing:-.7px;margin:0 32px 18px 0;min-height:0}
+#equipo .person-bio{font-size:14px;line-height:1.85;max-width:720px;margin:0}
+#equipo .profile-tags{margin:18px 0 0;gap:6px}
+#equipo .profile-tags li{font-size:11px;line-height:1.5;padding:7px 10px;border-color:#c0956438;background:#f5f1e9a3}
+#equipo .profile-pending{font-size:12px;margin:18px 0 0}
+#equipo .profile-link{width:fit-content;max-width:100%;margin-top:22px;min-height:46px;padding:13px 18px;background:var(--navy);border:1px solid var(--navy);color:var(--ivory);gap:26px;font-size:10px;letter-spacing:1px}
+#equipo .profile-link:hover,#equipo .profile-link:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+#equipo .person:nth-child(even){grid-template-columns:minmax(0,1.4fr) minmax(240px,.72fr);background:var(--ivory);color:var(--navy)}
+#equipo .person:nth-child(even)::before{left:27px;right:auto;color:#a575435c}
+#equipo .person:nth-child(even) .person-copy{padding-left:clamp(54px,5vw,74px)}
+#equipo .person:nth-child(even) .person-copy::before{right:auto;left:28px;top:62px;background:#c0956450}
+.admin-access{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:10px 12px;border:1px solid #c0956470;color:var(--champagne,#dbb98c);font:500 10px/1.4 var(--sans);letter-spacing:.8px;text-transform:uppercase;flex-shrink:0;transition:background .3s,border-color .3s}
+.admin-access svg{width:16px;height:18px;stroke-width:1.6}
+.admin-access:hover,.admin-access:focus-visible{background:#c095641a;border-color:var(--gold)}
+.mobile-admin-access{display:none}
+@media(max-width:750px){
+ .mobile-admin-access{position:fixed;left:max(14px,env(safe-area-inset-left));bottom:calc(14px + env(safe-area-inset-bottom));z-index:95;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 16px;background:#071c2bf5;color:#f5f1e9;border:1px solid #c09564;box-shadow:0 5px 20px #0002;font:500 12px/1.4 var(--sans);letter-spacing:.3px}
+ .mobile-admin-access svg{width:17px;height:18px}
+ body:has(.bko-editor-bar) .mobile-admin-access{display:none}
+}
+@media(max-width:1350px){.header .header-cta{display:none}.header .admin-access{margin-left:auto}.header .menu-toggle{margin-left:0}}
+@media(max-width:900px){
+ #equipo .team-heading{display:block;margin-bottom:28px}#equipo .team-heading h2{max-width:680px;margin-bottom:22px}#equipo .team-heading p:not(.eyebrow){max-width:650px}
+ #equipo .person{grid-template-columns:minmax(210px,.8fr) minmax(0,1.2fr)}#equipo .person:nth-child(even){grid-template-columns:minmax(0,1.2fr) minmax(210px,.8fr)}
+ #equipo .person-copy{padding:30px 26px}#equipo .person-copy h3{font-size:34px}#equipo .person:nth-child(even) .person-copy{padding-left:48px}#equipo .person-portrait{min-height:340px}
+}
+@media(max-width:700px){
+ #equipo .team-grid{gap:26px}#equipo .person,#equipo .person:nth-child(even){grid-template-columns:minmax(0,1fr)}
+ #equipo .person-portrait{height:auto;min-height:0;aspect-ratio:6/5;border-width:10px}
+ #equipo .person:nth-child(even) .person-portrait,#equipo .person:nth-child(even) .person-copy{grid-column:auto;grid-row:auto}
+ #equipo .person-copy,#equipo .person:nth-child(even) .person-copy{padding:27px 25px 29px}
+ #equipo .person::before,#equipo .person:nth-child(even)::before{top:auto;bottom:32px;right:24px;left:auto;font-size:24px}
+ #equipo .person-copy::before,#equipo .person:nth-child(even) .person-copy::before{display:none}
+ #equipo .person-copy>.eyebrow{margin-right:0;font-size:11px}
+ #equipo .person-copy h3{font-size:34px;margin-right:0}#equipo .person-bio{font-size:14px}
+ #equipo .profile-link{font-size:9px;letter-spacing:.65px;gap:16px;margin-right:25px;padding-inline:13px}
+}
+@media(max-width:600px){
+ .header{gap:8px}.header .admin-access{padding:10px;width:44px;height:44px;margin-left:auto}
+ .header .admin-access span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .header .brand{gap:9px}.header .menu-toggle{margin-left:0;flex-shrink:0}
+}
+@media(max-width:359px){.header .brand-name{font-size:7.5px;letter-spacing:.5px}.header .brand-mark{font-size:37px;padding-right:10px}.header .brand{gap:8px}#equipo .person-copy{padding-inline:22px}#equipo .person-copy h3{font-size:31px}#equipo .profile-link{font-size:8px;gap:10px}}
