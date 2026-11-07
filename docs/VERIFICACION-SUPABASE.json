@@ -1,0 +1,27 @@
+{
+  "project": "kxldsjodgfonrrlwjbws",
+  "date": "2026-11-07T16:55:03.625Z",
+  "checks": [
+    "CMS público activo con 25 servicios",
+    "CORS de desarrollo activo",
+    "Envíos reales jurídico y de seguros guardados por Edge Function",
+    "Persistencia PostgreSQL y asignación automática a Roxana",
+    "Visitantes sin lectura de consultas ni acceso directo al RPC de escritura",
+    "RLS real: administrador, editor, seguros y cuenta sin rol",
+    "Seguimiento CRM permitido al rol de seguros",
+    "Rol de seguros no modifica consultas jurídicas",
+    "Indicadores reales sin cotizaciones ficticias",
+    "Base de datos rechaza seguimiento de cotización sin referencia",
+    "CMS rechaza modificaciones de cuentas sin rol",
+    "Edición CMS con editor y lectura pública persistente sin cambiar textos visibles",
+    "Control de versiones evita sobrescribir ediciones concurrentes",
+    "Carga de imágenes CMS y lectura pública operativas"
+  ],
+  "cleanup": [
+    "Marcador de prueba CMS retirado",
+    "Consultas temporales eliminadas",
+    "Imagen temporal eliminada",
+    "Cuentas y roles temporales eliminados"
+  ],
+  "liveDatabaseVerified": true
+}

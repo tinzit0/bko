@@ -16,9 +16,11 @@
 
 ## Estado remoto verificado
 
-El 7 de noviembre de 2026, las comprobaciones públicas al proyecto configurado devolvieron **404** para `/rest/v1/site_content?key=eq.insurance&select=key` y `/functions/v1/contact`. No se dispone en esta sesión de una CLI autenticada, credenciales administrativas ni cuenta autorizada para aplicar las migraciones o desplegar la función. Por tanto, la integración está implementada y comprobada con transporte de prueba local, **pero no activada ni verificada contra almacenamiento de producción**.
+El 7 de noviembre de 2026 se autenticó la CLI oficial, se vinculó el proyecto `kxldsjodgfonrrlwjbws`, se inspeccionó su historial remoto y se aplicaron las tres migraciones BKO. La función `contact` está desplegada y activa, con sus secretos configurados en el backend. Se verificaron envíos reales jurídico y de seguros, persistencia en PostgreSQL, asignación automática a Roxana, métricas, edición y lectura pública del CMS, control de revisiones, carga de imágenes y permisos de administrador, editor, seguros y cuenta sin rol. Evidencia: `docs/VERIFICACION-SUPABASE.json`.
 
-No se inventaron credenciales ni se incorporó una clave service_role al navegador. Las solicitudes reales fallan de forma explícita mientras no esté activo el backend; el panel tampoco muestra estadísticas de ejemplo.
+Todos los registros, cuentas, roles e imágenes temporales de verificación fueron eliminados; la comprobación final encontró cero restos. No se incorporaron secretos al frontend ni al repositorio. El proyecto comparte base de datos con otras aplicaciones: se conservaron sus tablas, funciones e historial de migraciones.
+
+La cuenta administradora solicitada por el propietario fue creada el 7 de noviembre de 2026 y se verificó su inicio de sesión real, rol administrador, CMS, CRM y métricas. Sus credenciales no se guardan en el frontend ni en esta documentación. **Pendiente:** correo de Roxana si requiere acceso propio y dominio público para añadirlo a `ALLOWED_ORIGINS`. Actualmente se permiten `http://localhost:3000` y `http://127.0.0.1:3000`. La asignación comercial a `roxana` funciona independientemente de su futura cuenta de acceso.
 
 ## Activación en el proyecto existente
 
@@ -27,11 +29,17 @@ Ejecutar con una sesión de Supabase autorizada para `kxldsjodgfonrrlwjbws`, rev
 ```powershell
 npx supabase login
 npx supabase link --project-ref kxldsjodgfonrrlwjbws
-npx supabase db push
-npx supabase functions deploy contact
+New-Item -ItemType Directory -Force artifacts/supabase-activation/supabase/migrations
+Copy-Item supabase/config.toml artifacts/supabase-activation/supabase/config.toml
+npx supabase migration fetch --remote=kxldsjodgfonrrlwjbws --workdir ./artifacts/supabase-activation --yes
+Copy-Item supabase/migrations/*.sql artifacts/supabase-activation/supabase/migrations/
+npx supabase db push --remote=kxldsjodgfonrrlwjbws --workdir ./artifacts/supabase-activation --skip-vault --dry-run
+# Tras revisar que solo enumera migraciones nuevas de BKO:
+npx supabase db push --remote=kxldsjodgfonrrlwjbws --workdir ./artifacts/supabase-activation --skip-vault --yes
+npx supabase functions deploy contact --remote=kxldsjodgfonrrlwjbws --use-api --no-verify-jwt --yes
 ```
 
-Completar los secretos documentados en `docs/SUPABASE.md`: `ALLOWED_ORIGINS`, `BKO_PUBLISHABLE_KEY`, `CONTACT_FINGERPRINT_SECRET` y, si se activa, `TURNSTILE_SECRET_KEY`. `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` los proporciona Supabase al backend. Los orígenes deben incluir el dominio real del sitio.
+La secuencia anterior corresponde a CLI 3 y conserva el historial remoto en una carpeta ignorada, sin importar archivos de otras aplicaciones al código de BKO. No usar `migration repair`, reset ni eliminar versiones remotas para resolver diferencias de historial. Los secretos `ALLOWED_ORIGINS`, `BKO_PUBLISHABLE_KEY` y `CONTACT_FINGERPRINT_SECRET` ya están configurados. Solo añadir el dominio real cuando se confirme. `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` los proporciona Supabase al backend. Turnstile sigue opcional y requiere configurar ambas claves si se decide activarlo.
 
 Crear o invitar a las cuentas reales desde Supabase Authentication. Asignar el primer administrador con SQL ejecutado por el propietario, reemplazando el marcador por su correo real:
 
@@ -88,4 +96,4 @@ Se usan tres fotografías reales existentes, una vez cada una dentro de la pági
 - Tras activar Supabase: comprobar acceso de cada rol; que visitantes no lean consultas; envío desde el dominio real y UUID presente en `consultations`; asignación a Roxana; filtros y métricas; actualización CMS visible en otra sesión; almacenamiento de imágenes; persistencia después de recargar y rechazo de usuarios sin rol.
 - Revisar el borrador de privacidad, identidad responsable, retención y canal de ejercicio de derechos antes de publicar. Los consentimientos de datos y contacto comercial se registran por separado.
 
-No se realizó publicación ni envío de datos personales reales.
+El backend está desplegado. La prueba real utilizó datos técnicos identificados y cuentas temporales, sin datos personales de clientes; se eliminaron al finalizar. El frontend no se publicó en este paso.

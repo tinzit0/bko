@@ -2,7 +2,7 @@
 
 Proyecto indicado: `kxldsjodgfonrrlwjbws`. La configuración del navegador está en `js/config.js` y usa exclusivamente la clave pública publishable. **Nunca incorporar service_role ni secretos al frontend ni al repositorio.**
 
-La integración está implementada, pero su despliegue y una escritura real de aceptación están pendientes. El servidor confirma `{ok:true,id}` únicamente cuando PostgreSQL devuelve el UUID de la consulta guardada. La consulta se almacena; no se envía un correo de aviso automáticamente.
+La integración está desplegada y verificada con escrituras reales, asignación de seguros a Roxana y comprobación de permisos. Se eliminaron los datos temporales de prueba. El servidor confirma `{ok:true,id}` únicamente cuando PostgreSQL devuelve el UUID de la consulta guardada. La consulta se almacena; no se envía un correo de aviso automáticamente. Estado actualizado y procedimiento para despliegues futuros: [SEGUROS.md](SEGUROS.md).
 
 ## Despliegue mediante CLI oficial
 
@@ -11,8 +11,9 @@ Desde una terminal de tu usuario con acceso a Internet y Node/npm disponibles:
 ```powershell
 npx supabase login
 npx supabase link --project-ref kxldsjodgfonrrlwjbws
-npx supabase db push
-npx supabase functions deploy contact
+# Continuar con la preparación de historial compartido descrita en docs/SEGUROS.md.
+# No ejecutar db push directamente desde la raíz sin conciliar el historial remoto.
+npx supabase functions deploy contact --remote=kxldsjodgfonrrlwjbws --use-api --no-verify-jwt --yes
 ```
 
 Revisar las migraciones remotas antes de `db push` si el proyecto ya contiene otras tablas/migraciones. La migración crea solo `consultations`, `contact_rate_limits` y `submit_consultation`; no elimina tablas de aplicación.

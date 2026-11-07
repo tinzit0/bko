@@ -30,5 +30,6 @@ export async function buildInsurance(){
  roxana=roxana.replace('content="assets/social.svg"','content="../assets/social.svg"');
  await writeFile(new URL('equipo/roxana-ximena-oyarzun-bustamante.html',root),roxana);
  await writeFile(new URL('supabase/migrations/202611070002_insurance_content.sql',root),`insert into public.site_content(key,value) values('insurance','${JSON.stringify(c).replaceAll("'","''")}'::jsonb) on conflict(key) do nothing;\n`);
+ await import('./install-visual-editor.mjs');
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))await buildInsurance();

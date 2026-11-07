@@ -1,0 +1,17 @@
+import {config} from './config.js';
+const key='bko-admin-session';let refreshing;
+export function readSession(){try{const raw=localStorage.getItem(key)||sessionStorage.getItem(key);return raw?JSON.parse(raw):null}catch{return null}}
+export function saveSession(session){if(session){localStorage.setItem(key,JSON.stringify(session));sessionStorage.setItem(key,JSON.stringify(session))}else{localStorage.removeItem(key);sessionStorage.removeItem(key)}window.dispatchEvent(new Event('bko:session-change'))}
+export async function cmsRequest(path,options={}){
+ let session=readSession();if(!session?.access_token)throw Error('Inicia sesión en Gestión para editar.');
+ if(session.expires_at<Date.now()/1000+60){
+  if(!refreshing)refreshing=(async()=>{const r=await fetch(config.supabaseUrl+'/auth/v1/token?grant_type=refresh_token',{method:'POST',headers:{apikey:config.supabasePublishableKey,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:session.refresh_token}),signal:AbortSignal.timeout(15000)});if(!r.ok){saveSession(null);throw Error('Tu sesión expiró. Vuelve a iniciar sesión.')}const data=await r.json();saveSession({...data,expires_at:Date.now()/1000+data.expires_in});return readSession()})().finally(()=>refreshing=null);
+  session=await refreshing;
+ }
+ const r=await fetch(config.supabaseUrl+'/rest/v1/'+path,{...options,headers:{apikey:config.supabasePublishableKey,Authorization:`Bearer ${session.access_token}`,'Content-Type':'application/json',...options.headers},signal:AbortSignal.timeout(20000)});
+ const data=await r.json().catch(()=>null);if(!r.ok)throw Error(r.status===401||r.status===403?'Tu cuenta no tiene permiso para guardar estos cambios.':'No se pudo guardar. Revisa la conexión e inténtalo nuevamente.');return data;
+}
+export async function cmsRole(){const s=readSession();if(!s?.user?.id)return '';const rows=await cmsRequest('bko_admin_members?select=role&user_id=eq.'+encodeURIComponent(s.user.id));return rows[0]?.role||''}
+export async function loadDocument(key){const {config}=await import('./config.js');const r=await fetch(config.supabaseUrl+'/rest/v1/site_content?select=value,revision&key=eq.'+key,{headers:{apikey:config.supabasePublishableKey},cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error('No se pudo cargar el contenido publicado.');const rows=await r.json();return rows[0]||{value:key==='website'?{pages:{}}:null,revision:null}}
+export async function saveDocument(key,value,revision){const rows=await cmsRequest(revision===null?'site_content':`site_content?key=eq.${key}&revision=eq.${revision}`,{method:revision===null?'POST':'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(revision===null?{key,value}:{value})});if(rows?.length!==1)throw Error('Otra edición cambió este contenido. Recarga antes de guardar.');return rows[0]}
+export async function uploadCmsImage(file){if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>8000000)throw Error('Selecciona JPEG, PNG o WebP de hasta 8 MB.');await cmsRole();const s=readSession(),ext={'image/jpeg':'jpg','image/png':'png','image/webp':'webp'}[file.type],path=crypto.randomUUID()+'.'+ext;const r=await fetch(config.supabaseUrl+'/storage/v1/object/insurance-media/'+path,{method:'POST',headers:{apikey:config.supabasePublishableKey,Authorization:`Bearer ${s.access_token}`,'Content-Type':file.type},body:file,signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error('No se pudo cargar la fotografía.');return config.supabaseUrl+'/storage/v1/object/public/insurance-media/'+path}

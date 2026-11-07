@@ -1,6 +1,6 @@
 # BKO — Bentjerodt Koplin y Oyarzun Consultores
 
-El área de Negocios y Seguros Corporativos, el CMS y el CRM autenticado se documentan en [docs/SEGUROS.md](docs/SEGUROS.md). La integración requiere activar las migraciones, la función de contacto y las cuentas autorizadas en Supabase; las pruebas locales no constituyen envíos reales.
+El área de Negocios y Seguros Corporativos, el CMS y el CRM autenticado se documentan en [docs/SEGUROS.md](docs/SEGUROS.md). Las tres migraciones y la función de contacto están activas en Supabase y se verificaron con escrituras reales y pruebas de permisos. La cuenta administradora solicitada por el propietario está creada y su acceso al CMS/CRM fue verificado. Queda pendiente el dominio público para autorizar sus envíos. La evidencia de activación está en [docs/VERIFICACION-SUPABASE.json](docs/VERIFICACION-SUPABASE.json).
 
 Sitio corporativo one page en español de Chile. HTML semántico, CSS responsive y JavaScript modular; sin frameworks ni dependencias de producción. Backend implementado como Edge Function de Supabase y migración PostgreSQL con RLS. Se conservan sin cambios los originales de `como quiero la pagina/`.
 

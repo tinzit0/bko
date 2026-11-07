@@ -1,10 +1,11 @@
 import {config} from './config.js';
 import {insuranceDefault,insuranceCategories,validateInsuranceContent} from './insurance-content.js';
 import {escapeHtml as h,mediaUrl} from './insurance-render.js';
+import {readSession,saveSession} from './cms-session.js';
 const $=s=>document.querySelector(s),apiRoot=config.supabaseUrl;
 let session=null,role='',content=structuredClone(insuranceDefault),revision=null,responsibles=[],page=0;
 const announce=(message,target='#admin-status')=>$(target).textContent=message;
-function storeSession(value){session=value;if(value)sessionStorage.setItem('bko-admin-session',JSON.stringify(value));else sessionStorage.removeItem('bko-admin-session')}
+function storeSession(value){session=value;saveSession(value)}
 async function auth(path,body){const r=await fetch(`${apiRoot}/auth/v1/${path}`,{method:'POST',headers:{apikey:config.supabasePublishableKey,'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)});const data=await r.json();if(!r.ok)throw Error('No fue posible autenticar la cuenta. Revisa tus credenciales y permisos.');return{...data,expires_at:Math.floor(Date.now()/1000)+data.expires_in}}
 async function request(path,options={}){
  if(!session)throw Error('Debes iniciar sesión.');
@@ -83,4 +84,4 @@ $('#content-form').addEventListener('submit',async e=>{
  button.disabled=true;try{const saved=await request(revision===null?'site_content':`site_content?key=eq.insurance&revision=eq.${revision}`,{method:revision===null?'POST':'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(revision===null?{key:'insurance',value:draft}:{value:draft})});if(saved?.length!==1)throw Error('Otro usuario modificó el contenido. Recarga antes de volver a guardar.');content=draft;revision=saved[0].revision;announce('Contenidos guardados. Abre el sitio para revisar los cambios.','#content-status')}catch(error){announce(error.message,'#content-status')}finally{button.disabled=false}
 });
 $('#responsible-form').addEventListener('submit',async e=>{e.preventDefault();const b=e.target.querySelector('button');b.disabled=true;try{const name=e.target.elements.name.value.trim();if(name.length<2)throw Error('Ingresa el nombre del responsable.');await request('insurance_responsibles',{method:'POST',body:JSON.stringify({id:'responsable-'+crypto.randomUUID(),name})});e.target.reset();await openWorkspace();showTab('settings');announce('Responsable agregado.')}catch(error){announce(error.message)}finally{b.disabled=false}});
-try{const saved=sessionStorage.getItem('bko-admin-session');if(saved){session=JSON.parse(saved);await openWorkspace()}}catch(error){storeSession(null);showLogin();announce(error.message)}
+try{const saved=readSession();if(saved){storeSession(saved);await openWorkspace()}}catch(error){storeSession(null);showLogin();announce(error.message)}
