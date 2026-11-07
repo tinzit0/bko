@@ -24,7 +24,7 @@ jobs:
         run: |
           mkdir -p public
           cp index.html robots.txt sitemap.xml public/
-          cp -R assets css js public/
+          cp -R assets css js equipo seguros admin public/
           touch public/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

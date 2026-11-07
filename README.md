@@ -1,5 +1,7 @@
 # BKO — Bentjerodt Koplin y Oyarzun Consultores
 
+El área de Negocios y Seguros Corporativos, el CMS y el CRM autenticado se documentan en [docs/SEGUROS.md](docs/SEGUROS.md). La integración requiere activar las migraciones, la función de contacto y las cuentas autorizadas en Supabase; las pruebas locales no constituyen envíos reales.
+
 Sitio corporativo one page en español de Chile. HTML semántico, CSS responsive y JavaScript modular; sin frameworks ni dependencias de producción. Backend implementado como Edge Function de Supabase y migración PostgreSQL con RLS. Se conservan sin cambios los originales de `como quiero la pagina/`.
 
 ## Iniciar en Windows / Visual Studio Code

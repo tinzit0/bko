@@ -1,6 +1,8 @@
 import { config } from './config.js';
 import { validateConsultation } from './validation.js';
 import { initMotion } from './motion.js';
+import { initLuxury } from './luxury.js';
+initLuxury();
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];

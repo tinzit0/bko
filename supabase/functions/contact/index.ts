@@ -1,5 +1,6 @@
 // Sin dependencias externas: Deno y API REST oficial de Supabase.
 import { validateConsultation } from '../../../js/validation.js';
+import { validateInsurance, insuranceArea } from '../../../js/insurance-validation.js';
 
 const allowedOrigins = (Deno.env.get('ALLOWED_ORIGINS') || 'http://localhost:3000,http://127.0.0.1:3000')
   .split(',').map(value => value.trim()).filter(Boolean);
@@ -44,11 +45,12 @@ Deno.serve(async (request: Request) => {
     for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.byteLength; }
     const data = JSON.parse(new TextDecoder().decode(bytes));
     if (!data || typeof data !== 'object' || Array.isArray(data)) return json({ ok:false, error:'invalid_body' }, 400);
-    for (const key of ['name','company','email','phone','city','area','message']) {
+    for (const key of ['name','company','email','phone','city','area','message','insuranceType','companyRut','activity','expectedDate']) {
       if (data[key] !== undefined && typeof data[key] !== 'string') return json({ ok:false, error:'invalid_fields' }, 400);
       data[key] = (data[key] || '').trim();
     }
-    if (Object.keys(validateConsultation(data)).length || data.website || !Number.isFinite(data.startedAt) || Date.now() - data.startedAt < 3000 || Date.now() - data.startedAt > 86400000) return json({ ok:false, error:'validation_failed' }, 400);
+    const insurance = data.area === insuranceArea;
+    if (Object.keys(insurance ? validateInsurance(data) : validateConsultation(data)).length || data.website || !Number.isFinite(data.startedAt) || Date.now() - data.startedAt < 3000 || Date.now() - data.startedAt > 86400000) return json({ ok:false, error:'validation_failed' }, 400);
     const turnstileSecret = Deno.env.get('TURNSTILE_SECRET_KEY');
     if (turnstileSecret) {
       const verification = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -63,6 +65,7 @@ Deno.serve(async (request: Request) => {
     const signature = await crypto.subtle.sign('HMAC', hmacKey, new TextEncoder().encode(ip));
     const fingerprint = [...new Uint8Array(signature)].map(value => value.toString(16).padStart(2,'0')).join('');
     const payload = Object.fromEntries(['name','company','email','phone','city','area','message','privacy'].map(key => [key,data[key]]));
+    if (insurance) for (const key of ['insuranceType','companyRut','activity','expectedDate','commercialConsent']) payload[key] = data[key];
     const saved = await fetch(`${url}/rest/v1/rpc/submit_consultation`, {
       method:'POST', headers:{'apikey':serviceKey,'Authorization':`Bearer ${serviceKey}`,'Content-Type':'application/json'},
       body:JSON.stringify({payload,client_fingerprint:fingerprint}), signal:AbortSignal.timeout(12000),

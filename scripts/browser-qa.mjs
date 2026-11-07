@@ -42,7 +42,7 @@ try {
       const overflow = await evaluate(`([...document.querySelectorAll('body *')].filter(el=>{const r=el.getBoundingClientRect();return r.width>0&&r.right>innerWidth+1&&getComputedStyle(el).position!=='absolute'}).map(el=>({tag:el.tagName,class:el.className?.baseVal??el.className,right:el.getBoundingClientRect().right})))`);
       throw new Error(`Desbordamiento a ${width}px: ${layout.scrollWidth} ${JSON.stringify(overflow)}`);
     }
-    if (layout.sections !== 8 || layout.h1 !== 1) throw new Error(`Estructura inesperada: ${JSON.stringify(layout)}`);
+    if (layout.sections !== 10 || layout.h1 !== 1) throw new Error(`Estructura inesperada: ${JSON.stringify(layout)}`);
     // Recorrer para activar las entradas al hacer scroll.
     await evaluate(`document.documentElement.style.scrollBehavior='auto'`);
     await evaluate(`(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=600){scrollTo({top:y,behavior:'instant'});await new Promise(r=>setTimeout(r,90))}scrollTo({top:0,behavior:'instant'})})()`); await pause(1000);

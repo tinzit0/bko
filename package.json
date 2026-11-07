@@ -7,6 +7,9 @@
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
+    "build:profiles": "node scripts/build-profiles.mjs",
+    "build:insurance": "node scripts/build-insurance.mjs",
+    "qa:insurance": "node scripts/insurance-qa.mjs",
     "configure-domain": "node scripts/configure-domain.mjs"
   },
   "engines": { "node": ">=22" }
