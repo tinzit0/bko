@@ -1,0 +1,50 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {teamMarkup,profileMarkup,peopleMarkup,practiceMarkup,caucePreview,cauceMarkup,firmNavigation} from '../js/firm-render.js';
+import {cauceDefault} from '../js/cauce-default.js';
+import {escapeHtml as h} from '../js/insurance-render.js';
+import {config} from '../js/config.js';
+const root=new URL('../',import.meta.url),records=JSON.parse(await readFile(new URL('supabase/seeds/firm.json',root),'utf8'));
+if(!records.some(r=>r.id==='cauce'))records.push(cauceDefault);
+await writeFile(new URL('supabase/seeds/firm.json',root),JSON.stringify(records,null,2)+'\n');
+let home=await readFile(new URL('index.html',root),'utf8');
+home=home.replace(/<nav class="nav" id="navigation"[\s\S]*?<\/nav>/,`<nav class="nav" id="navigation" aria-label="Navegación principal">${firmNavigation(records)}</nav>`);
+home=home.replace(/<section id="personas"[\s\S]*?(?=\s*<section id="seguros")/,`<section id="personas" class="section people-services" aria-labelledby="people-title" data-firm-people>${peopleMarkup(records)}</section>\n`);
+home=home.replace(/<div class="team-grid">[\s\S]*?(?=\s*<section id="presencia")/,`<div class="team-grid" data-firm-team>${teamMarkup(records)}</div></section>\n\n`);
+home=home.replace(/<div class="practice-list">[\s\S]*?(?=\s*<section id="sectores")/,`<div class="practice-list" data-firm-practices>${practiceMarkup(records)}</div></section>\n\n`);
+home=home.replace(/<div data-cauce-preview>[\s\S]*?<\/div>\s*(?=<section id="equipo")/,'');
+if(!home.includes('data-cauce-preview'))home=home.replace('<section id="equipo"',`<div data-cauce-preview>${caucePreview(records)}</div>\n<section id="equipo"`);
+home=home.replace('Derecho<br>corporativo','Corporativo').replace('Derecho inmobiliario<br>y de familia','Inmobiliario').replace('Marítimo, naviero<br>y seguros','Marítimo y<br>Naviero').replaceAll('href="#acuicultura"','href="#maritimo"');
+home=home.replace('<span>Acuicultura</span>','').replace('<h3>Acuicultura y recursos<br>hidrobiológicos</h3><p>Centros de cultivo, producción y comercialización.</p>','<h3>Marítimo y Naviero</h3><p>Acuicultura y recursos hidrobiológicos: centros de cultivo, producción y comercialización.</p>');
+home=home.replace('Experiencia, conocimiento y <em>compromiso jurídico.</em>','Experiencia, conocimiento y <em>compromiso.</em>').replace('Contamos con profesionales especializados en distintas áreas del Derecho, cuya experiencia académica y práctica permite entregar asesoría jurídica integral, estratégica y cercana.','Un equipo de profesionales que integra experiencia jurídica, atención médico-psiquiátrica, gestión empresarial y seguros, con funciones y especialidades propias.');
+home=home.replace(/<!-- Biografías institucionales provisionales:[\s\S]*?-->/,'').replace(/^[ \t]+$/gm,'').replace(/\n\s*\n(?:\s*\n)+/g,'\n\n');
+const canonicalAreas=['Corporativo','Minería, construcción y servicios asociados','Marítimo y Naviero','Inmobiliario','Derecho de Familia','Derecho Laboral','CAUCE Gestión Integral','Necesito orientación'];
+home=home.replace(/(<select id="area"[^>]*>)[\s\S]*?<\/select>/,`$1<option value="">Selecciona un área</option>${canonicalAreas.map(a=>`<option>${a}</option>`).join('')}</select>`);
+home=home.replace('href="#sectores">Sectores</a>','href="cauce/index.html">CAUCE Gestión Integral</a>');
+home=home.replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="Abogados Chile: asesoría empresarial, Derecho de Familia y Derecho Laboral. Equipo interdisciplinario, seguros corporativos y CAUCE Gestión Integral.">');
+if(!home.includes('data-firm-noscript'))home=home.replace('<main id="contenido">','<noscript data-firm-noscript><p class="firm-unavailable">Activa JavaScript para consultar los perfiles y servicios actualizados desde el CMS. Puedes contactar a BKO al <a href="tel:+56974826025">+56 9 7482 6025</a>.</p></noscript><main id="contenido">');
+if(!home.includes('css/firm.css'))home=home.replace('</head>','<link rel="stylesheet" href="css/firm.css"><script type="module" src="js/firm-public.js"></script></head>');
+await writeFile(new URL('index.html',root),home);
+// Retain the complete insurance service page and its existing CRM integration.
+const {buildInsurance}=await import('./build-insurance.mjs');await buildInsurance();
+home=await readFile(new URL('index.html',root),'utf8');
+const shell=(content,title,description,schema,attrs='',extra='')=>{
+ let page=home.replace(/<main id="contenido">[\s\S]*?<\/main>/,'<main id="contenido" FIRM_MAIN></main>');
+ page=page.replace(/href="#(?!i-)([^\"]+)"/g,(m,id)=>id==='contenido'?m:`href="../index.html#${id}"`).replace(/(?:src|href)="((?:assets|css|js|equipo|admin|seguros|cauce|index\.html)\b[^\"]*)"/g,(m,p)=>m.replace(p,'../'+p));
+ page=page.replace('src="../js/app.js"','src="../js/profiles.js"').replace('<main id="contenido" FIRM_MAIN></main>',`<main id="contenido" ${attrs}>${content}</main>`);
+ page=page.replace(/<title>[\s\S]*?<\/title>/,`<title>${h(title)}</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${h(description)}">`).replace(/<meta property="og:title" content="[^"]*">/,`<meta property="og:title" content="${h(title)}">`).replace(/<meta property="og:description" content="[^"]*">/,`<meta property="og:description" content="${h(description)}">`).replace('content="assets/social.svg"','content="../assets/social.svg"');
+ page=page.replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/,`<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`);
+ page=page.replace(/\s*<link rel="canonical"[^>]*>|\s*<meta property="og:url"[^>]*>/g,'');
+ return page.replace('</head>',extra+'</head>');
+};
+for(const r of records.filter(r=>r.kind==='professional')){
+ const d=r.data;const page=shell(profileMarkup(r,'../',records),d.seoTitle||`${d.name} | BKO Consultores`,d.seoDescription||d.intro.split('\n\n')[0],{'@context':'https://schema.org','@type':'Person',name:d.name,description:d.role},`class="profile-page" data-firm-profile="${r.id}"`);
+ await writeFile(new URL(`equipo/${r.id}.html`,root),page);
+}
+await writeFile(new URL('equipo/perfil.html',root),shell('<div class="firm-unavailable"><h1>Equipo BKO</h1><p>Cargando perfil profesional…</p></div>','Perfil profesional | BKO','Conoce al equipo de BKO Consultores.',{'@context':'https://schema.org','@type':'Organization',name:'BKO Consultores'},'class="profile-page" data-firm-profile=""'));
+const field=(name,label,type='text',required=true)=>`<div class="field"><label for="cauce-${name}">${label}${required?' *':''}</label><input id="cauce-${name}" name="${name}" type="${type}" ${required?'required':''} maxlength="${name==='email'?254:name==='phone'?25:160}" autocomplete="${({name:'name',email:'email',phone:'tel',company:'organization'})[name]||'off'}" aria-describedby="cauce-${name}-error"><span class="field-error" id="cauce-${name}-error" data-error="${name}"></span></div>`;
+const form=`<section id="solicitud-cauce" class="cauce-contact"><p class="eyebrow">CONTACTO / CAUCE</p><h2>Conversemos sobre tu cartera.</h2><p>Solicita asesoría sin adjuntar documentos ni antecedentes sensibles en este primer contacto.</p><form id="cauce-form" novalidate><p>Los campos con * son obligatorios.</p><div class="form-grid">${field('name','Nombre completo')}${field('company','Empresa','text',false)}${field('email','Correo electrónico','email')}${field('phone','Teléfono','tel',false)}<div class="field"><label for="cauce-city">Ciudad *</label><select id="cauce-city" name="city" required aria-describedby="cauce-city-error"><option value="">Selecciona tu ciudad</option>${['Calama','Santiago','Puerto Varas','Otra ciudad'].map(s=>`<option>${s}</option>`).join('')}</select><span class="field-error" id="cauce-city-error" data-error="city"></span></div><div class="field field-full"><label for="cauce-message">Cuéntanos qué necesitas *</label><textarea id="cauce-message" name="message" rows="5" minlength="20" maxlength="4000" required aria-describedby="cauce-message-error"></textarea><span class="field-error" id="cauce-message-error" data-error="message"></span></div></div><div class="honeypot" aria-hidden="true"><label for="cauce-website">Deja vacío este campo</label><input id="cauce-website" name="website" tabindex="-1" autocomplete="off"></div><label class="checkbox-label"><input id="cauce-privacy" type="checkbox" name="privacy" required aria-describedby="cauce-privacy-error"><span>Acepto la <button class="inline-button" type="button" data-open-privacy>política de privacidad</button> para gestionar esta solicitud. *</span></label><span class="field-error" id="cauce-privacy-error" data-error="privacy"></span><div id="cauce-turnstile"></div><button class="button button-gold" type="submit">ENVIAR SOLICITUD</button><p class="form-status" role="status" aria-live="polite"></p><noscript>Activa JavaScript para enviar la solicitud o contacta a BKO.</noscript></form></section>`;
+await mkdir(new URL('cauce/',root),{recursive:true});
+const c=records.find(r=>r.id==='cauce');await writeFile(new URL('cauce/index.html',root),shell(`<div data-firm-cauce>${cauceMarkup(c,records)}</div>${form}`,c.data.seoTitle,c.data.seoDescription,{'@context':'https://schema.org','@type':'Service',name:c.data.title,description:c.data.seoDescription,provider:{'@type':'Organization',name:'CAUCE Gestión Integral'}},'class="cauce-page"','<script type="module" src="../js/cauce.js"></script>'));
+// Keep configured canonical URLs on generated routes when a domain has been set.
+if(config.siteUrl){for(const path of ['cauce/index.html',...records.filter(r=>r.kind==='professional').map(r=>`equipo/${r.id}.html`)]){const url=config.siteUrl+'/'+path;let html=await readFile(new URL(path,root),'utf8');html=html.replace('</head>',`<link rel="canonical" href="${h(url)}"><meta property="og:url" content="${h(url)}"></head>`);await writeFile(new URL(path,root),html)}}
+console.log('Actualizados equipo, perfiles individuales, Personas, áreas y CAUCE.');

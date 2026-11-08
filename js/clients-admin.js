@@ -1,0 +1,96 @@
+import {config} from './config.js';
+import {cmsRole,cmsRequest,readSession} from './cms-session.js';
+import {escapeHtml as h} from './insurance-render.js';
+import {clientSectors,clientStatistics,validateClient,validateLogoFile,logoTypes,logoLocalPath,logoStoragePath,websiteUrl} from './clients-model.js';
+import {clientsMarkup,bindClients} from './clients-render.js';
+const tab=document.querySelector('[data-tab="clients"]');
+const panel=document.createElement('section');panel.id='clients-admin-panel';panel.hidden=true;
+panel.innerHTML='<h2>Gestión de clientes y empresas</h2><p>Administra nombres, logotipos, enlaces, sectores y orden. Las autorizaciones se registran de manera independiente de la verificación del archivo.</p><div data-client-metrics aria-label="Estadísticas del catálogo"></div><div class="admin-toolbar"><label>Cliente<select data-client-select></select></label><button class="button profile-link" type="button" data-client-add>AGREGAR CLIENTE</button><button class="button profile-link" type="button" data-client-preview-all>VISTA PREVIA DE LOS CLIENTES</button></div><form><div data-client-fields></div><div class="admin-toolbar"><button class="button button-gold" type="submit">GUARDAR CLIENTE</button><button class="button profile-link" type="button" data-client-reload>RECARGAR</button><button class="button profile-link" type="button" data-client-delete>ELIMINAR CLIENTE</button></div><p class="clients-admin-status" data-client-status role="status" aria-live="polite"></p></form><div class="clients-preview" data-clients-admin-preview hidden></div>';
+document.querySelector('#workspace').append(panel);
+const fields=panel.querySelector('[data-client-fields]'),select=panel.querySelector('[data-client-select]'),out=panel.querySelector('[data-client-status]'),previewAll=panel.querySelector('[data-clients-admin-preview]');
+let records=[],selected=null,selectedFile=null,uploadedPath='',previewUrl='',previewUrls=[],dirty=false,busy=false,allowed=false,authorizationRun=0;
+const announce=message=>out.textContent=message;
+const input=(label,key,value,area=false)=>`<label>${h(label)}${area?`<textarea rows="4" data-client-field="${key}">${h(value||'')}</textarea>`:`<input data-client-field="${key}" value="${h(value??'')}" maxlength="${key==='name'?180:key==='slug'?160:2000}">`}</label>`;
+const check=(label,key,value)=>`<label class="admin-check"><input type="checkbox" data-client-field="${key}"${value?' checked':''}>${h(label)}</label>`;
+function clearFile(){selectedFile=null;uploadedPath='';if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=''}
+function clearPreview(){previewUrls.forEach(url=>URL.revokeObjectURL(url));previewUrls=[];previewAll.replaceChildren();previewAll.hidden=true}
+function payload(){const value=structuredClone(selected);for(const field of fields.querySelectorAll('[data-client-field]')){const k=field.dataset.clientField;value[k]=field.type==='checkbox'?field.checked:field.type==='number'?Number(field.value):field.value.trim()}return value}
+function renderStatistics(){
+ const stats=clientStatistics(records.filter(r=>r.id));
+ const metrics=[['Empresas registradas',stats.total],['Empresas publicadas',stats.published],['Pendientes de autorización',stats.pending],['Con logotipo',stats.withLogo],['Sin logotipo',stats.withoutLogo],['Destacadas',stats.featured]];
+ panel.querySelector('[data-client-metrics]').innerHTML='<div class="admin-metrics clients-metrics">'+metrics.map(([label,value])=>'<div><strong>'+value+'</strong><span>'+label+'</span></div>').join('')+'</div><details class="clients-sector-stats"><summary>Distribución por sectores</summary><dl>'+Object.entries(clientSectors).map(([key,label])=>'<div><dt>'+h(label)+'</dt><dd>'+stats.sectors[key]+'</dd></div>').join('')+'</dl></details><p class="small-note">Datos guardados en Supabase. Publicadas: activas y con relación autorizada. Pendientes: falta autorización de la relación o del logotipo disponible. Se muestran hasta cuatro destacadas.</p>';
+}
+function choices(){select.innerHTML=records.map(r=>`<option value="${h(r.id||r.slug)}">${h(r.name)}${r.published?'':' · Sin publicar'}</option>`).join('');if(selected)select.value=selected.id||selected.slug}
+async function privateLogo(path){await cmsRole();const s=readSession();const response=await fetch(`${config.supabaseUrl}/storage/v1/object/authenticated/bko-client-logos/${encodeURIComponent(path)}`,{headers:{apikey:config.supabasePublishableKey,Authorization:`Bearer ${s.access_token}`},signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('No se pudo cargar la vista previa del logotipo guardado.');return URL.createObjectURL(await response.blob())}
+async function showLogo(){
+ const box=fields.querySelector('[data-client-image-preview]');if(!box||!selected)return;box.replaceChildren();box.dataset.background=fields.querySelector('[data-client-field=logo_background]')?.value||'white';
+ const recordId=selected.id||selected.slug;let url=selectedFile?previewUrl:logoLocalPath(selected.logo_local_path)?'../'+selected.logo_local_path:'';
+ if(!url&&logoStoragePath(selected.logo_storage_path)){try{url=await privateLogo(selected.logo_storage_path);if(recordId!==(selected?.id||selected?.slug)){URL.revokeObjectURL(url);return}if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=url}catch(e){announce(e.message)}}
+ if(url){const img=document.createElement('img');img.src=url;img.alt='Vista previa del logotipo de '+selected.name;box.append(img)}else{const span=document.createElement('span');span.className='client-wordmark';span.textContent=selected.name||'Nombre de la organización';box.append(span)}
+}
+function render(){
+ if(!selected)return;const r=selected;fields.dataset.selected=r.id||r.slug;
+ fields.innerHTML=`<fieldset><legend>Organización</legend>${input('Nombre público','name',r.name)}${input('Identificador único (slug)','slug',r.slug)}${input('Descripción institucional opcional','description',r.description,true)}${input('Enlace oficial','website_url',r.website_url)}${check('Enlace oficial comprobado','website_verified',r.website_verified)}<label>Sector<select data-client-field="sector">${Object.entries(clientSectors).map(([id,label])=>`<option value="${id}"${r.sector===id?' selected':''}>${label}</option>`).join('')}</select></label>${input('Fuente que respalda la clasificación por sector','sector_source',r.sector_source)}<label>Orden<input type="number" min="-1000000" max="1000000" step="1" data-client-field="sort_order" value="${r.sort_order}" required></label>${check('Cliente activo','active',r.active)}${check('Destacar en la selección inicial (se muestran hasta 4)','featured',r.featured)}</fieldset>
+ <fieldset><legend>Logotipo original</legend><div class="client-admin-preview" data-client-image-preview data-background="${h(r.logo_background)}"></div><label>Seleccionar o reemplazar logotipo desde el dispositivo<input type="file" data-client-file accept="image/svg+xml,image/png,image/webp,image/jpeg"></label><p>SVG estático, PNG, WebP o JPEG; hasta 2 MB. Conservamos el archivo y sus proporciones. El reemplazo se guarda con una ruta nueva y requiere revisar nuevamente su autorización.</p><label>Fondo<select data-client-field="logo_background">${[['white','Blanco'],['ivory','Marfil'],['navy','Marino']].map(([v,t])=>`<option value="${v}"${r.logo_background===v?' selected':''}>${t}</option>`).join('')}</select></label>${input('Fuente del logotipo o identificación de quien lo entregó','logo_source',r.logo_source)}${check('Comprobé que el archivo corresponde al logotipo oficial','logo_verified',r.logo_verified)}${check('Existe autorización o base legítima para usar este logotipo','logo_authorized',r.logo_authorized)}${input('Referencia interna de autorización de uso del logotipo','logo_authorization_reference',r.logo_authorization_reference,true)}<label>Estado de revisión<select data-client-field="verification_status">${[['pending','Pendiente'],['verified','Verificado'],['rejected','Descartado']].map(([v,t])=>`<option value="${v}"${r.verification_status===v?' selected':''}>${t}</option>`).join('')}</select></label><button type="button" class="button profile-link" data-client-remove-logo>USAR SOLO EL NOMBRE</button></fieldset>
+ <fieldset><legend>Autorización y publicación</legend><p>Publicar el nombre comunica una relación profesional. Registra su autorización sin afirmar la existencia de un contrato vigente. La autorización del logotipo se controla por separado.</p>${check('BKO está autorizada a comunicar públicamente esta relación','relation_authorized',r.relation_authorized)}${input('Referencia interna de autorización de la relación','authorization_reference',r.authorization_reference,true)}${check('Mostrar en la web (publicado)','published',r.published)}</fieldset><fieldset><legend>Antecedentes internos</legend>${input('Observaciones','observations',r.observations,true)}<p>Nombre original del CSV: ${h(r.original_name||'Registro agregado desde el CMS')}</p><p>Enlace original: ${h(r.website_original||'Sin enlace confirmado')}</p><p>Estado original del logotipo: ${h(r.logo_status_original||'No informado')}</p><p>Archivo persistente: ${h(r.logo_storage_path||r.logo_local_path||'Sin archivo')}</p></fieldset>`;
+ if(r.slug==='cauce-gestion-integral')fields.querySelector('fieldset').insertAdjacentHTML('afterbegin','<p class="client-admin-notice">CAUCE: confirma si corresponde a una unidad o servicio propio de BKO antes de comunicar una relación con un cliente externo. Conserva su clasificación y respaldo en Observaciones; mientras no se confirme, mantén el registro en borrador.</p>');
+ panel.querySelector('[data-client-delete]').hidden=!r.id;showLogo();
+}
+async function reload(id){const rows=await cmsRequest('bko_clients?select=*&order=sort_order,slug');if(!Array.isArray(rows)||!rows.every(validateClient))throw Error('No se pudo validar el catálogo.');records=rows;renderStatistics();selected=rows.find(r=>r.id===id)||rows[0]||null;clearFile();choices();if(selected)render();else{fields.replaceChildren();fields.dataset.selected=''}dirty=false}
+async function authorize(){
+ const run=++authorizationRun;
+ let role='';
+ if(readSession()){
+  role=document.querySelector('#workspace').dataset.role||'';
+  if(!role){try{role=await cmsRole()}catch{role=''}}
+ }
+ if(run!==authorizationRun)return;
+ allowed=role==='admin';tab.hidden=!allowed;
+ if(!allowed){panel.hidden=true;records=[];selected=null;fields.replaceChildren();clearPreview();clearFile();panel.querySelector('[data-client-metrics]').replaceChildren();dirty=false}
+}
+function hideOthers(){document.querySelectorAll('#workspace>section').forEach(s=>s.hidden=s!==panel);document.querySelectorAll('.admin-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b===tab)));panel.hidden=false}
+tab.onclick=async()=>{if(!allowed)return;hideOthers();try{if(!selected)await reload();announce('')}catch(e){announce(e.message)}};
+select.onchange=()=>{if(dirty&&!confirm('Hay cambios sin guardar. ¿Quieres descartarlos?')){select.value=selected.id||selected.slug;return}clearFile();selected=records.find(r=>(r.id||r.slug)===select.value);render();dirty=false;announce('')};
+fields.addEventListener('input',()=>dirty=true);
+fields.addEventListener('change',async e=>{
+ dirty=true;if(e.target.matches('[data-client-field=logo_background]')){fields.querySelector('[data-client-image-preview]').dataset.background=e.target.value;return}
+ if(!e.target.matches('[data-client-file]')||!e.target.files?.[0])return;
+ try{
+  const file=e.target.files[0];await validateLogoFile(file);const url=URL.createObjectURL(file),image=new Image();image.src=url;try{await image.decode();if(!image.naturalWidth||!image.naturalHeight||image.naturalWidth>10000||image.naturalHeight>10000)throw Error('Dimensiones del logotipo no admitidas.')}catch(error){URL.revokeObjectURL(url);throw error}
+  clearFile();selectedFile=file;previewUrl=url;selected.logo_width=image.naturalWidth;selected.logo_height=image.naturalHeight;
+  fields.querySelector('[data-client-field=logo_verified]').checked=false;fields.querySelector('[data-client-field=logo_authorized]').checked=false;fields.querySelector('[data-client-field=logo_authorization_reference]').value='';fields.querySelector('[data-client-field=verification_status]').value='pending';await showLogo();announce('Vista previa lista. Guarda para cargar el archivo en Supabase; después confirma su verificación y autorización.');
+ }catch(error){e.target.value='';announce(error.message)}
+});
+fields.addEventListener('click',e=>{if(!e.target.closest('[data-client-remove-logo]'))return;selected=payload();clearFile();Object.assign(selected,{logo_local_path:'',logo_storage_path:'',logo_verified:false,logo_authorized:false,logo_authorization_reference:'',verification_status:'pending'});render();dirty=true;announce('Se utilizará el nombre al guardar. El original local no se elimina.')});
+panel.querySelector('[data-client-add]').onclick=()=>{if(dirty&&!confirm('¿Descartar los cambios sin guardar?'))return;clearFile();selected={name:'',slug:'cliente-'+crypto.randomUUID(),original_name:'',website_url:'',website_original:'',website_verified:false,logo_local_path:'',logo_storage_path:'',logo_width:240,logo_height:100,logo_background:'white',logo_verified:false,logo_authorized:false,logo_source:'',logo_source_original:'',logo_status_original:'',verification_status:'pending',observations:'',sector:'general',sector_source:'',description:'',sort_order:Math.max(0,...records.map(r=>r.sort_order))+10,active:true,published:false,featured:false,relation_authorized:false,authorization_reference:'',logo_authorization_reference:'',original_row:''};records.push(selected);choices();render();dirty=true;announce('Nuevo cliente en borrador. Completa sus antecedentes.')};
+panel.querySelector('[data-client-reload]').onclick=async()=>{if(dirty&&!confirm('¿Descartar los cambios y recargar?'))return;try{await reload(selected?.id);announce('Catálogo actualizado.')}catch(e){announce(e.message)}};
+panel.querySelector('[data-client-preview-all]').onclick=async()=>{
+ if(!previewAll.hidden){clearPreview();return}clearPreview();previewAll.hidden=false;
+ const draft=selected?payload():null,previewRecords=draft?records.map(r=>(r.id||r.slug)===(selected.id||selected.slug)?draft:r):records;
+ const previewLogoUrls=new Map();if(selectedFile&&draft&&previewUrl)previewLogoUrls.set(draft.slug,previewUrl);
+ previewAll.innerHTML='<p class="client-admin-notice">VISTA PREVIA PRIVADA. Incluye los registros activos aunque no estén publicados; no acredita autorización de uso.</p>'+clientsMarkup(previewRecords,{preview:true,base:'../',supabaseUrl:config.supabaseUrl,previewLogoUrls});bindClients(previewAll);
+ // Private Storage previews use the administrator session, never a public URL.
+ for(const row of previewRecords.filter(r=>r.active&&r.logo_verified&&r.logo_storage_path&&!previewLogoUrls.has(r.slug))){try{const url=await privateLogo(row.logo_storage_path);if(previewAll.hidden){URL.revokeObjectURL(url);continue}previewUrls.push(url);previewAll.querySelectorAll(`[data-client-slug="${CSS.escape(row.slug)}"] .client-logo`).forEach(box=>{const img=document.createElement('img');img.src=url;img.alt='Logotipo de '+row.name;img.width=row.logo_width;img.height=row.logo_height;box.replaceChildren(img);box.className='client-logo client-logo-'+row.logo_background})}catch{}}
+ previewAll.querySelector('.clients-directory')?.setAttribute('open','');
+};
+panel.querySelector('form').onsubmit=async e=>{
+ e.preventDefault();if(busy||!selected)return;const draft=payload();
+ if(!validateClient(draft)){announce('Revisa nombre, identificador, enlace, sector y opciones de publicación.');return}
+ if(draft.published&&(!draft.relation_authorized||draft.authorization_reference.trim().length<3)){announce('Para publicar, registra la autorización de la relación profesional.');return}
+ if(draft.logo_authorized&&draft.logo_authorization_reference.trim().length<3){announce('Registra la autorización o base legítima del uso del logotipo.');return}
+ if(draft.logo_verified&&(!draft.logo_source.trim()||(!draft.logo_local_path&&!draft.logo_storage_path&&!selectedFile))){announce('Indica el archivo y su fuente antes de marcarlo como verificado.');return}
+ busy=true;panel.querySelectorAll('input,textarea,select,button').forEach(el=>el.disabled=true);announce('Guardando cliente…');
+ try{
+  if((await cmsRole())!=='admin')throw Error('Solo la administración BKO puede guardar clientes.');
+  if(selectedFile){await validateLogoFile(selectedFile);if(!uploadedPath){const path=crypto.randomUUID()+'.'+logoTypes[selectedFile.type],s=readSession();const r=await fetch(`${config.supabaseUrl}/storage/v1/object/bko-client-logos/${path}`,{method:'POST',headers:{apikey:config.supabasePublishableKey,Authorization:`Bearer ${s.access_token}`,'Content-Type':selectedFile.type},body:selectedFile,signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error('No se pudo cargar el logotipo en Supabase Storage.');uploadedPath=path}draft.logo_storage_path=uploadedPath;draft.logo_local_path='';draft.logo_verified=false;draft.logo_authorized=false;draft.logo_authorization_reference='';draft.verification_status='pending'}
+  const create=!selected.id;const data={...draft};delete data.id;delete data.revision;delete data.created_at;delete data.updated_at;if(!create)for(const k of ['original_name','website_original','logo_source_original','logo_status_original','original_row'])delete data[k];
+  const saved=await cmsRequest(create?'bko_clients':`bko_clients?id=eq.${selected.id}&revision=eq.${selected.revision}`,{method:create?'POST':'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(data)});if(saved?.length!==1)throw Error('Otro usuario modificó este cliente. Recarga antes de guardar.');
+  await reload(saved[0].id);clearPreview();announce('Cliente guardado en Supabase. '+(saved[0].published&&saved[0].active?'El nombre está publicado.':'El registro no está publicado.')+(saved[0].logo_storage_path&&!saved[0].logo_authorized?' El archivo está almacenado; falta verificar y autorizar su uso.':''));
+ }catch(error){announce(error.message)}finally{busy=false;panel.querySelectorAll('input,textarea,select,button').forEach(el=>el.disabled=false)}
+};
+panel.querySelector('[data-client-delete]').onclick=async()=>{
+ if(busy||!selected?.id||!confirm(`¿Eliminar el registro de ${selected.name}? Esta acción retira su nombre de la sección.`))return;busy=true;
+ try{const r=await cmsRequest(`bko_clients?id=eq.${selected.id}&revision=eq.${selected.revision}`,{method:'DELETE',headers:{Prefer:'return=representation'}});if(r?.length!==1)throw Error('El registro cambió en otra sesión. Recarga antes de eliminar.');await reload();clearPreview();announce('Cliente eliminado. Los archivos privados anteriores se conservan hasta su limpieza por administración.')}catch(e){announce(e.message)}finally{busy=false}
+};
+document.querySelectorAll('.admin-tabs button').forEach(button=>{if(button!==tab)button.addEventListener('click',()=>{panel.hidden=true;tab.setAttribute('aria-pressed','false')})});
+window.addEventListener('bko:session-change',authorize);window.addEventListener('bko:workspace-ready',authorize);window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});await authorize();

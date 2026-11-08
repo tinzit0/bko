@@ -13,9 +13,9 @@ html = html.replace(/<meta property="og:image" content="[^"]*">/, `<meta propert
 html = html.replace(/(<script type="application\/ld\+json">)(.*?)(<\/script>)/s, (_,start,body,end) => `${start}${JSON.stringify({...JSON.parse(body),url:origin + '/'})}${end}`);
 await writeFile(new URL('index.html', root), html);
 const routes=[''];
-for(const directory of ['equipo','seguros']){
+for(const directory of ['equipo','seguros','cauce']){
   for(const name of await readdir(new URL(directory+'/',root))){
-    if(!name.endsWith('.html'))continue;
+    if(!name.endsWith('.html')||name==='perfil.html')continue;
     const path=directory+'/'+name,route=name==='index.html'?directory+'/':path;
     let page=await readFile(new URL(path,root),'utf8');
     page=page.replace(/\s*<link rel="canonical"[^>]*>/g,'').replace(/\s*<meta property="og:url"[^>]*>/g,'').replace(/<meta name="robots" content="[^"]*">/,'<meta name="robots" content="index, follow">');

@@ -1,0 +1,15 @@
+{
+  "source": "clientes/clientes_confian_en_nosotros.csv",
+  "sha256": "1ab5f09c1d7ec4160b2ad8ddbe8a413ca869153431f04a9d8745264458b52b3f",
+  "records": 22,
+  "uniqueSlugs": 22,
+  "sourceUnchanged": true,
+  "corrections": [
+    "Retiro del envoltorio externo de cada fila y del terminador ;",
+    "Decodificación de comillas duplicadas",
+    "Conservación de los ; internos en observaciones",
+    "Nombre público de CAUCE según instrucción escrita; valor original conservado"
+  ],
+  "audioReview": "pending",
+  "authorization": "pending; unpublished by default"
+}

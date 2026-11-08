@@ -10,7 +10,14 @@
     "build:profiles": "node scripts/build-profiles.mjs",
     "build:insurance": "node scripts/build-insurance.mjs",
     "qa:insurance": "node scripts/insurance-qa.mjs",
-    "configure-domain": "node scripts/configure-domain.mjs"
+    "configure-domain": "node scripts/configure-domain.mjs",
+    "build:firm": "node scripts/build-firm.mjs",
+    "qa:firm": "node scripts/firm-qa.mjs",
+    "import:clients": "node scripts/prepare-clients-import.mjs",
+    "build:clients": "node scripts/build-clients.mjs",
+    "qa:clients": "node scripts/clients-qa.mjs"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }

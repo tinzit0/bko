@@ -1,0 +1,508 @@
+[
+  {
+    "slug": "afuen-afuen-y-cia",
+    "name": "Afüen / Afüen y Cía.",
+    "requested": "https://afuen.cl/w/",
+    "resolved": "https://afuen.cl/w/",
+    "status": 200,
+    "title": "Afüen &#8211; Arriendo de maquinarias",
+    "candidates": [
+      {
+        "url": "https://afuen.cl/w/wp-content/uploads/2026/06/logo.svg",
+        "tag": "<img loading=\"lazy\" src=\"https://afuen.cl/w/wp-content/uploads/2026/06/logo.svg\" alt=\"Afüen\" width=\"100\" height=\"100\" />"
+      },
+      {
+        "url": "https://afuen.cl/w/wp-content/uploads/2026/07/logo_nosotros.png",
+        "tag": "<img decoding=\"async\" width=\"800\" height=\"300\" src=\"https://afuen.cl/w/wp-content/uploads/2026/07/logo_nosotros.png\" class=\"attachment-full size-full wp-image-4148\" alt=\"\" srcset=\"https://afuen.cl/w/wp-content/uploads/2026/07/logo_nosotros.png 800w, https://afuen.cl/w/wp-content/uploads/2026/07/logo_nosotros-300x113.png 300w, https://afuen.cl/w/wp-content/uploads/2026/07/logo_nosotros-768x288.png 768w\" sizes=\"(max-width: 800px) 100vw, 800px\" />"
+      }
+    ]
+  },
+  {
+    "slug": "hotel-agua-nativa",
+    "name": "Hotel Agua Nativa",
+    "requested": "https://www.aguanativa.cl/",
+    "resolved": "https://www.aguanativa.cl/",
+    "status": 200,
+    "title": "Inicio - Hotel Agua Nativa",
+    "candidates": [
+      {
+        "url": "https://files-p.pxsol.com/4367/company/library/user/1825409559668980ea1e1af7045c3eb18de6e21bba1.jpg",
+        "tag": "<img loading=\"lazy\"  class=\"logo-white\"   lazy-src=\"https://files-p.pxsol.com/4367/company/library/user/1825409559668980ea1e1af7045c3eb18de6e21bba1.jpg\" alt=\"HotelAguaNativa\" >"
+      },
+      {
+        "url": "https://cdn.pxsol.com/css/images/logo_loginrd.png",
+        "tag": "<img class=\"animated slideInUp\" src=\"https://cdn.pxsol.com/css/images/logo_loginrd.png\" />"
+      }
+    ]
+  },
+  {
+    "slug": "restaurant-puerto-colono",
+    "name": "Restaurant Puerto Colono",
+    "requested": "http://www.puertocolono.cl/",
+    "resolved": "http://www.puertocolono.cl/",
+    "status": 200,
+    "title": "Puerto Colono – Bar & Restaurante en Puerto Varas",
+    "candidates": [
+      {
+        "url": "https://puertocolono.cl/img/logo.png",
+        "tag": "\"https://puertocolono.cl/img/logo.png\""
+      },
+      {
+        "url": "https://puertocolono.cl/img/Logotipo_Main_gold.png",
+        "tag": "\"https://puertocolono.cl/img/Logotipo_Main_gold.png\""
+      },
+      {
+        "url": "http://www.puertocolono.cl/img/logo.png",
+        "tag": "<img src=\"img/logo.png\" alt=\"Puerto Colono – Bar y Restaurante en Puerto Varas (logo)\" class=\"max-w-xs w-full\" loading=\"lazy\">"
+      },
+      {
+        "url": "http://www.puertocolono.cl/img/Logotipo_Main_gold.png",
+        "tag": "<img src=\"img/Logotipo_Main_gold.png\" alt=\"Puerto Colono – logotipo dorado\" loading=\"lazy\">"
+      }
+    ]
+  },
+  {
+    "slug": "transportes-fca",
+    "name": "Transportes FCA",
+    "requested": "http://www.franciscocayo.cl/",
+    "resolved": "https://franciscocayo.cl/",
+    "status": 503,
+    "title": "Sitio En Construcción",
+    "candidates": []
+  },
+  {
+    "slug": "hotel-cabana-del-lago",
+    "name": "Hotel Cabaña del Lago",
+    "requested": "https://hotelcabanadellago.cl/",
+    "resolved": "https://hotelcabanadellago.cl/",
+    "status": 200,
+    "title": "Hotel Caba&ntilde;a del Lago | Alojamiento a orillas del Lago Llanquihue",
+    "candidates": [
+      {
+        "url": "https://hotelcabanadellago.cl//web2020//wp-content//uploads//2025//01//logo-hotel-2-300x251-1.png",
+        "tag": "\"https:\\/\\/hotelcabanadellago.cl\\/web2020\\/wp-content\\/uploads\\/2025\\/01\\/logo-hotel-2-300x251-1.png\""
+      },
+      {
+        "url": "https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-255x214.png",
+        "tag": "<img fetchpriority=\"high\" width=\"255\" height=\"214\" src=\"https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-255x214.png\" class=\"attachment-cozystay_255x9999 size-cozystay_255x9999 wp-image-3210\" alt=\"Logo Hotel Caba&ntilde;a del Lago 2024\" srcset=\"https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-255x214.png 255w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-300x251.png 300w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-768x644.png 768w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-780x654.png 780w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-600x503.png 600w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-550x461.png 550w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-370x310.png 370w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2.png 940w\" sizes=\"(max-width: 255px) 100vw, 255px\">"
+      },
+      {
+        "url": "https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2.png",
+        "tag": "<img width=\"940\" height=\"788\" src=\"https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2.png\" class=\"attachment-large size-large wp-image-3210\" alt=\"Logo Hotel Caba&ntilde;a del Lago 2024\" srcset=\"https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2.png 940w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-300x251.png 300w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-768x644.png 768w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-780x654.png 780w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-600x503.png 600w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-550x461.png 550w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-370x310.png 370w, https://hotelcabanadellago.cl/web2020/wp-content/uploads/2024/12/logo-hotel-2-255x214.png 255w\" sizes=\"(max-width: 940px) 100vw, 940px\">"
+      }
+    ]
+  },
+  {
+    "slug": "autovaras",
+    "name": "AutoVaras",
+    "requested": "http://www.autovaras.cl/",
+    "resolved": "http://www.autovaras.cl/cgi-sys/suspendedpage.cgi",
+    "status": 200,
+    "title": "Account Suspended",
+    "candidates": []
+  },
+  {
+    "slug": "teski-refugio-volcan-osorno",
+    "name": "Teski Refugio Volcán Osorno",
+    "requested": "https://www.teski.cl/",
+    "resolved": "https://www.teski.cl/",
+    "status": 200,
+    "title": "Teski Refugio - Volcán Osorno",
+    "candidates": []
+  },
+  {
+    "slug": "palm-trade-chile",
+    "name": "Palm Trade Chile",
+    "requested": "https://palmtradechile.com/inicio-nacional/",
+    "resolved": "https://palmtradechile.com/inicio-nacional/",
+    "status": 200,
+    "title": "INICIO NACIONAL &#8211; Palm Trade",
+    "candidates": []
+  },
+  {
+    "slug": "laboratorios-obens",
+    "name": "Laboratorios Obens",
+    "requested": "https://www.obens.cl/",
+    "resolved": "https://www.obens.cl/",
+    "status": 200,
+    "title": "Laboratorios OBENS.cl",
+    "candidates": []
+  },
+  {
+    "slug": "machinery-chile",
+    "name": "Machinery Chile",
+    "requested": "https://www.machinerychile.cl/",
+    "resolved": "https://www.machinerychile.cl/",
+    "status": 200,
+    "title": "Machinery Chile — Venta de Maquinaria Pesada para Minería y Construcción",
+    "candidates": []
+  },
+  {
+    "slug": "ipsanort",
+    "name": "IPSANORT",
+    "requested": "https://cl.linkedin.com/company/ingenier%C3%ADa-y-consultora-ltda-ipsanort",
+    "resolved": "https://cl.linkedin.com/company/ingenier%C3%ADa-y-consultora-ltda-ipsanort",
+    "status": 403,
+    "title": "Attention Required! | Cloudflare",
+    "candidates": []
+  },
+  {
+    "slug": "directemar",
+    "name": "DIRECTEMAR",
+    "requested": "https://www.directemar.cl/",
+    "resolved": "https://www.directemar.cl/",
+    "status": 200,
+    "title": "DIRECTEMAR |",
+    "candidates": [
+      {
+        "url": "https://www.directemar.cl/directemar/site/artic/20170228/imag/foto_0000003720170228090653/Logo_DGTM300x82.svg",
+        "tag": "<img src=\"/directemar/site/artic/20170228/imag/foto_0000003720170228090653/Logo_DGTM300x82.svg\" alt=\"\" width=\"300\">"
+      },
+      {
+        "url": "https://www.directemar.cl/directemar/site/artic/20170228/imag/foto_0000002620170228090653/logo_OFICIAL_DGTM_bla_26.png",
+        "tag": "<img src=\"/directemar/site/artic/20170228/imag/foto_0000002620170228090653/logo_OFICIAL_DGTM_bla_26.png\" alt=\"\">"
+      },
+      {
+        "url": "https://www.directemar.cl/directemar/site/artic/20211103/imag/foto_0000000120211103095928/logo_137.svg",
+        "tag": "<img src=\"/directemar/site/artic/20211103/imag/foto_0000000120211103095928/logo_137.svg\">"
+      },
+      {
+        "url": "https://www.directemar.cl/directemar/site/artic/20211103/imag/foto_0000000120211103100048/logo_radio.svg",
+        "tag": "<img src=\"/directemar/site/artic/20211103/imag/foto_0000000120211103100048/logo_radio.svg\">"
+      },
+      {
+        "url": "https://www.directemar.cl/directemar/site/artic/20190905/imag/foto_0000000120190905152503/logo_meteorologia.svg",
+        "tag": "<img src=\"/directemar/site/artic/20190905/imag/foto_0000000120190905152503/logo_meteorologia.svg\" alt=\"\">"
+      }
+    ]
+  },
+  {
+    "slug": "quimlab-chile",
+    "name": "Quimlab Chile",
+    "requested": "https://quimlabchile.cl/",
+    "resolved": "https://quimlabchile.cl/",
+    "status": 200,
+    "title": "Home - Quimlab Chile",
+    "candidates": [
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/05/logo-quimlab.png",
+        "tag": "\"https://quimlabchile.cl/wp-content/uploads/2025/05/logo-quimlab.png\""
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2023/11/LOGO-QUIMLAB_Mesa-de-trabajo-1-e1699566928618-removebg-preview-100x100.png",
+        "tag": "\"https://quimlabchile.cl/wp-content/uploads/2023/11/LOGO-QUIMLAB_Mesa-de-trabajo-1-e1699566928618-removebg-preview-100x100.png\""
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2023/11/LOGO-QUIMLAB_Mesa-de-trabajo-1-e1699566928618-removebg-preview-300x300.png",
+        "tag": "\"https://quimlabchile.cl/wp-content/uploads/2023/11/LOGO-QUIMLAB_Mesa-de-trabajo-1-e1699566928618-removebg-preview-300x300.png\""
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2023/11/logoclientesdetergentes.png",
+        "tag": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://quimlabchile.cl/wp-content/uploads/2023/11/logoclientesdetergentes.png\" alt=\"logoclientesdetergentes\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-222x300.png",
+        "tag": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-222x300.png\" alt=\"LOGO-UNIFRUTTI-2021\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes-1-300x93.png",
+        "tag": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes-1-300x93.png\" alt=\"Logo-Abrantes-1\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/logo-granasur-chile-300x81.jpg",
+        "tag": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/logo-granasur-chile-300x81.jpg\" alt=\"logo-granasur-chile\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/garden-house-logo-1.jpg",
+        "tag": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/garden-house-logo-1.jpg\" alt=\"garden-house-logo-1\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-300x232.jpg",
+        "tag": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-300x232.jpg\" alt=\"LogoGoldenOmega\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-1024x791.jpg",
+        "tag": "<img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"618\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-1024x791.jpg\" class=\"attachment-large size-large wp-image-1438\" alt=\"\" srcset=\"https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-1024x791.jpg 1024w, https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-300x232.jpg 300w, https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-768x593.jpg 768w, https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-1536x1187.jpg 1536w, https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-2048x1583.jpg 2048w, https://quimlabchile.cl/wp-content/uploads/2025/11/LogoGoldenOmega-600x464.jpg 600w\" sizes=\"(max-width: 800px) 100vw, 800px\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes-300x93.png",
+        "tag": "<img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"93\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes-300x93.png\" class=\"attachment-medium size-medium wp-image-1437\" alt=\"\" srcset=\"https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes-300x93.png 300w, https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes-768x239.png 768w, https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes-600x187.png 600w, https://quimlabchile.cl/wp-content/uploads/2025/11/Logo-Abrantes.png 1000w\" sizes=\"(max-width: 300px) 100vw, 300px\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-757x1024.png",
+        "tag": "<img loading=\"lazy\" decoding=\"async\" width=\"757\" height=\"1024\" src=\"https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-757x1024.png\" class=\"attachment-large size-large wp-image-1440\" alt=\"\" srcset=\"https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-757x1024.png 757w, https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-222x300.png 222w, https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-768x1038.png 768w, https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021-600x811.png 600w, https://quimlabchile.cl/wp-content/uploads/2025/11/LOGO-UNIFRUTTI-2021.png 872w\" sizes=\"(max-width: 757px) 100vw, 757px\" />"
+      },
+      {
+        "url": "https://quimlabchile.cl/wp-content/uploads/2023/11/webpay-logo-1-1-300x140.png",
+        "tag": "<img width=\"300\" height=\"140\" src=\"https://quimlabchile.cl/wp-content/uploads/2023/11/webpay-logo-1-1-300x140.png\" class=\"attachment-medium size-medium wp-image-700\" alt=\"\" srcset=\"https://quimlabchile.cl/wp-content/uploads/2023/11/webpay-logo-1-1-300x140.png 300w, https://quimlabchile.cl/wp-content/uploads/2023/11/webpay-logo-1-1.png 500w\" sizes=\"(max-width: 300px) 100vw, 300px\" />"
+      }
+    ]
+  },
+  {
+    "slug": "cauce-gestion-integral",
+    "name": "CAUCE Gestión Integral",
+    "status": "no_official_url",
+    "candidates": []
+  },
+  {
+    "slug": "constructora-werner",
+    "name": "Constructora Werner",
+    "requested": "https://proyectos.construcciones-werner.cl/",
+    "resolved": "https://proyectos.construcciones-werner.cl/",
+    "status": 200,
+    "title": "Construcciones Werner",
+    "candidates": []
+  },
+  {
+    "slug": "puerto-pellet",
+    "name": "Puerto Pellet",
+    "requested": "https://www.puertopellet.cl/",
+    "resolved": "https://www.puertopellet.cl/",
+    "status": 200,
+    "title": "Puerto Pellet",
+    "candidates": [
+      {
+        "url": "https://dojiw2m9tvv09.cloudfront.net/80945/1/F_logo6724.webp?60&t=1794088759",
+        "tag": "\"https://dojiw2m9tvv09.cloudfront.net/80945/1/F_logo6724.webp?60&t=1794088759\""
+      },
+      {
+        "url": "https://dojiw2m9tvv09.cloudfront.net/80945/1/logo6724.webp?60&t=1794088760",
+        "tag": "\"https://dojiw2m9tvv09.cloudfront.net/80945/1/logo6724.webp?60&t=1794088760\""
+      },
+      {
+        "url": "https://dojiw2m9tvv09.cloudfront.net/80945/1/logo6724.webp",
+        "tag": "\"https://dojiw2m9tvv09.cloudfront.net/80945/1/logo6724.webp\""
+      },
+      {
+        "url": "https://dojiw2m9tvv09.cloudfront.net/80945/1/S_logo6724.webp?60&t=1794088760",
+        "tag": "<img data-bs=\"header.logo\"\n                         class=\"img-fluid\" \n                         src='https://dojiw2m9tvv09.cloudfront.net/80945/1/S_logo6724.webp?60&t=1794088760'\n                         width=\"700\"\n                         height=\"700\"\n                         title=\"Puerto Pellet\" alt=\"Puerto Pellet\"\n                    >"
+      }
+    ]
+  },
+  {
+    "slug": "inmobiliaria-tierra-santa-puerto-varas",
+    "name": "Inmobiliaria Tierra Santa (Puerto Varas)",
+    "status": "no_official_url",
+    "candidates": []
+  },
+  {
+    "slug": "agua-puerto-varas",
+    "name": "Agua Puerto Varas",
+    "requested": "https://www.aguapuertovaras.cl/",
+    "resolved": "https://www.aguapuertovaras.cl/",
+    "status": 200,
+    "title": "Agua Puerto Varas: agua premium del sur de Chile",
+    "candidates": [
+      {
+        "url": "https://www.aguapuertovaras.cl/logo/logo-apv-monocromo-negro.svg",
+        "tag": "\"/logo/logo-apv-monocromo-negro.svg\""
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logo/logo-apv.svg",
+        "tag": "\"/logo/logo-apv.svg\""
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logo/logo-apv-source.png",
+        "tag": "\"https://www.aguapuertovaras.cl/logo/logo-apv-source.png\""
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/bordelago.svg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Bordelago\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/bordelago.svg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/colonos-del-lago.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Colonos del Lago\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/colonos-del-lago.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/kingdom.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Kingdom\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/kingdom.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/la-campestre.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"La Campestre\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/la-campestre.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/cafe-blanco.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Café Blanco\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/cafe-blanco.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/alquimia.jpeg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Alquimia\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/alquimia.jpeg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/aremko.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Aremko\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/aremko.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/s91.jpeg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"S91 Coffee\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/s91.jpeg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/logistica-austral.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Logística Austral\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/logistica-austral.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/verman.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Verman\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/verman.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/dgusty.webp?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Dgusty\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/dgusty.webp?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/hotel-patagonico.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Hotel Patagónico\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/hotel-patagonico.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/tutti.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Tutti\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/tutti.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/stanley.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Stanley\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/stanley.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/pan-con-chancho.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Pan con Chancho\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/pan-con-chancho.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/brasas-el-tepual.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Brasas El Tepual\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/brasas-el-tepual.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/el-barista.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"El Barista\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/el-barista.png?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/hotel-casona-freire.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Hotel Casona Freire\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/hotel-casona-freire.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/el-llano.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"El Llano\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/el-llano.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/alisur.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Alisur\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/alisur.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/punto-express.svg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Punto Express\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/punto-express.svg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/esquina-market.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Esquina Market\" loading=\"lazy\" width=\"120\" height=\"48\" decoding=\"async\" data-nimg=\"1\" class=\"marquee-img\" style=\"color:transparent\" src=\"/logos/clientes/esquina-market.jpg?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/basquet-puerto-varas.webp?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7",
+        "tag": "<img alt=\"Básquet Puerto Varas\" loading=\"lazy\" width=\"798\" height=\"800\" decoding=\"async\" data-nimg=\"1\" class=\"comunidad-foto-logo-img\" style=\"color:transparent\" src=\"/logos/basquet-puerto-varas.webp?dpl=dpl_8kAbzA5x8rYT5Dy66vEvZgkF7iK7\"/>"
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logo/logo-apv.svg/",
+        "tag": "\"/logo/logo-apv.svg\\\""
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logo/logo-apv-source.png///",
+        "tag": "\"https://www.aguapuertovaras.cl/logo/logo-apv-source.png\\\\\\\""
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/bordelago.svg/",
+        "tag": "\"/logos/clientes/bordelago.svg\\\""
+      },
+      {
+        "url": "https://www.aguapuertovaras.cl/logos/clientes/kingdom.png/",
+        "tag": "\"/logos/clientes/kingdom.png\\\""
+      }
+    ]
+  },
+  {
+    "slug": "centro-comercial-dona-ema",
+    "name": "Centro Comercial Doña Ema",
+    "requested": "http://www.donaema.cl/",
+    "status": "unavailable",
+    "error": "ENOTFOUND",
+    "candidates": []
+  },
+  {
+    "slug": "las-buenas-brasas",
+    "name": "Las Buenas Brasas",
+    "requested": "http://www.lbb.cl/",
+    "resolved": "https://www.lbb.cl/",
+    "status": 200,
+    "title": "PON288: Memperkenalkan Platform Terbaru Kebebasan Finansial Anda",
+    "candidates": [
+      {
+        "url": "https://ik.imagekit.io/zex97gx8t/Pon288/logo-pon288.png?updatedAt=1774431108253",
+        "tag": "<img src=\"https://ik.imagekit.io/zex97gx8t/Pon288/logo-pon288.png?updatedAt=1774431108253\" data-src=\"https://ik.imagekit.io/zex97gx8t/Pon288/logo-pon288.png?updatedAt=1774431108253\" alt=\"PON288\" class=\"lazyImage\" width=\"130\" height=\"35\" data-loaded=\"false\" data-pagespeed-url-hash=\"2600325937\" onload=\"pagespeed.CriticalImages.checkImageForCriticality(this);\">"
+      },
+      {
+        "url": "https://www.static-src.com/frontend/static/img/blibli-tiket-logo.7100ba16.svg",
+        "tag": "<img data-v-f03a55b3=\"\" data-v-e8a6e46e=\"\" src=\"https://www.static-src.com/frontend/static/img/blibli-tiket-logo.7100ba16.svg\" alt=\"PON288\" class=\"login-hover__image\" data-pagespeed-url-hash=\"1323005503\" onload=\"pagespeed.CriticalImages.checkImageForCriticality(this);\">"
+      },
+      {
+        "url": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/105/MTA-178175238/no_brand_mystery_box_full01_b7kg1a4y.jpg",
+        "tag": "<img data-v-ea260dd7=\"\" src=\"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/105/MTA-178175238/no_brand_mystery_box_full01_b7kg1a4y.jpg\" alt=\"PON288\" class=\"image\" data-pagespeed-url-hash=\"1376155484\" onload=\"pagespeed.CriticalImages.checkImageForCriticality(this);\">"
+      },
+      {
+        "url": "https://www.static-src.com/frontend/product-detail/static/img/logo-os.7a2a5058.svg",
+        "tag": "<img data-v-65487edb=\"\" src=\"https://www.static-src.com/frontend/product-detail/static/img/logo-os.7a2a5058.svg\" alt=\"PON288\" data-pagespeed-url-hash=\"3898948262\" onload=\"pagespeed.CriticalImages.checkImageForCriticality(this);\">"
+      }
+    ]
+  },
+  {
+    "slug": "up-social-club-osorno",
+    "name": "UP Social Club Osorno",
+    "requested": "https://up-social-club.negocio.site/",
+    "resolved": "https://up-social-club.negocio.site/",
+    "status": 404,
+    "title": "Error 404 (Not Found)!!1",
+    "candidates": [
+      {
+        "url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png",
+        "tag": "url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png)"
+      },
+      {
+        "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png",
+        "tag": "url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png)"
+      }
+    ]
+  },
+  {
+    "slug": "hotel-oelckers",
+    "name": "Hotel Oelckers",
+    "requested": "https://hoteloelckers.cl/",
+    "resolved": "https://hoteloelckers.cl/",
+    "status": 200,
+    "title": "Hotel Oelckers | Hornopiren - Chile",
+    "candidates": [
+      {
+        "url": "https://hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.eot",
+        "tag": "url(//hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.eot)"
+      },
+      {
+        "url": "https://hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.eot?#iefix",
+        "tag": "url(//hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.eot?#iefix)"
+      },
+      {
+        "url": "https://hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.woff2",
+        "tag": "url(//hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.woff2)"
+      },
+      {
+        "url": "https://hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.woff",
+        "tag": "url(//hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.woff)"
+      },
+      {
+        "url": "https://hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.ttf",
+        "tag": "url(//hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.ttf)"
+      },
+      {
+        "url": "https://hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.svg#fontawesome",
+        "tag": "url(//hoteloelckers.cl/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.svg#fontawesome)"
+      },
+      {
+        "url": "https://hoteloelckers.cl/wp-content/uploads/2024/01/logo.png",
+        "tag": "<img src=\"https://hoteloelckers.cl/wp-content/uploads/2024/01/logo.png\" width=\"243\" height=\"91\" alt=\"Hotel Oelckers\" id=\"logo\" data-height-percentage=\"100\" />"
+      }
+    ]
+  }
+]

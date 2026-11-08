@@ -5,7 +5,7 @@ const nav=document.querySelector('#navigation');
 const header=document.querySelector('#header');
 function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menú');nav.classList.remove('is-open');document.body.classList.remove('menu-open')}
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');nav.classList.toggle('is-open',open);document.body.classList.toggle('menu-open',open)});
-nav.addEventListener('click',closeMenu);
+nav.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 document.addEventListener('click',e=>{if(!header.contains(e.target))closeMenu()});
 matchMedia('(min-width:1201px)').addEventListener('change',e=>{if(e.matches)closeMenu()});

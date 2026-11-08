@@ -9,7 +9,7 @@ export async function cmsRequest(path,options={}){
   session=await refreshing;
  }
  const r=await fetch(config.supabaseUrl+'/rest/v1/'+path,{...options,headers:{apikey:config.supabasePublishableKey,Authorization:`Bearer ${session.access_token}`,'Content-Type':'application/json',...options.headers},signal:AbortSignal.timeout(20000)});
- const data=await r.json().catch(()=>null);if(!r.ok)throw Error(r.status===401||r.status===403?'Tu cuenta no tiene permiso para guardar estos cambios.':'No se pudo guardar. Revisa la conexión e inténtalo nuevamente.');return data;
+ const data=await r.json().catch(()=>null);if(!r.ok)throw Error(data?.code==='40001'||data?.code==='23505'?'Otro usuario modificó este contenido. Recarga antes de guardar.':r.status===401||r.status===403?'Tu cuenta no tiene permiso para guardar estos cambios.':'No se pudo guardar. Revisa la conexión e inténtalo nuevamente.');return data;
 }
 export async function cmsRole(){const s=readSession();if(!s?.user?.id)return '';const rows=await cmsRequest('bko_admin_members?select=role&user_id=eq.'+encodeURIComponent(s.user.id));return rows[0]?.role||''}
 export async function loadDocument(key){const {config}=await import('./config.js');const r=await fetch(config.supabaseUrl+'/rest/v1/site_content?select=value,revision&key=eq.'+key,{headers:{apikey:config.supabasePublishableKey},cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error('No se pudo cargar el contenido publicado.');const rows=await r.json();return rows[0]||{value:key==='website'?{pages:{}}:null,revision:null}}

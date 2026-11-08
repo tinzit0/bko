@@ -1,0 +1,14 @@
+import {config} from './config.js';
+import {validateConsultation} from './validation.js';
+const form=document.querySelector('#cauce-form'),out=form.querySelector('[role=status]');let startedAt=Date.now(),busy=false,turnstileToken='',widget;
+if(config.turnstileSiteKey){window.bkoCauceTurnstile=()=>{widget=window.turnstile.render('#cauce-turnstile',{sitekey:config.turnstileSiteKey,callback:t=>turnstileToken=t,'expired-callback':()=>turnstileToken=''})};const script=document.createElement('script');script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=bkoCauceTurnstile&render=explicit';script.async=true;document.head.append(script)}
+form.addEventListener('submit',async e=>{
+ e.preventDefault();if(busy)return;const data=Object.fromEntries(new FormData(form));for(const k in data)if(typeof data[k]==='string')data[k]=data[k].trim();data.area='CAUCE Gestión Integral';data.privacy=form.elements.privacy.checked;
+ const errors=validateConsultation(data);form.querySelectorAll('.field-error').forEach(el=>el.textContent='');form.querySelectorAll('[aria-invalid]').forEach(el=>el.removeAttribute('aria-invalid'));
+ for(const [key,message]of Object.entries(errors)){form.querySelector(`[data-error="${key}"]`).textContent=message;form.elements[key].setAttribute('aria-invalid','true')}
+ if(Object.keys(errors).length){out.textContent='Revisa los campos indicados.';form.elements[Object.keys(errors)[0]].focus();return}
+ if(Date.now()-startedAt<3000||data.website){out.textContent='Espera unos segundos antes de enviar.';return}
+ if(config.turnstileSiteKey&&!turnstileToken){out.textContent='Completa la verificación de seguridad.';return}
+ busy=true;const button=form.querySelector('[type=submit]');button.disabled=true;form.setAttribute('aria-busy','true');out.textContent='Enviando solicitud…';
+ try{const r=await fetch(config.supabaseUrl+'/functions/v1/contact',{method:'POST',headers:{apikey:config.supabasePublishableKey,'Content-Type':'application/json'},body:JSON.stringify({...data,startedAt,turnstileToken}),signal:AbortSignal.timeout(20000)});const result=await r.json();if(!r.ok||result.ok!==true||!/^[-0-9a-f]{36}$/i.test(result.id||''))throw Error(r.status===429?'Has realizado varias consultas. Espera antes de reenviar.':'No pudimos confirmar la recepción. Tus datos siguen en el formulario. Inténtalo más tarde.');out.textContent='Solicitud recibida correctamente. BKO coordinará tu asesoría con CAUCE.';form.reset();startedAt=Date.now();window.dispatchEvent(new CustomEvent('bko:consultation-sent',{detail:{channel:'cauce'}}))}catch(error){out.textContent=error.name==='TimeoutError'?'La conexión tardó demasiado. Consulta con BKO antes de reenviar.':error.message}finally{busy=false;button.disabled=false;form.removeAttribute('aria-busy');if(widget!==undefined&&window.turnstile){window.turnstile.reset(widget);turnstileToken=''}}
+});

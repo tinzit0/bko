@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url);
+let home=await readFile(new URL('index.html',root),'utf8');
+if(!home.includes('data-clients'))home=home.replace('    <section id="practicas"','    <section id="clientes" class="section clients-section" data-clients hidden aria-labelledby="clients-title"></section>\n\n    <section id="practicas"');
+if(!home.includes('js/clients-public.js'))home=home.replace('</head>','<link rel="stylesheet" href="css/clients.css"><script type="module" src="js/clients-public.js"></script></head>');
+await writeFile(new URL('index.html',root),home);
+const adminUrl=new URL('admin/index.html',root);let admin=await readFile(adminUrl,'utf8');if(!admin.includes('clients-admin.js'))admin=admin.replace('</head>','<link rel="stylesheet" href="../css/clients.css"><script type="module" src="../js/clients-admin.js"></script></head>');if(!admin.includes('data-tab="clients"'))admin=admin.replace('</nav><section id="crm"','<button data-tab="clients" class="button profile-link" type="button" hidden>GESTIÓN DE CLIENTES Y EMPRESAS</button></nav><section id="crm"');await writeFile(adminUrl,admin);
+const websiteUrl=new URL('js/website-content.js',root);let website=await readFile(websiteUrl,'utf8');website=website.replaceAll("'[data-firm-team],","'[data-clients],[data-firm-team],");await writeFile(websiteUrl,website);
+const packageUrl=new URL('package.json',root),pkg=JSON.parse(await readFile(packageUrl,'utf8'));pkg.scripts['import:clients']='node scripts/prepare-clients-import.mjs';pkg.scripts['build:clients']='node scripts/build-clients.mjs';pkg.scripts['qa:clients']='node scripts/clients-qa.mjs';await writeFile(packageUrl,JSON.stringify(pkg,null,2)+'\n');
+console.log('Sección de clientes integrada en la portada; panel administrativo incorporado.');

@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-07",
+  "project": "kxldsjodgfonrrlwjbws",
+  "migration": "20261107212814_firm_professionals_people_cauce",
+  "migrationApplied": true,
+  "contactFunctionVersion": 2,
+  "initialRecords": 14,
+  "databaseChecks": {
+    "draftHiddenFromAnon": true,
+    "privateTableDeniedToAnon": true,
+    "adminRpcWriteAndRevision": true,
+    "staleRevisionRejected": true,
+    "unauthorizedWriteRejected": true,
+    "unapprovedEmailStoredPrivately": true,
+    "cauceConsultationStoredWithOwnArea": true,
+    "temporaryTransactionsRolledBack": true
+  },
+  "verificationMethod": "Real Supabase SQL transactions using authenticated and anonymous database roles; separate browser UI checks with mocked transport.",
+  "newObjectsAdvisorFindings": 0,
+  "unitTestsPassed": 25,
+  "responsivePageViewportChecks": 36,
+  "responsiveWidths": [1440, 820, 390, 320],
+  "frontendPublished": false,
+  "audioReview": "pending: files and transcripts unavailable"
+}

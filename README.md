@@ -1,5 +1,9 @@
 # BKO — Bentjerodt Koplin y Oyarzun Consultores
 
+La sección institucional de clientes está integrada en la portada y dispone de **GESTIÓN DE CLIENTES** en el CMS. Se importaron 22 registros y se incorporaron 13 logotipos oficiales; la publicación está pendiente de sus autorizaciones. Ver [archivos, fuentes, administración, pruebas y pendientes](docs/CLIENTES.md).
+
+La actualización de equipo, Personas y CAUCE está implementada en el proyecto y conectada a Supabase. Administración → **EQUIPO, PERSONAS Y CAUCE** permite editar perfiles, orden, publicación, relaciones y servicios. Ver [implementación, archivos, pruebas y pendientes](docs/ACTUALIZACION-INTEGRAL.md).
+
 El área de Negocios y Seguros Corporativos, el CMS y el CRM autenticado se documentan en [docs/SEGUROS.md](docs/SEGUROS.md). Las tres migraciones y la función de contacto están activas en Supabase y se verificaron con escrituras reales y pruebas de permisos. La cuenta administradora solicitada por el propietario está creada y su acceso al CMS/CRM fue verificado. Queda pendiente el dominio público para autorizar sus envíos. La evidencia de activación está en [docs/VERIFICACION-SUPABASE.json](docs/VERIFICACION-SUPABASE.json).
 
 Sitio corporativo one page en español de Chile. HTML semántico, CSS responsive y JavaScript modular; sin frameworks ni dependencias de producción. Backend implementado como Edge Function de Supabase y migración PostgreSQL con RLS. Se conservan sin cambios los originales de `como quiero la pagina/`.
@@ -38,13 +42,13 @@ No requiere `npm install`. No abrir `index.html` mediante `file://`: usa módulo
 
 La URL y clave **publishable** entregadas están configuradas en el frontend. La función hace una petición real a `/functions/v1/contact`. No existe un modo de envío simulado. Si no se ha desplegado la función o falla el servicio, el sitio muestra error y conserva el mensaje.
 
-La base de datos y la función todavía requieren activación por una cuenta autorizada en Supabase. La clave pública no permite crear tablas, desplegar funciones ni leer consultas privadas. No se dispuso de una conexión administrativa a Supabase en esta sesión y la red saliente del ejecutor está restringida. Ver [SUPABASE.md](docs/SUPABASE.md).
+La base de datos y la función de contacto están activas en Supabase. La actualización integral incorpora `bko_content`, `bko_content_private` y guardado transaccional con control de revisión. La clave pública permite leer exclusivamente el contenido publicado; los permisos administrativos se validan en la base de datos. Los antecedentes de instalación anteriores se conservan en [SUPABASE.md](docs/SUPABASE.md).
 
 Se inicializó Git localmente. La configuración del remoto fue bloqueada por los permisos del entorno sobre `.git/config`; no hay commit ni push confirmados. El flujo de publicación está preparado para `https://github.com/tinzit0/bko.git`. Ver [PUBLICACION.md](docs/PUBLICACION.md).
 
 ## Antes de publicar
 
-1. Activar migración y función en Supabase; configurar orígenes autorizados y probar una consulta de aceptación.
+1. Configurar el origen del dominio definitivo en la función de contacto y probar una consulta de aceptación. La migración de la actualización integral y la versión 2 de la función ya están activas.
 2. Entregar dominio definitivo y ejecutar `npm run configure-domain -- https://dominio-real.cl`. Genera canonical, Open Graph absoluto, Schema con URL, sitemap y robots indexables. La versión de preparación tiene **noindex** y robots bloqueado para evitar indexar borradores.
 3. Completar y aprobar política de privacidad, responsable y plazo de conservación. Actualizar `privacy_version` en la migración/función según el texto aprobado.
 4. Entregar retratos autorizados y biografías, contenido editorial real y los tres correos. Los placeholders no inventan cargos, fechas o publicaciones.

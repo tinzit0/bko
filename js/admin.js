@@ -15,7 +15,7 @@ async function request(path,options={}){
  if(!r.ok)throw Error(r.status===401||r.status===403?'La cuenta no tiene permiso para esta operación.':'No se pudo completar la operación. Revisa la conexión, las migraciones y los datos ingresados.');
  return data;
 }
-function showLogin(){$('#login').hidden=false;$('#workspace').hidden=true;$('#logout').hidden=true;$('#inquiries').replaceChildren();$('#metrics').replaceChildren()}
+function showLogin(){role='';delete $('#workspace').dataset.role;window.dispatchEvent(new Event('bko:workspace-ready'));$('#login').hidden=false;$('#workspace').hidden=true;$('#logout').hidden=true;$('#inquiries').replaceChildren();$('#metrics').replaceChildren()}
 function options(items,selected=''){return items.map(([value,label])=>`<option value="${h(value)}"${value===selected?' selected':''}>${h(label)}</option>`).join('')}
 const responsibleOptions=selected=>options(responsibles.map(r=>[r.id,r.name+(r.active?'':' (inactivo)')]),selected);
 async function openWorkspace(){
@@ -28,9 +28,10 @@ async function openWorkspace(){
  $('#filters [name="area"]').disabled=role!=='admin';
  $('#filters [name="insurance_type"]').innerHTML='<option value="">Todos</option>'+options(insuranceCategories.map(t=>[t,t]));$('#filters [name="responsible_id"]').innerHTML='<option value="">Todos</option>'+responsibleOptions();
  $('#responsibles').innerHTML=responsibles.map(r=>`<li>${h(r.name)}${r.active?'':' (inactivo)'}</li>`).join('');
- renderEditor();showTab(role==='editor'?'cms':'crm');announce('Sesión iniciada.');
+ $('#workspace').dataset.role=role;document.querySelector('[data-tab="clients"]').hidden=role!=='admin';
+ renderEditor();showTab(role==='editor'?'cms':'crm');announce('Sesión iniciada.');window.dispatchEvent(new Event('bko:workspace-ready'));
 }
-function showTab(name){if(name==='settings'&&role!=='admin'||name==='cms'&&!['admin','editor'].includes(role)||name==='crm'&&role==='editor')return;for(const id of['crm','cms','settings'])$('#'+id).hidden=id!==name;document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tab===name)));if(name==='crm')loadCrm()}
+function showTab(name){if(name==='clients'&&role!=='admin'||name==='settings'&&role!=='admin'||name==='cms'&&!['admin','editor'].includes(role)||name==='crm'&&role==='editor')return;for(const id of['crm','cms','settings'])$('#'+id).hidden=id!==name;document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tab===name)));if(name==='crm')loadCrm()}
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
 $('#login').addEventListener('submit',async e=>{e.preventDefault();const button=e.target.querySelector('button');button.disabled=true;try{const f=new FormData(e.target);storeSession(await auth('token?grant_type=password',{email:f.get('email'),password:f.get('password')}));e.target.reset();await openWorkspace()}catch(error){storeSession(null);showLogin();announce(error.message)}finally{button.disabled=false}});
 $('#logout').addEventListener('click',async()=>{const token=session?.access_token;storeSession(null);showLogin();announce('Sesión cerrada.');if(token)await fetch(`${apiRoot}/auth/v1/logout`,{method:'POST',headers:{apikey:config.supabasePublishableKey,Authorization:`Bearer ${token}`}}).catch(()=>{})});

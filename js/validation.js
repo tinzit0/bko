@@ -1,4 +1,4 @@
-export const areas = ['Corporativo y empresarial','Minería, construcción y servicios asociados','Marítimo, naviero, lacustre y seguros','Acuicultura y recursos hidrobiológicos','Derecho laboral','Inmobiliario y familia','Necesito orientación'];
+export const areas = ['Corporativo','Marítimo y Naviero','Inmobiliario','Derecho de Familia','Derecho Laboral','CAUCE Gestión Integral','Corporativo y empresarial','Minería, construcción y servicios asociados','Marítimo, naviero, lacustre y seguros','Acuicultura y recursos hidrobiológicos','Derecho laboral','Inmobiliario y familia','Necesito orientación'];
 export const cities = ['Calama','Santiago','Puerto Varas','Otra ciudad'];
 export function validateConsultation(data) {
   const errors = {};

@@ -39,49 +39,43 @@
         "label": "Página · La firma"
       },
       {
-        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Áreas de práctica",
         "label": "Página · Áreas de práctica"
       },
       {
-        "key": "#navigation>a:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Personas",
         "label": "Página · Personas"
       },
       {
-        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Negocios y seguros",
-        "label": "Página · Negocios y seguros"
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
       },
       {
-        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "key": "#navigation>a:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "key": "#navigation>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "key": "#navigation>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -91,12 +85,6 @@
         "type": "text",
         "value": "Agenda una reunión",
         "label": "Página · Agenda una reunión"
-      },
-      {
-        "key": "#header>a:nth-of-type(3)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Gestión",
-        "label": "Página · Gestión"
       },
       {
         "key": "#inicio>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
@@ -173,23 +161,17 @@
       {
         "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(2)|text:0",
         "type": "text",
-        "value": "Acuicultura",
-        "label": "inicio · Acuicultura"
-      },
-      {
-        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(3)|text:0",
-        "type": "text",
         "value": "Marítimo y naviero",
         "label": "inicio · Marítimo y naviero"
       },
       {
-        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(4)|text:0",
+        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Inmobiliario",
         "label": "inicio · Inmobiliario"
       },
       {
-        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(5)|text:0",
+        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Turismo",
         "label": "inicio · Turismo"
@@ -271,78 +253,6 @@
         "type": "text",
         "value": "Sur productivo",
         "label": "inicio · Sur productivo"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Derecho",
-        "label": "Página · Derecho"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(1)>h2:nth-of-type(1)|text:1",
-        "type": "text",
-        "value": "corporativo",
-        "label": "Página · corporativo"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Soluciones legales para empresas que operan, invierten y crecen.",
-        "label": "Página · Soluciones legales para empresas que operan, invierten y crecen."
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(2)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Minería, construcción",
-        "label": "Página · Minería, construcción"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(2)>h2:nth-of-type(1)|text:1",
-        "type": "text",
-        "value": "y servicios asociados",
-        "label": "Página · y servicios asociados"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asesoría a contratistas, proveedores y empresas que hacen posible la operación.",
-        "label": "Página · Asesoría a contratistas, proveedores y empresas que hacen posible la operación."
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(3)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Marítimo, naviero",
-        "label": "Página · Marítimo, naviero"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(3)>h2:nth-of-type(1)|text:1",
-        "type": "text",
-        "value": "y seguros",
-        "label": "Página · y seguros"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Experiencia jurídica en navegación y actividades relacionadas.",
-        "label": "Página · Experiencia jurídica en navegación y actividades relacionadas."
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(4)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Derecho inmobiliario",
-        "label": "Página · Derecho inmobiliario"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(4)>h2:nth-of-type(1)|text:1",
-        "type": "text",
-        "value": "y de familia",
-        "label": "Página · y de familia"
-      },
-      {
-        "key": "#contenido>section:nth-of-type(2)>a:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asesoría patrimonial y acompañamiento jurídico personalizado.",
-        "label": "Página · Asesoría patrimonial y acompañamiento jurídico personalizado."
       },
       {
         "key": "#firma>div:nth-of-type(1)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
@@ -477,360 +387,6 @@
         "label": "practicas · Selecciona un área para conocer más."
       },
       {
-        "key": "#corporativo>summary:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "01",
-        "label": "practicas · 01"
-      },
-      {
-        "key": "#corporativo>summary:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Corporativo y empresarial",
-        "label": "practicas · Corporativo y empresarial"
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Soluciones legales para empresas que operan, invierten y crecen.",
-        "label": "practicas · Soluciones legales para empresas que operan, invierten y crecen."
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asesoría corporativa permanente.",
-        "label": "practicas · Asesoría corporativa permanente."
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Constitución y modificación de sociedades.",
-        "label": "practicas · Constitución y modificación de sociedades."
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Relaciones entre socios.",
-        "label": "practicas · Relaciones entre socios."
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Contratos y negociaciones comerciales.",
-        "label": "practicas · Contratos y negociaciones comerciales."
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Proyectos e inversiones.",
-        "label": "practicas · Proyectos e inversiones."
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(6)|text:0",
-        "type": "text",
-        "value": "Prevención y resolución de controversias.",
-        "label": "practicas · Prevención y resolución de controversias."
-      },
-      {
-        "key": "#corporativo>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Conversemos sobre tu empresa",
-        "label": "practicas · Conversemos sobre tu empresa"
-      },
-      {
-        "key": "#mineria>summary:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "02",
-        "label": "practicas · 02"
-      },
-      {
-        "key": "#mineria>summary:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Minería, construcción y servicios asociados",
-        "label": "practicas · Minería, construcción y servicios asociados"
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asesoría a quienes hacen posible la operación.",
-        "label": "practicas · Asesoría a quienes hacen posible la operación."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Contratos de servicios.",
-        "label": "practicas · Contratos de servicios."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Arriendo de maquinaria.",
-        "label": "practicas · Arriendo de maquinaria."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Transporte y logística.",
-        "label": "practicas · Transporte y logística."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Mantenimiento y suministro.",
-        "label": "practicas · Mantenimiento y suministro."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Administración contractual.",
-        "label": "practicas · Administración contractual."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(6)|text:0",
-        "type": "text",
-        "value": "Cobranza y recuperación de créditos.",
-        "label": "practicas · Cobranza y recuperación de créditos."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(7)|text:0",
-        "type": "text",
-        "value": "Compraventa y arrendamiento de maquinaria.",
-        "label": "practicas · Compraventa y arrendamiento de maquinaria."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(8)|text:0",
-        "type": "text",
-        "value": "Terrenos, patios, bodegas e instalaciones industriales.",
-        "label": "practicas · Terrenos, patios, bodegas e instalaciones industriales."
-      },
-      {
-        "key": "#mineria>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Consulta sobre esta área",
-        "label": "practicas · Consulta sobre esta área"
-      },
-      {
-        "key": "#maritimo>summary:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "03",
-        "label": "practicas · 03"
-      },
-      {
-        "key": "#maritimo>summary:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Marítimo, naviero, lacustre y seguros",
-        "label": "practicas · Marítimo, naviero, lacustre y seguros"
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asesoría jurídica vinculada a la navegación y sus actividades.",
-        "label": "practicas · Asesoría jurídica vinculada a la navegación y sus actividades."
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Régimen jurídico y registral de naves.",
-        "label": "practicas · Régimen jurídico y registral de naves."
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Matrícula e inscripción.",
-        "label": "practicas · Matrícula e inscripción."
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Contratos relativos al dominio.",
-        "label": "practicas · Contratos relativos al dominio."
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Hipotecas y gravámenes.",
-        "label": "practicas · Hipotecas y gravámenes."
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Controversias marítimas y lacustres.",
-        "label": "practicas · Controversias marítimas y lacustres."
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(6)|text:0",
-        "type": "text",
-        "value": "Seguros y siniestros.",
-        "label": "practicas · Seguros y siniestros."
-      },
-      {
-        "key": "#maritimo>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Consulta sobre esta área",
-        "label": "practicas · Consulta sobre esta área"
-      },
-      {
-        "key": "#acuicultura>summary:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "04",
-        "label": "practicas · 04"
-      },
-      {
-        "key": "#acuicultura>summary:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Acuicultura y recursos hidrobiológicos",
-        "label": "practicas · Acuicultura y recursos hidrobiológicos"
-      },
-      {
-        "key": "#acuicultura>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Acompañamiento jurídico para la actividad acuícola.",
-        "label": "practicas · Acompañamiento jurídico para la actividad acuícola."
-      },
-      {
-        "key": "#acuicultura>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Concesiones de acuicultura.",
-        "label": "practicas · Concesiones de acuicultura."
-      },
-      {
-        "key": "#acuicultura>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Proyectos productivos.",
-        "label": "practicas · Proyectos productivos."
-      },
-      {
-        "key": "#acuicultura>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Centros de cultivo.",
-        "label": "practicas · Centros de cultivo."
-      },
-      {
-        "key": "#acuicultura>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Relaciones contractuales.",
-        "label": "practicas · Relaciones contractuales."
-      },
-      {
-        "key": "#acuicultura>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Producción y comercialización.",
-        "label": "practicas · Producción y comercialización."
-      },
-      {
-        "key": "#acuicultura>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Consulta sobre esta área",
-        "label": "practicas · Consulta sobre esta área"
-      },
-      {
-        "key": "#laboral>summary:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "05",
-        "label": "practicas · 05"
-      },
-      {
-        "key": "#laboral>summary:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Derecho laboral",
-        "label": "practicas · Derecho laboral"
-      },
-      {
-        "key": "#laboral>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Acompañamiento para empresas y personas en sus relaciones laborales.",
-        "label": "practicas · Acompañamiento para empresas y personas en sus relaciones laborales."
-      },
-      {
-        "key": "#laboral>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asesoría laboral preventiva.",
-        "label": "practicas · Asesoría laboral preventiva."
-      },
-      {
-        "key": "#laboral>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Relaciones laborales.",
-        "label": "practicas · Relaciones laborales."
-      },
-      {
-        "key": "#laboral>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Negociaciones.",
-        "label": "practicas · Negociaciones."
-      },
-      {
-        "key": "#laboral>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Controversias laborales.",
-        "label": "practicas · Controversias laborales."
-      },
-      {
-        "key": "#laboral>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Asesoría a trabajadores y empresas.",
-        "label": "practicas · Asesoría a trabajadores y empresas."
-      },
-      {
-        "key": "#laboral>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Consulta sobre esta área",
-        "label": "practicas · Consulta sobre esta área"
-      },
-      {
-        "key": "#inmobiliario>summary:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "06",
-        "label": "practicas · 06"
-      },
-      {
-        "key": "#inmobiliario>summary:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Inmobiliario y familia",
-        "label": "practicas · Inmobiliario y familia"
-      },
-      {
-        "key": "#inmobiliario>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asesoría patrimonial y acompañamiento jurídico personalizado.",
-        "label": "practicas · Asesoría patrimonial y acompañamiento jurídico personalizado."
-      },
-      {
-        "key": "#inmobiliario>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Operaciones inmobiliarias.",
-        "label": "practicas · Operaciones inmobiliarias."
-      },
-      {
-        "key": "#inmobiliario>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Adquisición y administración de inmuebles.",
-        "label": "practicas · Adquisición y administración de inmuebles."
-      },
-      {
-        "key": "#inmobiliario>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Proyectos e inversiones.",
-        "label": "practicas · Proyectos e inversiones."
-      },
-      {
-        "key": "#inmobiliario>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Asesoría patrimonial.",
-        "label": "practicas · Asesoría patrimonial."
-      },
-      {
-        "key": "#inmobiliario>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Asesoría jurídica familiar.",
-        "label": "practicas · Asesoría jurídica familiar."
-      },
-      {
-        "key": "#inmobiliario>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Consulta sobre esta área",
-        "label": "practicas · Consulta sobre esta área"
-      },
-      {
         "key": "#sectores>div:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
         "type": "text",
         "value": "03 — Sectores de actividad",
@@ -893,20 +449,14 @@
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(2)>div:nth-of-type(2)>h3:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Acuicultura y recursos",
-        "label": "sectores · Acuicultura y recursos"
-      },
-      {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(2)>div:nth-of-type(2)>h3:nth-of-type(1)|text:1",
-        "type": "text",
-        "value": "hidrobiológicos",
-        "label": "sectores · hidrobiológicos"
+        "value": "Marítimo y Naviero",
+        "label": "sectores · Marítimo y Naviero"
       },
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Centros de cultivo, producción y comercialización.",
-        "label": "sectores · Centros de cultivo, producción y comercialización."
+        "value": "Acuicultura y recursos hidrobiológicos: centros de cultivo, producción y comercialización.",
+        "label": "sectores · Acuicultura y recursos hidrobiológicos: centros de cultivo, producción y comercializa"
       },
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
@@ -969,130 +519,34 @@
         "label": "sectores · Asesoría corporativa y contractual para proyectos turísticos."
       },
       {
-        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
         "type": "text",
         "value": "DE NORTE A SUR, UNA MISMA FORMA DE ASESORAR.",
         "label": "Página · DE NORTE A SUR, UNA MISMA FORMA DE ASESORAR."
       },
       {
-        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "La distancia cambia.",
         "label": "Página · La distancia cambia."
       },
       {
-        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>h2:nth-of-type(1)>em:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>h2:nth-of-type(1)>em:nth-of-type(1)|text:0",
         "type": "text",
         "value": "El compromiso permanece.",
         "label": "Página · El compromiso permanece."
       },
       {
-        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Conecta con BKO",
         "label": "Página · Conecta con BKO"
       },
       {
-        "key": "#contenido>section:nth-of-type(6)>span:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(7)>span:nth-of-type(1)|text:0",
         "type": "text",
         "value": "CHILE / 22° S — 41° S",
         "label": "Página · CHILE / 22° S — 41° S"
-      },
-      {
-        "key": "#personas>div:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "PERSONAS",
-        "label": "personas · PERSONAS"
-      },
-      {
-        "key": "#people-title|text:0",
-        "type": "text",
-        "value": "Asesoría para ti y",
-        "label": "personas · Asesoría para ti y"
-      },
-      {
-        "key": "#people-title>em:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "tu familia.",
-        "label": "personas · tu familia."
-      },
-      {
-        "key": "#personas>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Áreas de atención jurídica a personas.",
-        "label": "personas · Áreas de atención jurídica a personas."
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "DERECHO DE FAMILIA",
-        "label": "personas · DERECHO DE FAMILIA"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Acompañamiento integral",
-        "label": "personas · Acompañamiento integral"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Asesoría jurídica en materias de Derecho de Familia, con una visión integral y acompañamiento profesional en los asuntos personales y familiares.",
-        "label": "personas · Asesoría jurídica en materias de Derecho de Familia, con una visión integral y acompa"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(1)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Especialidades y profesional responsable de la asesoría jurídica: información por completar.",
-        "label": "personas · Especialidades y profesional responsable de la asesoría jurídica: información por com"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(1)>p:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Área de familia: Dra. Fenella Reyes Gonzalo, psiquiatra infantojuvenil.",
-        "label": "personas · Área de familia: Dra. Fenella Reyes Gonzalo, psiquiatra infantojuvenil."
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Conoce su perfil ↗",
-        "label": "personas · Conoce su perfil ↗"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "DERECHO LABORAL",
-        "label": "personas · DERECHO LABORAL"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(2)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Relaciones laborales y litigación",
-        "label": "personas · Relaciones laborales y litigación"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(2)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Asesoría y representación jurídica en materias laborales, tanto para trabajadores como para empleadores, con especial atención a las relaciones individuales y colectivas de trabajo, la litigación y la resolución de controversias.",
-        "label": "personas · Asesoría y representación jurídica en materias laborales, tanto para trabajadores com"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(2)>p:nth-of-type(3)>strong:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Camila Alejandra Kopplin Lanata",
-        "label": "personas · Camila Alejandra Kopplin Lanata"
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(2)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Abogada · Magíster en Derecho del Trabajo y Previsión Social.",
-        "label": "personas · Abogada · Magíster en Derecho del Trabajo y Previsión Social."
-      },
-      {
-        "key": "#personas>div:nth-of-type(2)>article:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Conoce su trayectoria ↗",
-        "label": "personas · Conoce su trayectoria ↗"
       },
       {
         "key": "#seguros>p:nth-of-type(1)|text:0",
@@ -1169,128 +623,14 @@
       {
         "key": "#team-title>em:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "compromiso jurídico.",
-        "label": "equipo · compromiso jurídico."
+        "value": "compromiso.",
+        "label": "equipo · compromiso."
       },
       {
         "key": "#equipo>div:nth-of-type(1)>p:nth-of-type(2)|text:0",
         "type": "text",
-        "value": "Contamos con profesionales especializados en distintas áreas del Derecho, cuya experiencia académica y práctica permite entregar asesoría jurídica integral, estratégica y cercana.",
-        "label": "equipo · Contamos con profesionales especializados en distintas áreas del Derecho, cuya experi"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Abogada | Magíster en Derecho del Trabajo y Previsión Social | Litigante | Académica y Autora Jurídica.",
-        "label": "equipo · Abogada | Magíster en Derecho del Trabajo y Previsión Social | Litigante | Académica "
-      },
-      {
-        "key": "#camila-name|text:0",
-        "type": "text",
-        "value": "Camila Alejandra Kopplin Lanata",
-        "label": "equipo · Camila Alejandra Kopplin Lanata"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Abogada con más de 16 años de ejercicio profesional, especializada en Derecho del Trabajo, Derecho Procesal Laboral y relaciones laborales individuales y colectivas.",
-        "label": "equipo · Abogada con más de 16 años de ejercicio profesional, especializada en Derecho del Tra"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Derecho del Trabajo",
-        "label": "equipo · Derecho del Trabajo"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Derecho Procesal Laboral",
-        "label": "equipo · Derecho Procesal Laboral"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Relaciones laborales individuales y colectivas",
-        "label": "equipo · Relaciones laborales individuales y colectivas"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CONOCE SU TRAYECTORIA",
-        "label": "equipo · CONOCE SU TRAYECTORIA"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(2)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CONOCE SU TRAYECTORIA ↗",
-        "label": "equipo · CONOCE SU TRAYECTORIA ↗"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asistente contable",
-        "label": "equipo · Asistente contable"
-      },
-      {
-        "key": "#estefania-name|text:0",
-        "type": "text",
-        "value": "Estefanía Benítez García",
-        "label": "equipo · Estefanía Benítez García"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(2)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Estefanía es la asistente contable de BKO Bentjerodt Koplin y Oyarzun Consultores y apoya la gestión contable de la firma.",
-        "label": "equipo · Estefanía es la asistente contable de BKO Bentjerodt Koplin y Oyarzun Consultores y a"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asistencia contable",
-        "label": "equipo · Asistencia contable"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CONOCE SU TRAYECTORIA",
-        "label": "equipo · CONOCE SU TRAYECTORIA"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(4)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Psiquiatra infantojuvenil | Área de familia",
-        "label": "equipo · Psiquiatra infantojuvenil | Área de familia"
-      },
-      {
-        "key": "#fenella-name|text:0",
-        "type": "text",
-        "value": "Dra. Fenella Reyes Gonzalo",
-        "label": "equipo · Dra. Fenella Reyes Gonzalo"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(4)>div:nth-of-type(2)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "La doctora Fenella Reyes Gonzalo es psiquiatra infantojuvenil en el área de familia.",
-        "label": "equipo · La doctora Fenella Reyes Gonzalo es psiquiatra infantojuvenil en el área de familia."
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(4)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Psiquiatría infantojuvenil",
-        "label": "equipo · Psiquiatría infantojuvenil"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(4)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Área de familia",
-        "label": "equipo · Área de familia"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(4)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CONOCE SU TRAYECTORIA",
-        "label": "equipo · CONOCE SU TRAYECTORIA"
+        "value": "Un equipo de profesionales que integra experiencia jurídica, atención médico-psiquiátrica, gestión empresarial y seguros, con funciones y especialidades propias.",
+        "label": "equipo · Un equipo de profesionales que integra experiencia jurídica, atención médico-psiquiát"
       },
       {
         "key": "#presencia>div:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
@@ -1701,27 +1041,6 @@
         "label": "Fotografía · Ilustración editorial de montañas y una ruta turística"
       },
       {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/personas/camila%20original.png",
-        "alt": "Retrato de Camila Alejandra Kopplin Lanata",
-        "label": "Fotografía · Retrato de Camila Alejandra Kopplin Lanata"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/personas/Estefania%20Benitez%20Garc%C3%ADa%20Asistente%20Contable.jpeg",
-        "alt": "Retrato de Estefanía Benítez García",
-        "label": "Fotografía · Retrato de Estefanía Benítez García"
-      },
-      {
-        "key": "#equipo>div:nth-of-type(2)>article:nth-of-type(4)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/personas/dra%20fenella%20reyes%20gonzalo%20psiauiatra%20infanto%20juvenil%20%C3%A1rea%20de%20familia.jpeg",
-        "alt": "Retrato de Dra. Fenella Reyes Gonzalo",
-        "label": "Fotografía · Retrato de Dra. Fenella Reyes Gonzalo"
-      },
-      {
         "key": "#oficina-calama>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
         "value": "assets/oficinas/calama/interior-960.webp",
@@ -1826,8 +1145,8 @@
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
         "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
@@ -1976,8 +1295,8 @@
       {
         "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Acceso administración",
-        "label": "Página · Acceso administración"
+        "value": "Administración",
+        "label": "Página · Administración"
       },
       {
         "key": "#year|text:0",
@@ -2052,49 +1371,43 @@
         "label": "Página · La firma"
       },
       {
-        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Áreas de práctica",
         "label": "Página · Áreas de práctica"
       },
       {
-        "key": "#navigation>a:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Personas",
         "label": "Página · Personas"
       },
       {
-        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Negocios y seguros",
-        "label": "Página · Negocios y seguros"
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
       },
       {
-        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "key": "#navigation>a:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "key": "#navigation>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "key": "#navigation>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -2104,12 +1417,6 @@
         "type": "text",
         "value": "Agenda una reunión",
         "label": "Página · Agenda una reunión"
-      },
-      {
-        "key": "#header>a:nth-of-type(3)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Gestión",
-        "label": "Página · Gestión"
       },
       {
         "key": "#solicitud-seguros>p:nth-of-type(1)|text:0",
@@ -2192,8 +1499,8 @@
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
         "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
@@ -2342,8 +1649,355 @@
       {
         "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Acceso administración",
-        "label": "Página · Acceso administración"
+        "value": "Administración",
+        "label": "Página · Administración"
+      },
+      {
+        "key": "#year|text:0",
+        "type": "text",
+        "value": "2026",
+        "label": "Página · 2026"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>p:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados.",
+        "label": "Página · BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados."
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Política de privacidad",
+        "label": "Página · Política de privacidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Créditos visuales",
+        "label": "Página · Créditos visuales"
+      }
+    ]
+  },
+  "cauce/index.html": {
+    "title": "CAUCE GESTIÓN INTEGRAL",
+    "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
+      {
+        "key": "#solicitud-cauce>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONTACTO / CAUCE",
+        "label": "solicitud-cauce · CONTACTO / CAUCE"
+      },
+      {
+        "key": "#solicitud-cauce>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Conversemos sobre tu cartera.",
+        "label": "solicitud-cauce · Conversemos sobre tu cartera."
+      },
+      {
+        "key": "#solicitud-cauce>p:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Solicita asesoría sin adjuntar documentos ni antecedentes sensibles en este primer contacto.",
+        "label": "solicitud-cauce · Solicita asesoría sin adjuntar documentos ni antecedentes sensibles en este primer co"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "PRESENCIA LOCAL.",
+        "label": "Página · PRESENCIA LOCAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "VISIÓN NACIONAL.",
+        "label": "Página · VISIÓN NACIONAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Volver al inicio",
+        "label": "Página · Volver al inicio"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Explora BKO",
+        "label": "Página · Explora BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Calama",
+        "label": "Página · Calama"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "AV Las Industrias, Sitio 14,",
+        "label": "Página · AV Las Industrias, Sitio 14,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Puerto Seco.",
+        "label": "Página · Puerto Seco."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Calama, Región de Antofagasta.",
+        "label": "Página · Calama, Región de Antofagasta."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Santiago",
+        "label": "Página · Santiago"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Av. Presidente Kennedy 5146,",
+        "label": "Página · Av. Presidente Kennedy 5146,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Piso 5. Vitacura,",
+        "label": "Página · Piso 5. Vitacura,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Santiago de Chile.",
+        "label": "Página · Santiago de Chile."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Puerto Varas",
+        "label": "Página · Puerto Varas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Avenida Vicente Pérez Rosales 1290,",
+        "label": "Página · Avenida Vicente Pérez Rosales 1290,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "tercer piso. Puerto Varas,",
+        "label": "Página · tercer piso. Puerto Varas,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Región de Los Lagos.",
+        "label": "Página · Región de Los Lagos."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "+56 9 7482 6025",
+        "label": "Página · +56 9 7482 6025"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo general por confirmar.",
+        "label": "Página · Correo general por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "WhatsApp ↗",
+        "label": "Página · WhatsApp ↗"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Administración",
+        "label": "Página · Administración"
       },
       {
         "key": "#year|text:0",
@@ -2411,49 +2065,43 @@
         "label": "Página · La firma"
       },
       {
-        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Áreas de práctica",
         "label": "Página · Áreas de práctica"
       },
       {
-        "key": "#navigation>a:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Personas",
         "label": "Página · Personas"
       },
       {
-        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Negocios y seguros",
-        "label": "Página · Negocios y seguros"
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
       },
       {
-        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "key": "#navigation>a:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "key": "#navigation>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "key": "#navigation>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -2463,409 +2111,6 @@
         "type": "text",
         "value": "Agenda una reunión",
         "label": "Página · Agenda una reunión"
-      },
-      {
-        "key": "#header>a:nth-of-type(3)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Gestión",
-        "label": "Página · Gestión"
-      },
-      {
-        "key": "#contenido>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "← VOLVER AL EQUIPO",
-        "label": "Página · ← VOLVER AL EQUIPO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "BKO · PERFIL INDIVIDUAL",
-        "label": "Página · BKO · PERFIL INDIVIDUAL"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>h1:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Camila Alejandra Kopplin Lanata",
-        "label": "Página · Camila Alejandra Kopplin Lanata"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Abogada | Magíster en Derecho del Trabajo y Previsión Social | Litigante | Académica y Autora Jurídica.",
-        "label": "Página · Abogada | Magíster en Derecho del Trabajo y Previsión Social | Litigante | Académica "
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Derecho del Trabajo",
-        "label": "Página · Derecho del Trabajo"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Derecho Procesal Laboral",
-        "label": "Página · Derecho Procesal Laboral"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Relaciones laborales individuales y colectivas",
-        "label": "Página · Relaciones laborales individuales y colectivas"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CONTACTAR A BKO",
-        "label": "Página · CONTACTAR A BKO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "PRESENTACIÓN PROFESIONAL",
-        "label": "Página · PRESENTACIÓN PROFESIONAL"
-      },
-      {
-        "key": "#presentation-title|text:0",
-        "type": "text",
-        "value": "Litigación, docencia y conocimiento jurídico",
-        "label": "Página · Litigación, docencia y conocimiento jurídico"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Abogada con más de 16 años de ejercicio profesional, especializada en Derecho del Trabajo, Derecho Procesal Laboral y relaciones laborales individuales y colectivas.",
-        "label": "Página · Abogada con más de 16 años de ejercicio profesional, especializada en Derecho del Tra"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Su trayectoria combina el ejercicio de la litigación judicial, la asesoría jurídica integral a empresas y trabajadores, la docencia universitaria y la formación especializada de integrantes del Poder Judicial.",
-        "label": "Página · Su trayectoria combina el ejercicio de la litigación judicial, la asesoría jurídica i"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Magíster en Derecho del Trabajo y Previsión Social por la Universidad de Concepción, ha desarrollado una carrera orientada a la resolución de conflictos laborales, la defensa de derechos y el análisis estratégico de controversias judiciales, complementada con experiencia académica y participación en publicaciones jurídicas especializadas.",
-        "label": "Página · Magíster en Derecho del Trabajo y Previsión Social por la Universidad de Concepción, "
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "HITOS PROFESIONALES Y ACADÉMICOS",
-        "label": "Página · HITOS PROFESIONALES Y ACADÉMICOS"
-      },
-      {
-        "key": "#timeline-title|text:0",
-        "type": "text",
-        "value": "Una trayectoria en desarrollo",
-        "label": "Página · Una trayectoria en desarrollo"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(1)>strong:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "2009",
-        "label": "Página · 2009"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Inicio del ejercicio profesional en Cárdenas Barría, Puerto Montt.",
-        "label": "Página · Inicio del ejercicio profesional en Cárdenas Barría, Puerto Montt."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(2)>strong:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Julio de 2010",
-        "label": "Página · Julio de 2010"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Título de abogada por la Excelentísima Corte Suprema de Chile.",
-        "label": "Página · Título de abogada por la Excelentísima Corte Suprema de Chile."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(3)>strong:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "2014",
-        "label": "Página · 2014"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Magíster en Derecho del Trabajo y Previsión Social, Universidad de Concepción.",
-        "label": "Página · Magíster en Derecho del Trabajo y Previsión Social, Universidad de Concepción."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(4)>strong:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "2022–2024",
-        "label": "Página · 2022–2024"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Socia fundadora de Kopplin & González Abogados SpA.",
-        "label": "Página · Socia fundadora de Kopplin & González Abogados SpA."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(5)>strong:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Marzo de 2024",
-        "label": "Página · Marzo de 2024"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(2)>ol:nth-of-type(1)>li:nth-of-type(5)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Publicación de su obra en coautoría por Editorial DER.",
-        "label": "Página · Publicación de su obra en coautoría por Editorial DER."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>aside:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "PRODUCCIÓN JURÍDICA · EDITORIAL DER · MARZO DE 2024",
-        "label": "Página · PRODUCCIÓN JURÍDICA · EDITORIAL DER · MARZO DE 2024"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>aside:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Derecho Colectivo del Trabajo en Chile. Aspectos prácticos y análisis jurisprudencial",
-        "label": "Página · Derecho Colectivo del Trabajo en Chile. Aspectos prácticos y análisis jurisprudencial"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>aside:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Coautora de una obra dedicada al estudio de las instituciones fundamentales del Derecho Colectivo del Trabajo desde una perspectiva normativa, práctica y jurisprudencial.",
-        "label": "Página · Coautora de una obra dedicada al estudio de las instituciones fundamentales del Derec"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "I. Trayectoria en el ejercicio profesional y litigación",
-        "label": "Página · I. Trayectoria en el ejercicio profesional y litigación"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Inició su ejercicio profesional en el año 2009, incorporándose al estudio jurídico Cárdenas Barría, en la ciudad de Puerto Montt, donde se desempeñó durante nueve años como abogada asociada, desarrollando labores de asesoría jurídica y representación judicial en diversas áreas del Derecho, con especial dedicación al ámbito laboral.",
-        "label": "Página · Inició su ejercicio profesional en el año 2009, incorporándose al estudio jurídico Cá"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Su experiencia comprende la asesoría integral tanto a empleadores como a trabajadores, lo que le ha permitido desarrollar una visión amplia de las relaciones laborales, sus desafíos jurídicos y los mecanismos de prevención y resolución de conflictos.",
-        "label": "Página · Su experiencia comprende la asesoría integral tanto a empleadores como a trabajadores"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Posteriormente, continuó su ejercicio profesional independiente y, entre los años 2022 y 2024, fue socia fundadora de Kopplin & González Abogados SpA, consolidando su experiencia en el ejercicio privado de la profesión.",
-        "label": "Página · Posteriormente, continuó su ejercicio profesional independiente y, entre los años 202"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Actualmente desarrolla su actividad como abogada litigante, con especial dedicación al Derecho del Trabajo, la litigación laboral y la resolución de controversias judiciales.",
-        "label": "Página · Actualmente desarrolla su actividad como abogada litigante, con especial dedicación a"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "II. Especialización en Derecho del Trabajo y relaciones laborales",
-        "label": "Página · II. Especialización en Derecho del Trabajo y relaciones laborales"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Su formación académica y trayectoria profesional se han concentrado especialmente en el Derecho del Trabajo y de la Seguridad Social, con experiencia en materias vinculadas a las relaciones individuales y colectivas de trabajo.",
-        "label": "Página · Su formación académica y trayectoria profesional se han concentrado especialmente en "
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>div:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Su ejercicio profesional comprende la representación judicial y asesoría jurídica en conflictos derivados de la relación laboral, así como el análisis y aplicación de la normativa que regula los derechos y obligaciones de trabajadores y empleadores.",
-        "label": "Página · Su ejercicio profesional comprende la representación judicial y asesoría jurídica en "
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>div:nth-of-type(1)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Esta especialización se complementa con una sostenida actividad académica en Derecho Individual y Colectivo del Trabajo, Derecho Procesal Laboral y litigación.",
-        "label": "Página · Esta especialización se complementa con una sostenida actividad académica en Derecho "
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>div:nth-of-type(1)>p:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Su conocimiento de la normativa laboral y de su aplicación jurisprudencial le permite abordar las controversias desde una perspectiva jurídica integral, combinando el análisis sustantivo, procesal y estratégico de cada caso.",
-        "label": "Página · Su conocimiento de la normativa laboral y de su aplicación jurisprudencial le permite"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "III. Trayectoria académica y formación del Poder Judicial",
-        "label": "Página · III. Trayectoria académica y formación del Poder Judicial"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Cuenta con una extensa trayectoria docente en instituciones de educación superior, impartiendo asignaturas vinculadas al Derecho del Trabajo, Derecho Procesal Laboral, Derecho Procesal Constitucional y formación en litigación.",
-        "label": "Página · Cuenta con una extensa trayectoria docente en instituciones de educación superior, im"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Se ha desempeñado como profesora en:",
-        "label": "Página · Se ha desempeñado como profesora en:"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Universidad San Sebastián, sede Puerto Montt.",
-        "label": "Página · Universidad San Sebastián, sede Puerto Montt."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Universidad Santo Tomás, sede Puerto Montt.",
-        "label": "Página · Universidad Santo Tomás, sede Puerto Montt."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Universidad Austral de Chile, sede Puerto Montt.",
-        "label": "Página · Universidad Austral de Chile, sede Puerto Montt."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "En la Universidad San Sebastián ejerció como profesora de Derecho del Trabajo, profesora litigante y coordinadora del Área de Extensión de la carrera de Derecho.",
-        "label": "Página · En la Universidad San Sebastián ejerció como profesora de Derecho del Trabajo, profes"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Actualmente desarrolla actividades docentes en la Universidad Santo Tomás y en la Universidad Austral de Chile, impartiendo asignaturas de Derecho del Trabajo y Derecho Procesal Constitucional, respectivamente.",
-        "label": "Página · Actualmente desarrolla actividades docentes en la Universidad Santo Tomás y en la Uni"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Destaca especialmente su participación como docente de la Academia Judicial de Chile, donde impartió un curso de perfeccionamiento de 32 horas en Derecho Colectivo del Trabajo, dirigido a integrantes del escalafón primario del Poder Judicial.",
-        "label": "Página · Destaca especialmente su participación como docente de la Academia Judicial de Chile,"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(6)|text:0",
-        "type": "text",
-        "value": "Asimismo, participó como expositora en un programa de seminarios organizado por la Academia Judicial y la Corte de Apelaciones de Concepción, mediante la elaboración de material docente especializado en Derecho Colectivo del Trabajo.",
-        "label": "Página · Asimismo, participó como expositora en un programa de seminarios organizado por la Ac"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(7)|text:0",
-        "type": "text",
-        "value": "Su trayectoria académica incluye también la coordinación de la segunda versión del Magíster en Derecho del Trabajo y Previsión Social de la Universidad de Concepción, desarrollado en Puerto Varas.",
-        "label": "Página · Su trayectoria académica incluye también la coordinación de la segunda versión del Ma"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(4)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "IV. Formación académica y producción jurídica",
-        "label": "Página · IV. Formación académica y producción jurídica"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(4)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Abogada titulada por la Excelentísima Corte Suprema de Chile en julio de 2010 y Licenciada en Ciencias Jurídicas y Sociales por la Universidad de Concepción.",
-        "label": "Página · Abogada titulada por la Excelentísima Corte Suprema de Chile en julio de 2010 y Licen"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(4)>div:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Posee el grado académico de Magíster en Derecho del Trabajo y Previsión Social por la Universidad de Concepción, obtenido en 2014 con la máxima calificación académica.",
-        "label": "Página · Posee el grado académico de Magíster en Derecho del Trabajo y Previsión Social por la"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(4)>div:nth-of-type(1)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Es coautora del libro:",
-        "label": "Página · Es coautora del libro:"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(4)>div:nth-of-type(1)>blockquote:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "“Derecho Colectivo del Trabajo en Chile. Aspectos prácticos y análisis jurisprudencial”, publicado por Editorial DER en marzo de 2024.",
-        "label": "Página · “Derecho Colectivo del Trabajo en Chile. Aspectos prácticos y análisis jurisprudencia"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(4)>div:nth-of-type(1)>p:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "La obra está dedicada al estudio de las instituciones fundamentales del Derecho Colectivo del Trabajo desde una perspectiva normativa, práctica y jurisprudencial.",
-        "label": "Página · La obra está dedicada al estudio de las instituciones fundamentales del Derecho Colec"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(4)>div:nth-of-type(1)>p:nth-of-type(5)|text:0",
-        "type": "text",
-        "value": "Su formación especializada incluye estudios de destrezas en litigación en la California Western School of Law, en San Diego, Estados Unidos, así como perfeccionamiento en investigación de violencia en los espacios de trabajo y participación en diversas jornadas académicas de Derecho del Trabajo y Seguridad Social.",
-        "label": "Página · Su formación especializada incluye estudios de destrezas en litigación en la Californ"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(5)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "V. Experiencia en asesoría jurídica y formación profesional",
-        "label": "Página · V. Experiencia en asesoría jurídica y formación profesional"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(5)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Su experiencia profesional se caracteriza por la integración del ejercicio judicial, la asesoría laboral y la formación jurídica especializada.",
-        "label": "Página · Su experiencia profesional se caracteriza por la integración del ejercicio judicial, "
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(5)>div:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Ha desarrollado asesoría laboral integral a empresas y trabajadores, abordando conflictos jurídicos desde el conocimiento de las obligaciones empresariales, los mecanismos de protección de los derechos laborales y las herramientas judiciales disponibles para su resolución.",
-        "label": "Página · Ha desarrollado asesoría laboral integral a empresas y trabajadores, abordando confli"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(5)>div:nth-of-type(1)>p:nth-of-type(3)|text:0",
-        "type": "text",
-        "value": "Paralelamente, su experiencia como profesora universitaria, coordinadora académica y docente de perfeccionamiento judicial le ha permitido contribuir a la formación de profesionales del Derecho y al fortalecimiento de competencias jurídicas en materias laborales.",
-        "label": "Página · Paralelamente, su experiencia como profesora universitaria, coordinadora académica y "
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(5)>div:nth-of-type(1)>p:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Su perfil combina la experiencia práctica del litigio con el estudio doctrinario y jurisprudencial, aportando una perspectiva especializada al análisis y resolución de controversias jurídicas.",
-        "label": "Página · Su perfil combina la experiencia práctica del litigio con el estudio doctrinario y ju"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>aside:nth-of-type(2)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CAMILA A. KOPPLIN LANATA",
-        "label": "Página · CAMILA A. KOPPLIN LANATA"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>aside:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Abogada | Magíster en Derecho del Trabajo y Previsión Social | Especialista en Litigación y Relaciones Laborales | Académica | Docente de la Academia Judicial | Coautora de obra jurídica especializada.",
-        "label": "Página · Abogada | Magíster en Derecho del Trabajo y Previsión Social | Especialista en Litiga"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "VOLVER AL EQUIPO",
-        "label": "Página · VOLVER AL EQUIPO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "CONTACTO",
-        "label": "Página · CONTACTO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/personas/camila%20original.png",
-        "alt": "Retrato de Camila Alejandra Kopplin Lanata",
-        "label": "Fotografía · Retrato de Camila Alejandra Kopplin Lanata"
       },
       {
         "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
@@ -2930,8 +2175,8 @@
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
         "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
@@ -3080,8 +2325,8 @@
       {
         "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Acceso administración",
-        "label": "Página · Acceso administración"
+        "value": "Administración",
+        "label": "Página · Administración"
       },
       {
         "key": "#year|text:0",
@@ -3149,49 +2394,43 @@
         "label": "Página · La firma"
       },
       {
-        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Áreas de práctica",
         "label": "Página · Áreas de práctica"
       },
       {
-        "key": "#navigation>a:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Personas",
         "label": "Página · Personas"
       },
       {
-        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Negocios y seguros",
-        "label": "Página · Negocios y seguros"
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
       },
       {
-        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "key": "#navigation>a:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "key": "#navigation>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "key": "#navigation>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -3201,121 +2440,6 @@
         "type": "text",
         "value": "Agenda una reunión",
         "label": "Página · Agenda una reunión"
-      },
-      {
-        "key": "#header>a:nth-of-type(3)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Gestión",
-        "label": "Página · Gestión"
-      },
-      {
-        "key": "#contenido>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "← VOLVER AL EQUIPO",
-        "label": "Página · ← VOLVER AL EQUIPO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "BKO · PERFIL INDIVIDUAL",
-        "label": "Página · BKO · PERFIL INDIVIDUAL"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>h1:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Estefanía Benítez García",
-        "label": "Página · Estefanía Benítez García"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Asistente contable",
-        "label": "Página · Asistente contable"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asistencia contable",
-        "label": "Página · Asistencia contable"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CONTACTAR A BKO",
-        "label": "Página · CONTACTAR A BKO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "PRESENTACIÓN PROFESIONAL",
-        "label": "Página · PRESENTACIÓN PROFESIONAL"
-      },
-      {
-        "key": "#presentation-title|text:0",
-        "type": "text",
-        "value": "Presentación",
-        "label": "Página · Presentación"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Estefanía es la asistente contable de BKO Bentjerodt Koplin y Oyarzun Consultores y apoya la gestión contable de la firma.",
-        "label": "Página · Estefanía es la asistente contable de BKO Bentjerodt Koplin y Oyarzun Consultores y a"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Trayectoria",
-        "label": "Página · Trayectoria"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Antecedentes de trayectoria por completar.",
-        "label": "Página · Antecedentes de trayectoria por completar."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Formación académica",
-        "label": "Página · Formación académica"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Información académica por completar.",
-        "label": "Página · Información académica por completar."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Experiencia profesional",
-        "label": "Página · Experiencia profesional"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Asistente contable de BKO Bentjerodt Koplin y Oyarzun Consultores.",
-        "label": "Página · Asistente contable de BKO Bentjerodt Koplin y Oyarzun Consultores."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "VOLVER AL EQUIPO",
-        "label": "Página · VOLVER AL EQUIPO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "CONTACTO",
-        "label": "Página · CONTACTO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/personas/Estefania%20Benitez%20Garc%C3%ADa%20Asistente%20Contable.jpeg",
-        "alt": "Retrato de Estefanía Benítez García",
-        "label": "Fotografía · Retrato de Estefanía Benítez García"
       },
       {
         "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
@@ -3380,8 +2504,8 @@
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
         "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
@@ -3530,8 +2654,8 @@
       {
         "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Acceso administración",
-        "label": "Página · Acceso administración"
+        "value": "Administración",
+        "label": "Página · Administración"
       },
       {
         "key": "#year|text:0",
@@ -3560,7 +2684,7 @@
     ]
   },
   "equipo/fenella-reyes-gonzalo.html": {
-    "title": "Dra. Fenella Reyes Gonzalo",
+    "title": "Fenella Reyes Gonzalo",
     "fields": [
       {
         "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
@@ -3599,49 +2723,43 @@
         "label": "Página · La firma"
       },
       {
-        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Áreas de práctica",
         "label": "Página · Áreas de práctica"
       },
       {
-        "key": "#navigation>a:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Personas",
         "label": "Página · Personas"
       },
       {
-        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Negocios y seguros",
-        "label": "Página · Negocios y seguros"
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
       },
       {
-        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "key": "#navigation>a:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "key": "#navigation>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "key": "#navigation>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -3651,127 +2769,6 @@
         "type": "text",
         "value": "Agenda una reunión",
         "label": "Página · Agenda una reunión"
-      },
-      {
-        "key": "#header>a:nth-of-type(3)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Gestión",
-        "label": "Página · Gestión"
-      },
-      {
-        "key": "#contenido>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "← VOLVER AL EQUIPO",
-        "label": "Página · ← VOLVER AL EQUIPO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "BKO · PERFIL INDIVIDUAL",
-        "label": "Página · BKO · PERFIL INDIVIDUAL"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>h1:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Dra. Fenella Reyes Gonzalo",
-        "label": "Página · Dra. Fenella Reyes Gonzalo"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Psiquiatra infantojuvenil | Área de familia",
-        "label": "Página · Psiquiatra infantojuvenil | Área de familia"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Psiquiatría infantojuvenil",
-        "label": "Página · Psiquiatría infantojuvenil"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Área de familia",
-        "label": "Página · Área de familia"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "CONTACTAR A BKO",
-        "label": "Página · CONTACTAR A BKO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "PRESENTACIÓN PROFESIONAL",
-        "label": "Página · PRESENTACIÓN PROFESIONAL"
-      },
-      {
-        "key": "#presentation-title|text:0",
-        "type": "text",
-        "value": "Presentación",
-        "label": "Página · Presentación"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>section:nth-of-type(1)>p:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "La doctora Fenella Reyes Gonzalo es psiquiatra infantojuvenil en el área de familia.",
-        "label": "Página · La doctora Fenella Reyes Gonzalo es psiquiatra infantojuvenil en el área de familia."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Trayectoria",
-        "label": "Página · Trayectoria"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Antecedentes de trayectoria por completar.",
-        "label": "Página · Antecedentes de trayectoria por completar."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Formación académica",
-        "label": "Página · Formación académica"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(2)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Información académica por completar.",
-        "label": "Página · Información académica por completar."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>summary:nth-of-type(1)>h2:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Experiencia profesional",
-        "label": "Página · Experiencia profesional"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>details:nth-of-type(3)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Psiquiatra infantojuvenil en el área de familia.",
-        "label": "Página · Psiquiatra infantojuvenil en el área de familia."
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "VOLVER AL EQUIPO",
-        "label": "Página · VOLVER AL EQUIPO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "CONTACTO",
-        "label": "Página · CONTACTO"
-      },
-      {
-        "key": "#contenido>article:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/personas/dra%20fenella%20reyes%20gonzalo%20psiauiatra%20infanto%20juvenil%20%C3%A1rea%20de%20familia.jpeg",
-        "alt": "Retrato de Dra. Fenella Reyes Gonzalo",
-        "label": "Fotografía · Retrato de Dra. Fenella Reyes Gonzalo"
       },
       {
         "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
@@ -3836,8 +2833,8 @@
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
         "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
@@ -3986,8 +2983,666 @@
       {
         "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Acceso administración",
-        "label": "Página · Acceso administración"
+        "value": "Administración",
+        "label": "Página · Administración"
+      },
+      {
+        "key": "#year|text:0",
+        "type": "text",
+        "value": "2026",
+        "label": "Página · 2026"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>p:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados.",
+        "label": "Página · BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados."
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Política de privacidad",
+        "label": "Página · Política de privacidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Créditos visuales",
+        "label": "Página · Créditos visuales"
+      }
+    ]
+  },
+  "equipo/jorge-ivan-saavedra-bentjerodt.html": {
+    "title": "Jorge I. Saavedra Bentjerodt",
+    "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "PRESENCIA LOCAL.",
+        "label": "Página · PRESENCIA LOCAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "VISIÓN NACIONAL.",
+        "label": "Página · VISIÓN NACIONAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Volver al inicio",
+        "label": "Página · Volver al inicio"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Explora BKO",
+        "label": "Página · Explora BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Calama",
+        "label": "Página · Calama"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "AV Las Industrias, Sitio 14,",
+        "label": "Página · AV Las Industrias, Sitio 14,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Puerto Seco.",
+        "label": "Página · Puerto Seco."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Calama, Región de Antofagasta.",
+        "label": "Página · Calama, Región de Antofagasta."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Santiago",
+        "label": "Página · Santiago"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Av. Presidente Kennedy 5146,",
+        "label": "Página · Av. Presidente Kennedy 5146,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Piso 5. Vitacura,",
+        "label": "Página · Piso 5. Vitacura,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Santiago de Chile.",
+        "label": "Página · Santiago de Chile."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Puerto Varas",
+        "label": "Página · Puerto Varas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Avenida Vicente Pérez Rosales 1290,",
+        "label": "Página · Avenida Vicente Pérez Rosales 1290,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "tercer piso. Puerto Varas,",
+        "label": "Página · tercer piso. Puerto Varas,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Región de Los Lagos.",
+        "label": "Página · Región de Los Lagos."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "+56 9 7482 6025",
+        "label": "Página · +56 9 7482 6025"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo general por confirmar.",
+        "label": "Página · Correo general por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "WhatsApp ↗",
+        "label": "Página · WhatsApp ↗"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Administración",
+        "label": "Página · Administración"
+      },
+      {
+        "key": "#year|text:0",
+        "type": "text",
+        "value": "2026",
+        "label": "Página · 2026"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>p:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados.",
+        "label": "Página · BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados."
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Política de privacidad",
+        "label": "Página · Política de privacidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Créditos visuales",
+        "label": "Página · Créditos visuales"
+      }
+    ]
+  },
+  "equipo/luis-miranda-chavarria.html": {
+    "title": "Luis Miranda Chavarría",
+    "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Inicio",
+        "label": "Página · Inicio"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "PRESENCIA LOCAL.",
+        "label": "Página · PRESENCIA LOCAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "VISIÓN NACIONAL.",
+        "label": "Página · VISIÓN NACIONAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Volver al inicio",
+        "label": "Página · Volver al inicio"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Explora BKO",
+        "label": "Página · Explora BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Calama",
+        "label": "Página · Calama"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "AV Las Industrias, Sitio 14,",
+        "label": "Página · AV Las Industrias, Sitio 14,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Puerto Seco.",
+        "label": "Página · Puerto Seco."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Calama, Región de Antofagasta.",
+        "label": "Página · Calama, Región de Antofagasta."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Santiago",
+        "label": "Página · Santiago"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Av. Presidente Kennedy 5146,",
+        "label": "Página · Av. Presidente Kennedy 5146,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Piso 5. Vitacura,",
+        "label": "Página · Piso 5. Vitacura,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Santiago de Chile.",
+        "label": "Página · Santiago de Chile."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Puerto Varas",
+        "label": "Página · Puerto Varas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Avenida Vicente Pérez Rosales 1290,",
+        "label": "Página · Avenida Vicente Pérez Rosales 1290,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "tercer piso. Puerto Varas,",
+        "label": "Página · tercer piso. Puerto Varas,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Región de Los Lagos.",
+        "label": "Página · Región de Los Lagos."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "+56 9 7482 6025",
+        "label": "Página · +56 9 7482 6025"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo general por confirmar.",
+        "label": "Página · Correo general por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "WhatsApp ↗",
+        "label": "Página · WhatsApp ↗"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Administración",
+        "label": "Página · Administración"
       },
       {
         "key": "#year|text:0",
@@ -4055,49 +3710,43 @@
         "label": "Página · La firma"
       },
       {
-        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Áreas de práctica",
         "label": "Página · Áreas de práctica"
       },
       {
-        "key": "#navigation>a:nth-of-type(4)|text:0",
-        "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Personas",
         "label": "Página · Personas"
       },
       {
-        "key": "#navigation>a:nth-of-type(6)|text:0",
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Negocios y seguros",
-        "label": "Página · Negocios y seguros"
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
       },
       {
-        "key": "#navigation>a:nth-of-type(7)|text:0",
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "#navigation>a:nth-of-type(8)|text:0",
+        "key": "#navigation>a:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "#navigation>a:nth-of-type(9)|text:0",
+        "key": "#navigation>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "#navigation>a:nth-of-type(10)|text:0",
+        "key": "#navigation>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -4107,12 +3756,6 @@
         "type": "text",
         "value": "Agenda una reunión",
         "label": "Página · Agenda una reunión"
-      },
-      {
-        "key": "#header>a:nth-of-type(3)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Gestión",
-        "label": "Página · Gestión"
       },
       {
         "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
@@ -4177,8 +3820,8 @@
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
         "type": "text",
-        "value": "Sectores",
-        "label": "Página · Sectores"
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
@@ -4327,8 +3970,8 @@
       {
         "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Acceso administración",
-        "label": "Página · Acceso administración"
+        "value": "Administración",
+        "label": "Página · Administración"
       },
       {
         "key": "#year|text:0",

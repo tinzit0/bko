@@ -65,7 +65,7 @@ try {
   if (!await evaluate(`document.querySelector('.menu-toggle').getAttribute('aria-expanded')==='true'`)) throw new Error('Menú no abre');
   await evaluate(`document.querySelector('#navigation a[href="#firma"]').click()`);
   if (!await evaluate(`document.querySelector('.menu-toggle').getAttribute('aria-expanded')==='false'`)) throw new Error('Menú no cierra al navegar');
-  await evaluate(`document.querySelector('.highlights a[href="#mineria"]').click()`);
+  await evaluate(`document.querySelector('#navigation a[href$="#mineria"]').click()`);
   if (!await evaluate(`document.querySelector('#mineria').open`)) throw new Error('Enlace no abre acordeón');
   await evaluate(`document.querySelector('[data-open-privacy]').click()`);
   if (!await evaluate(`document.querySelector('#privacy-dialog').open`)) throw new Error('Privacidad no abre');

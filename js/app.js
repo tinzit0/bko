@@ -40,9 +40,9 @@ motion.addEventListener('change', e => { if (e.matches) document.documentElement
 
 let ticking = false;
 const updateMotionScroll = initMotion(motion);
-const sectionLinks = $$('#navigation a');
-const sections = sectionLinks.map(link => $(link.getAttribute('href'))).sort((a,b) => a.offsetTop - b.offsetTop);
+function navigationState(){const links=$$('#navigation a').filter(link=>link.hash&&document.getElementById(link.hash.slice(1)));return {links,sections:links.map(link=>document.getElementById(link.hash.slice(1))).sort((a,b)=>a.offsetTop-b.offsetTop)}}
 function updateScroll() {
+  const {links:sectionLinks,sections}=navigationState();
   const y = window.scrollY;
   header.classList.toggle('scrolled', y > 30);
   const max = document.documentElement.scrollHeight - innerHeight;
@@ -50,7 +50,7 @@ function updateScroll() {
   let active = sections[0];
   for (const section of sections) if (section.getBoundingClientRect().top <= 155) active = section;
   for (const link of sectionLinks) {
-    const current = link.hash === `#${active.id}`;
+    const current = link.hash === `#${active?.id}`;
     link.classList.toggle('active', current);
     if (current) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current');
   }
@@ -66,7 +66,7 @@ updateScroll();
 // Abrir el área correcta antes de que el navegador se desplace a su ancla.
 function openPractice(hash) {
   const target = document.getElementById(hash.replace('#',''));
-  if (target?.matches('details')) {
+  if (target?.matches('details') && !target.matches('.clients-directory')) {
     target.open = true;
     target.classList.add('is-visible');
   }
@@ -74,7 +74,8 @@ function openPractice(hash) {
 $$('a[href^="#"]').forEach(link => link.addEventListener('click', () => openPractice(link.hash)));
 window.addEventListener('hashchange', () => openPractice(location.hash));
 openPractice(location.hash);
-$$('[data-area]').forEach(link => link.addEventListener('click', () => { $('#area').value = link.dataset.area; }));
+document.addEventListener('click',e=>{const link=e.target.closest('[data-area]');if(link)$('#area').value=link.dataset.area});
+document.addEventListener('click',e=>{const a=e.target.closest('a');if(a?.hash)openPractice(a.hash)});
 
 const whatsappMessage = 'Hola, quisiera solicitar información sobre los servicios de BKO Bentjerodt Koplin y Oyarzun Consultores.';
 $$('[data-whatsapp]').forEach(link => {

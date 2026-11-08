@@ -1,0 +1,13 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url),manifest=JSON.parse(await readFile(new URL('docs/interno/clientes/logotipos.json',root),'utf8'));
+const t=await fetch('http://127.0.0.1:9333/json/new?about:blank',{method:'PUT'}).then(r=>r.json()),ws=new WebSocket(t.webSocketDebuggerUrl);await new Promise(r=>ws.addEventListener('open',r,{once:true}));let seq=0;const pending=new Map();ws.addEventListener('message',({data})=>{const m=JSON.parse(data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);m.error?p.reject(m.error):p.resolve(m.result)}});const call=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}))});
+try{
+await call('Page.enable');await call('Emulation.setDeviceMetricsOverride',{width:1200,height:1400,deviceScaleFactor:1,mobile:false});const {frameTree}=await call('Page.getFrameTree');
+const tiles=await Promise.all(manifest.map(async m=>{const bytes=await readFile(new URL(m.path,root)),url=`data:${m.mime};base64,${bytes.toString('base64')}`;return `<article><h2>${m.slug}</h2><div><img data-slug="${m.slug}" src="${url}"></div><div class="navy"><img src="${url}"></div></article>`}));
+await call('Page.setDocumentContent',{frameId:frameTree.frame.id,html:`<!doctype html><html><head><meta charset="utf-8"><style>body{font:12px Arial;background:#ddd;margin:20px}main{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}article{background:white;padding:12px}h2{font-size:12px;min-height:30px}article div{height:150px;padding:10px;display:grid;place-items:center}.navy{background:#071c2b}img{width:100%;height:100%;object-fit:contain;max-height:135px}</style></head><body><main>${tiles.join('')}</main></body></html>`});
+await call('Runtime.evaluate',{expression:'Promise.all([...document.images].map(i=>i.decode()))',awaitPromise:true});
+const dimensions=await call('Runtime.evaluate',{expression:"[...document.querySelectorAll('[data-slug]')].map(i=>({slug:i.dataset.slug,width:i.naturalWidth,height:i.naturalHeight}))",returnByValue:true});
+for(const d of dimensions.result.value){const m=manifest.find(m=>m.slug===d.slug);m.width=d.width;m.height=d.height}
+await writeFile(new URL('docs/interno/clientes/logotipos.json',root),JSON.stringify(manifest,null,2)+'\n');
+const shot=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:true});await writeFile(new URL('artifacts/clients-logo-review.png',root),Buffer.from(shot.data,'base64'));console.log('Hoja de revisión creada. Dimensiones originales registradas.');
+}finally{await call('Page.close');ws.close()}
