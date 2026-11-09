@@ -2,6 +2,24 @@
 
 Fecha: 7 de noviembre de 2026.
 
+## Logotipos publicados — estado vigente
+
+El usuario indicó expresamente «pero no se ven los logos quiero que se vean». Se habilitaron los trece logotipos originales previamente verificados de organizaciones publicadas y se registró esa instrucción como referencia de autorización de uso en Supabase. Esta operación modifica únicamente `logo_authorized` y `logo_authorization_reference`; la publicación de nombres mantiene su propia referencia. No se modificaron archivos, colores de marcas, relaciones comerciales, enlaces ni políticas.
+
+La comprobación directa en `https://bko.concepcion.workers.dev/#clientes` confirmó las trece imágenes con HTTP 200 y dimensiones válidas. Se compararon los bytes descargados de cada imagen con el SHA-256 del manifiesto original: los trece coinciden. Hay cuatro tarjetas en la selección inicial y 21 empresas en el directorio, de las cuales ocho continúan con nombre tipográfico. CAUCE se conserva en borrador pendiente de clasificación. La sección mantiene el diseño compacto y el despliegue sin repetir tarjetas. No hace falta otro despliegue de código para esta modificación de datos.
+
+Evidencia actualizada: `artifacts/clients-public-verification.json`, `artifacts/clients-public-1440.png` y `artifacts/clients-public-390.png`. Escritorio, tablet y móvil sin desbordamientos, errores de consola o fallos de red. El manifiesto local y el seed conservan los estados de la importación original; Supabase es la fuente de los permisos vigentes. Las menciones de logotipos pendientes en los apartados siguientes son históricas.
+
+## Publicación pública de nombres — estado vigente
+
+Tras la instrucción expresa del usuario «quiero que se vean las empresas asociadas me entiendes», se activaron `published` y `relation_authorized` en los 21 registros de organizaciones externas, conservando todos sus demás campos. La referencia de autorización identifica la instrucción del responsable del sitio y su fecha en Chile; no atribuye autorizaciones a terceros ni concede permisos adicionales de marcas. `logo_authorized` permanece desactivado: la presentación pública utiliza los nombres tipográficos. Los trece archivos originales se conservan para cuando se registre su autorización de uso.
+
+CAUCE se mantiene en borrador para evitar presentarlo como cliente externo mientras su clasificación siga pendiente. Continúan existiendo los 22 registros en el CMS. No se modificaron tablas, políticas, funciones, buckets, originales ni enlaces.
+
+Se verificó la web real `https://bko.concepcion.workers.dev/#clientes` en Edge sin respuestas simuladas: cuatro empresas visibles inicialmente, 21 al desplegar, sin repetición visual, filtros correctos y enlaces no verificados deshabilitados. Escritorio, tablet y móvil (1440/820/390 px) sin desbordamientos, errores de consola ni solicitudes fallidas. Evidencia `artifacts/clients-public-verification.json` y capturas `artifacts/clients-public-1440.png`, `artifacts/clients-public-390.png`.
+
+Antes de modificar los datos se compararon los archivos publicados con los locales: HTML, módulos de clientes, estilos y `js/app.js` coincidían. El despliegue de Cloudflare ya contenía el diseño compacto. La ausencia de empresas se debía a los estados de publicación, que esta operación corrigió. Las menciones de «cero publicados» en los apartados históricos siguientes describen el estado anterior a esta autorización.
+
 ## Presentación compacta — actualización vigente
 
 La selección inicial se redujo de diez a **cuatro** empresas, en una fila de escritorio y dos por dos en móvil. Se simplificaron el encabezado, los textos y las tarjetas. Un único desplegable **Ver todas las empresas (22)** sustituye el botón y la segunda cabecera que antes repetían el acceso. Al abrirlo desaparece la selección inicial y queda solo el directorio completo; **Ocultar directorio** devuelve la vista breve. Todos los registros, filtros, enlaces verificados y opciones de ordenación se conservan. El acceso inicial mediante `#clientes-completo` también comienza compacto.

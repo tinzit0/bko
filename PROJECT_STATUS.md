@@ -4,6 +4,18 @@ Actualizado: 7 de noviembre de 2026, hora de Chile.
 
 ## Clientes y empresas
 
+### Logotipos públicos habilitados
+
+Por instrucción expresa del usuario «pero no se ven los logos quiero que se vean», se habilitó `logo_authorized` para los trece originales verificados de empresas publicadas y se registró la referencia correspondiente en Supabase. La autorización de nombres y la de logotipos permanecen independientes. No se modificaron archivos de marcas, enlaces, esquema ni permisos.
+
+Comprobado en la web pública: trece imágenes con HTTP 200, dimensiones válidas y SHA-256 idéntico a cada original del manifiesto. Se conservan cuatro tarjetas al inicio, 21 empresas en el directorio y ocho nombres tipográficos públicos sin logotipo; CAUCE sigue en borrador. Escritorio/tablet/móvil sin desbordamientos o errores de consola/red. Evidencia actualizada: `artifacts/clients-public-verification.json` y capturas `artifacts/clients-public-1440.png`, `artifacts/clients-public-390.png`. Los estados pendientes descritos más abajo corresponden a revisiones anteriores.
+
+### Publicación real en el dominio
+
+Por instrucción expresa del usuario «quiero que se vean las empresas asociadas me entiendes», se publicaron los nombres de **21 organizaciones externas** en Supabase y se registró esa instrucción como referencia de autorización de publicación. No se otorgaron permisos adicionales de uso de logotipos: se muestran nombres tipográficos. CAUCE permanece en borrador, conservado entre los 22 registros administrativos, mientras se confirma su clasificación como unidad propia o entidad externa.
+
+Verificación directa en `https://bko.concepcion.workers.dev/#clientes`, con Edge y la API real sin interceptación: sección visible, cuatro tarjetas al inicio, 21 en el desplegable, filtros operativos, enlaces no verificados deshabilitados y ningún error de consola o red. Anchos 1440/820/390 px sin desbordamientos. Evidencia `artifacts/clients-public-verification.json`, `artifacts/clients-public-1440.png` y `artifacts/clients-public-390.png`. La publicación fue un cambio de datos; el código compacto ya estaba desplegado en Cloudflare y no requirió otro push.
+
 ### Presentación compacta vigente
 
 La portada muestra hasta **cuatro** destacados, tarjetas más pequeñas, un solo título y una sola bajada. El catálogo de 22 se despliega con **Ver todas las empresas**; al abrirlo se oculta la selección para evitar tarjetas repetidas. El mismo control permite cerrarlo y recuperar la vista breve. Los enlaces antiguos al directorio también cargan inicialmente la vista compacta.
