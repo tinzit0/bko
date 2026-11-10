@@ -62,7 +62,6 @@ export function initContentTabs() {
   if (!document.querySelector('#firma')) return;
   const copy = document.querySelector('.firm-copy');
   tabs(copy, 'Conoce la firma', [
-    {label: 'Resumen', nodes: [...copy.querySelectorAll(':scope > .firm-values')]},
     {label: 'Nuestro enfoque', nodes: [...copy.querySelectorAll(':scope > p:not(.eyebrow):not(.intro)')].slice(0, 1)},
     {label: 'Presencia', nodes: [...copy.querySelectorAll(':scope > p:not(.eyebrow):not(.intro)')].slice(1)}
   ], {wrap: false});

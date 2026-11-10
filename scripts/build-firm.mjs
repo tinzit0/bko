@@ -9,8 +9,8 @@ await writeFile(new URL('supabase/seeds/firm.json',root),JSON.stringify(records,
 let home=await readFile(new URL('index.html',root),'utf8');
 home=home.replace(/<nav class="nav" id="navigation"[\s\S]*?<\/nav>/,`<nav class="nav" id="navigation" aria-label="Navegación principal">${firmNavigation(records)}</nav>`);
 home=home.replace(/<section id="personas"[\s\S]*?(?=\s*<section id="seguros")/,`<section id="personas" class="section people-services" aria-labelledby="people-title" data-firm-people>${peopleMarkup(records)}</section>\n`);
-home=home.replace(/<div class="team-grid">[\s\S]*?(?=\s*<section id="presencia")/,`<div class="team-grid" data-firm-team>${teamMarkup(records)}</div></section>\n\n`);
-home=home.replace(/<div class="practice-list">[\s\S]*?(?=\s*<section id="sectores")/,`<div class="practice-list" data-firm-practices>${practiceMarkup(records)}</div></section>\n\n`);
+home=home.replace(/<div class="team-grid"[^>]*>[\s\S]*?(?=\s*<section id="presencia")/,`<div class="team-grid" data-firm-team>${teamMarkup(records)}</div></section>\n\n`);
+home=home.replace(/<div class="practice-list"[^>]*>[\s\S]*?(?=\s*<section id="sectores")/,`<div class="practice-list" data-firm-practices>${practiceMarkup(records)}</div></section>\n\n`);
 home=home.replace(/<div data-cauce-preview>[\s\S]*?<\/div>\s*(?=<section id="equipo")/,'');
 if(!home.includes('data-cauce-preview'))home=home.replace('<section id="equipo"',`<div data-cauce-preview>${caucePreview(records)}</div>\n<section id="equipo"`);
 home=home.replace('Derecho<br>corporativo','Corporativo').replace('Derecho inmobiliario<br>y de familia','Inmobiliario').replace('Marítimo, naviero<br>y seguros','Marítimo y<br>Naviero').replaceAll('href="#acuicultura"','href="#maritimo"');

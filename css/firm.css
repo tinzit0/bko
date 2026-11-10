@@ -10,3 +10,12 @@
 @media(max-width:1200px){.nav-group{width:100%}.nav-group>summary{font-size:18px;min-height:50px;border-bottom:1px solid #c0956430;justify-content:space-between}.nav-submenu{position:static;width:100%;max-height:none;box-shadow:none;border:0;padding:0 0 10px 12px;background:#071c2b}.nav-submenu>a{min-height:44px}.nav .nav-group{flex-shrink:0}.nav.is-open{overflow-y:auto;overscroll-behavior:contain;max-height:calc(100dvh - 75px)}}
 @media(max-width:800px){.cauce-intro,.cauce-benefits{grid-template-columns:1fr;gap:24px}.cauce-preview{flex-direction:column;align-items:flex-start}.cauce-process ol{grid-template-columns:1fr 1fr}.cauce-hero{padding-top:50px;padding-bottom:50px}.cauce-body{padding-block:45px}.cauce-founder,.cauce-scope{padding:26px}.cauce-page{padding-top:76px}.cauce-method summary h3{font-size:23px}.cauce-wordmark{letter-spacing:6px}}
 @media(max-width:480px){.cauce-process ol{grid-template-columns:1fr}.people-heading{margin-bottom:35px}.cauce-contact .form-grid{grid-template-columns:1fr}.cauce-contact .field{grid-column:1/-1}.cauce-hero::after{display:none}.nav-submenu{padding-left:0}.cauce-contact{padding-block:40px}.cauce-quote{padding-block:26px}.cauce-method summary h3{font-size:21px}.method-number{font-size:10px}.cauce-wordmark>span{letter-spacing:4px}}
+
+/* Document-requested service layout and consistent CAUCE typography. */
+.people-services .service-grid{grid-template-columns:minmax(0,1fr)}
+.cauce-lead,.cauce-quote{font:16px/1.9 var(--sans)}
+.cauce-body h2,.cauce-contact h2{font-size:clamp(26px,2.6vw,36px)}
+.cauce-method summary h3{font-size:clamp(20px,2vw,26px)}
+.cauce-process-image{margin:28px 0 0;overflow:auto}
+.cauce-process-image img{display:block;width:100%;height:auto;min-width:680px}
+@media(max-width:700px){.hero-industries{flex-wrap:wrap;row-gap:12px}}

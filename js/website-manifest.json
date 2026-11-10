@@ -29,14 +29,14 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
+        "value": "La firma",
+        "label": "Página · La firma"
       },
       {
         "key": "#navigation>a:nth-of-type(2)|text:0",
         "type": "text",
-        "value": "La firma",
-        "label": "Página · La firma"
+        "value": "Empresas",
+        "label": "Página · Empresas"
       },
       {
         "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
@@ -57,25 +57,31 @@
         "label": "Página · Negocios y Seguros"
       },
       {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
+      },
+      {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "key": "#navigation>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "key": "#navigation>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "key": "#navigation>a:nth-of-type(6)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -143,8 +149,8 @@
       {
         "key": "#inicio>div:nth-of-type(5)>p:nth-of-type(2)|text:0",
         "type": "text",
-        "value": "Asesoría jurídica para empresas y personas, con presencia directa",
-        "label": "inicio · Asesoría jurídica para empresas y personas, con presencia directa"
+        "value": "Asesoría para empresas y personas, con presencia directa",
+        "label": "inicio · Asesoría para empresas y personas, con presencia directa"
       },
       {
         "key": "#inicio>div:nth-of-type(5)>p:nth-of-type(2)|text:1",
@@ -155,26 +161,38 @@
       {
         "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(1)|text:0",
         "type": "text",
+        "value": "Corporativo",
+        "label": "inicio · Corporativo"
+      },
+      {
+        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
         "value": "Minería",
         "label": "inicio · Minería"
       },
       {
-        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Marítimo y naviero",
         "label": "inicio · Marítimo y naviero"
       },
       {
-        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(3)|text:0",
+        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Inmobiliario",
         "label": "inicio · Inmobiliario"
       },
       {
-        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(4)|text:0",
+        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Turismo",
         "label": "inicio · Turismo"
+      },
+      {
+        "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(1)>span:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "inicio · Personas"
       },
       {
         "key": "#inicio>div:nth-of-type(5)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
@@ -461,89 +479,65 @@
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "03 / CONEXIÓN CON EL AGUA",
-        "label": "sectores · 03 / CONEXIÓN CON EL AGUA"
+        "value": "03 / PATRIMONIO Y PROYECTOS",
+        "label": "sectores · 03 / PATRIMONIO Y PROYECTOS"
       },
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(2)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Marítimo, naviero",
-        "label": "sectores · Marítimo, naviero"
-      },
-      {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(2)>h3:nth-of-type(1)|text:1",
-        "type": "text",
-        "value": "y lacustre",
-        "label": "sectores · y lacustre"
-      },
-      {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Navegación, naves, contratos y seguros.",
-        "label": "sectores · Navegación, naves, contratos y seguros."
-      },
-      {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(4)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "04 / PATRIMONIO Y PROYECTOS",
-        "label": "sectores · 04 / PATRIMONIO Y PROYECTOS"
-      },
-      {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(4)>div:nth-of-type(2)>h3:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Inmobiliario",
         "label": "sectores · Inmobiliario"
       },
       {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(4)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Operaciones, inversiones y administración de inmuebles.",
         "label": "sectores · Operaciones, inversiones y administración de inmuebles."
       },
       {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(5)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
+        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(4)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "05 / TERRITORIO Y DESARROLLO",
-        "label": "sectores · 05 / TERRITORIO Y DESARROLLO"
+        "value": "04 / TERRITORIO Y DESARROLLO",
+        "label": "sectores · 04 / TERRITORIO Y DESARROLLO"
       },
       {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(5)>div:nth-of-type(2)>h3:nth-of-type(1)|text:0",
+        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(4)>div:nth-of-type(2)>h3:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Turismo",
         "label": "sectores · Turismo"
       },
       {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(5)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(4)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Asesoría corporativa y contractual para proyectos turísticos.",
         "label": "sectores · Asesoría corporativa y contractual para proyectos turísticos."
       },
       {
-        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
         "type": "text",
         "value": "DE NORTE A SUR, UNA MISMA FORMA DE ASESORAR.",
         "label": "Página · DE NORTE A SUR, UNA MISMA FORMA DE ASESORAR."
       },
       {
-        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "La distancia cambia.",
         "label": "Página · La distancia cambia."
       },
       {
-        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>h2:nth-of-type(1)>em:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>h2:nth-of-type(1)>em:nth-of-type(1)|text:0",
         "type": "text",
         "value": "El compromiso permanece.",
         "label": "Página · El compromiso permanece."
       },
       {
-        "key": "#contenido>section:nth-of-type(7)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(6)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Conecta con BKO",
         "label": "Página · Conecta con BKO"
       },
       {
-        "key": "#contenido>section:nth-of-type(7)>span:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(6)>span:nth-of-type(1)|text:0",
         "type": "text",
         "value": "CHILE / 22° S — 41° S",
         "label": "Página · CHILE / 22° S — 41° S"
@@ -1001,9 +995,9 @@
       {
         "key": "#firma>div:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
-        "value": "assets/oficinas/santiago/WhatsApp%20Image%202026-11-05%20at%2022.48.40%20(1).jpeg",
-        "alt": "Espacio de trabajo de BKO en Santiago, con escritorios y sala de reuniones al fondo",
-        "label": "Fotografía · Espacio de trabajo de BKO en Santiago, con escritorios y sala de reuniones al fondo"
+        "value": "assets/actualizacion/image1.png",
+        "alt": "Espacio de trabajo de BKO en Santiago",
+        "label": "Fotografía · Espacio de trabajo de BKO en Santiago"
       },
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
@@ -1015,37 +1009,30 @@
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(2)>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
-        "value": "assets/editorial/acuicultura.svg",
-        "alt": "Ilustración editorial de centros de cultivo y corrientes de agua",
-        "label": "Fotografía · Ilustración editorial de centros de cultivo y corrientes de agua"
+        "value": "assets/actualizacion/image2.png",
+        "alt": "Composición de una embarcación y centros de cultivo junto a montañas",
+        "label": "Fotografía · Composición de una embarcación y centros de cultivo junto a montañas"
       },
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
-        "value": "assets/oficinas/puerto%20varas/WhatsApp%20Image%202026-11-05%20at%2022.48.53.jpeg",
-        "alt": "Vista del lago desde la terraza de la oficina de BKO en Puerto Varas",
-        "label": "Fotografía · Vista del lago desde la terraza de la oficina de BKO en Puerto Varas"
+        "value": "assets/actualizacion/image3.png",
+        "alt": "Composición de proyectos inmobiliarios entre el norte minero y el sur de Chile",
+        "label": "Fotografía · Composición de proyectos inmobiliarios entre el norte minero y el sur de Chile"
       },
       {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(4)>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
-        "value": "assets/santiago.webp",
-        "alt": "Ilustración del horizonte urbano de Santiago de Chile y la cordillera",
-        "label": "Fotografía · Ilustración del horizonte urbano de Santiago de Chile y la cordillera"
-      },
-      {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(5)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/editorial/turismo.svg",
-        "alt": "Ilustración editorial de montañas y una ruta turística",
-        "label": "Fotografía · Ilustración editorial de montañas y una ruta turística"
+        "value": "assets/actualizacion/image4.png",
+        "alt": "Composición de hotel y restaurante junto a un lago y montañas",
+        "label": "Fotografía · Composición de hotel y restaurante junto a un lago y montañas"
       },
       {
         "key": "#oficina-calama>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
-        "value": "assets/oficinas/calama/interior-960.webp",
-        "alt": "Interior de la oficina de BKO en Calama, con mesa de reuniones y espacios de trabajo",
-        "label": "Fotografía · Interior de la oficina de BKO en Calama, con mesa de reuniones y espacios de trabajo"
+        "value": "assets/oficinas/calama/calama.png",
+        "alt": "Oficina de BKO en Calama",
+        "label": "Fotografía · Oficina de BKO en Calama"
       },
       {
         "key": "#oficina-santiago>div:nth-of-type(1)>img:nth-of-type(1)|image",
@@ -1057,9 +1044,9 @@
       {
         "key": "#oficina-puerto-varas>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
-        "value": "assets/oficinas/puerto%20varas/interior-960.webp",
-        "alt": "Interior de la oficina de BKO en Puerto Varas, con escritorio y ventanales hacia el lago",
-        "label": "Fotografía · Interior de la oficina de BKO en Puerto Varas, con escritorio y ventanales hacia el lago"
+        "value": "assets/oficinas/puerto%20varas/puerto%20varas.png",
+        "alt": "Oficina de BKO en Puerto Varas",
+        "label": "Fotografía · Oficina de BKO en Puerto Varas"
       },
       {
         "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
@@ -1139,47 +1126,53 @@
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(2)|text:0",
         "type": "text",
+        "value": "Empresas",
+        "label": "Página · Empresas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
+        "type": "text",
         "value": "Áreas de práctica",
         "label": "Página · Áreas de práctica"
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
         "type": "text",
         "value": "CAUCE Gestión Integral",
         "label": "Página · CAUCE Gestión Integral"
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Personas",
         "label": "Página · Personas"
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(5)|text:0",
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(6)|text:0",
         "type": "text",
         "value": "Negocios y seguros",
         "label": "Página · Negocios y seguros"
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(6)|text:0",
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(7)|text:0",
         "type": "text",
         "value": "Equipo",
         "label": "Página · Equipo"
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(7)|text:0",
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(8)|text:0",
         "type": "text",
         "value": "Presencia",
         "label": "Página · Presencia"
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(8)|text:0",
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(9)|text:0",
         "type": "text",
         "value": "Actualidad",
         "label": "Página · Actualidad"
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(9)|text:0",
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(10)|text:0",
         "type": "text",
         "value": "Contacto",
         "label": "Página · Contacto"
@@ -1361,12 +1354,6 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(2)|text:0",
-        "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
       },
@@ -1387,6 +1374,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
@@ -1708,12 +1701,6 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(2)|text:0",
-        "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
       },
@@ -1734,6 +1721,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
@@ -2055,12 +2048,6 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(2)|text:0",
-        "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
       },
@@ -2081,6 +2068,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
@@ -2384,12 +2377,6 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(2)|text:0",
-        "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
       },
@@ -2410,6 +2397,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
@@ -2713,12 +2706,6 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(2)|text:0",
-        "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
       },
@@ -2739,6 +2726,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
@@ -3042,12 +3035,6 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(2)|text:0",
-        "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
       },
@@ -3068,6 +3055,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
@@ -3371,11 +3364,334 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(1)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(2)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(3)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Negocios y Seguros",
+        "label": "Página · Negocios y Seguros"
       },
       {
         "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
+      },
+      {
+        "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "#header>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Agenda una reunión",
+        "label": "Página · Agenda una reunión"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "PRESENCIA LOCAL.",
+        "label": "Página · PRESENCIA LOCAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>p:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "VISIÓN NACIONAL.",
+        "label": "Página · VISIÓN NACIONAL."
+      },
+      {
+        "key": "footer>div:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Volver al inicio",
+        "label": "Página · Volver al inicio"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Explora BKO",
+        "label": "Página · Explora BKO"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "La firma",
+        "label": "Página · La firma"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Áreas de práctica",
+        "label": "Página · Áreas de práctica"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(3)|text:0",
+        "type": "text",
+        "value": "CAUCE Gestión Integral",
+        "label": "Página · CAUCE Gestión Integral"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(4)|text:0",
+        "type": "text",
+        "value": "Personas",
+        "label": "Página · Personas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(5)|text:0",
+        "type": "text",
+        "value": "Negocios y seguros",
+        "label": "Página · Negocios y seguros"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Equipo",
+        "label": "Página · Equipo"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(7)|text:0",
+        "type": "text",
+        "value": "Presencia",
+        "label": "Página · Presencia"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(8)|text:0",
+        "type": "text",
+        "value": "Actualidad",
+        "label": "Página · Actualidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(1)>nav:nth-of-type(1)>a:nth-of-type(9)|text:0",
+        "type": "text",
+        "value": "Contacto",
+        "label": "Página · Contacto"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Calama",
+        "label": "Página · Calama"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "AV Las Industrias, Sitio 14,",
+        "label": "Página · AV Las Industrias, Sitio 14,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Puerto Seco.",
+        "label": "Página · Puerto Seco."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Calama, Región de Antofagasta.",
+        "label": "Página · Calama, Región de Antofagasta."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Santiago",
+        "label": "Página · Santiago"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Av. Presidente Kennedy 5146,",
+        "label": "Página · Av. Presidente Kennedy 5146,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "Piso 5. Vitacura,",
+        "label": "Página · Piso 5. Vitacura,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Santiago de Chile.",
+        "label": "Página · Santiago de Chile."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Puerto Varas",
+        "label": "Página · Puerto Varas"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Avenida Vicente Pérez Rosales 1290,",
+        "label": "Página · Avenida Vicente Pérez Rosales 1290,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "tercer piso. Puerto Varas,",
+        "label": "Página · tercer piso. Puerto Varas,"
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>address:nth-of-type(1)|text:2",
+        "type": "text",
+        "value": "Región de Los Lagos.",
+        "label": "Página · Región de Los Lagos."
+      },
+      {
+        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo de oficina por confirmar.",
+        "label": "Página · Correo de oficina por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "+56 9 7482 6025",
+        "label": "Página · +56 9 7482 6025"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Correo general por confirmar.",
+        "label": "Página · Correo general por confirmar."
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "WhatsApp ↗",
+        "label": "Página · WhatsApp ↗"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Administración",
+        "label": "Página · Administración"
+      },
+      {
+        "key": "#year|text:0",
+        "type": "text",
+        "value": "2026",
+        "label": "Página · 2026"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>p:nth-of-type(1)|text:1",
+        "type": "text",
+        "value": "BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados.",
+        "label": "Página · BKO Bentjerodt Koplin y Oyarzun Consultores. Todos los derechos reservados."
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Política de privacidad",
+        "label": "Página · Política de privacidad"
+      },
+      {
+        "key": "footer>div:nth-of-type(4)>div:nth-of-type(1)>button:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Créditos visuales",
+        "label": "Página · Créditos visuales"
+      }
+    ]
+  },
+  "equipo/makarena-andrea-ponce-villarroel.html": {
+    "title": "Makarena Andrea Ponce Villarroel",
+    "fields": [
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "BKO",
+        "label": "Página · BKO"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "BENTJERODT KOPLIN",
+        "label": "Página · BENTJERODT KOPLIN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)|text:1",
+        "type": "text",
+        "value": "Y OYARZUN",
+        "label": "Página · Y OYARZUN"
+      },
+      {
+        "key": "#header>a:nth-of-type(1)>span:nth-of-type(2)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "CONSULTORES",
+        "label": "Página · CONSULTORES"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
@@ -3397,6 +3713,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",
@@ -3700,12 +4022,6 @@
       {
         "key": "#navigation>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Inicio",
-        "label": "Página · Inicio"
-      },
-      {
-        "key": "#navigation>a:nth-of-type(2)|text:0",
-        "type": "text",
         "value": "La firma",
         "label": "Página · La firma"
       },
@@ -3726,6 +4042,12 @@
         "type": "text",
         "value": "Negocios y Seguros",
         "label": "Página · Negocios y Seguros"
+      },
+      {
+        "key": "#navigation>a:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "CAUCE",
+        "label": "Página · CAUCE"
       },
       {
         "key": "#navigation>details:nth-of-type(4)>summary:nth-of-type(1)|text:0",

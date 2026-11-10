@@ -36,8 +36,8 @@ test('No enlaza dominios sin verificar ni recursos que no sean logotipos locales
  assert.equal(websiteUrl('javascript:alert(1)'), '');assert.equal(websiteUrl('https://user:password@example.com'), '');assert.equal(logoLocalPath('assets/clientes/../evil.svg'), '');
  const brasas=approved(rows.find(r=>r.slug==='las-buenas-brasas'));assert.ok(!clientCard(brasas).includes('<a '));const malicious={...approved(rows[0]),name:'<img onerror=alert(1)>',website_url:'javascript:alert(1)',website_verified:true,logo_authorized:false};assert.ok(clientCard(malicious).includes('&lt;img'));assert.ok(!clientCard(malicious).includes('<a '));
 });
-test('Selección de portada y directorio completo conservan orden y sectores',()=>{
- const visible=rows.map(approved);const html=clientsMarkup(visible);assert.equal((html.match(/data-client-slug=/g)||[]).length,26);assert.match(html,/id="clientes-completo"/);assert.match(html,/data-client-filter="mineria"/);assert.match(html,/data-client-filter="salud"/);const order=publishedClients(visible.map(r=>({...r,sort_order:r.slug==='directemar'?-1:r.sort_order})));assert.equal(order[0].slug,'directemar');
+test('Empresas se muestran una sola vez, sin directorio ni filtros de especialidades',()=>{
+ const visible=rows.map(approved);const html=clientsMarkup(visible);assert.equal((html.match(/data-client-slug=/g)||[]).length,22);assert.ok(!/clients-directory|data-client-filter|clients-sort/.test(html));const order=publishedClients(visible.map(r=>({...r,sort_order:r.slug==='directemar'?-1:r.sort_order})));assert.equal(order[0].slug,'directemar');
 });
 test('Valida formatos reales de los 13 originales y rechaza SVG activo, recursos externos y tamaños excesivos',async()=>{
  const manifest=JSON.parse(await readFile(new URL('docs/interno/clientes/logotipos.json',root),'utf8'));

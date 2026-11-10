@@ -5,7 +5,7 @@ import {validateRecord,visibleRecords,profilePath} from '../js/firm-model.js';
 import {teamMarkup,profileMarkup,cauceMarkup} from '../js/firm-render.js';
 const records=JSON.parse(await readFile(new URL('../supabase/seeds/firm.json',import.meta.url),'utf8'));
 test('Equipo conserva el orden solicitado y permite modificarlo desde los datos',()=>{
- const team=visibleRecords(records).filter(r=>r.kind==='professional');assert.deepEqual(team.map(r=>r.id),['jorge-ivan-saavedra-bentjerodt','camila-alejandra-kopplin-lanata','fenella-reyes-gonzalo','luis-miranda-chavarria','roxana-ximena-oyarzun-bustamante','estefania-benitez-garcia']);
+ const team=visibleRecords(records).filter(r=>r.kind==='professional');assert.deepEqual(team.map(r=>r.id),['jorge-ivan-saavedra-bentjerodt','camila-alejandra-kopplin-lanata','fenella-reyes-gonzalo','luis-miranda-chavarria','roxana-ximena-oyarzun-bustamante','estefania-benitez-garcia','makarena-andrea-ponce-villarroel']);
  const reordered=team.map(r=>({...r,sort_order:r.id.startsWith('luis')?-1:r.sort_order}));assert.equal(visibleRecords(reordered)[0].id,'luis-miranda-chavarria');
  assert.ok(records.every(validateRecord));
 });
@@ -25,9 +25,9 @@ test('Conserva la trayectoria completa de Jorge, Camila y la metodología de CAU
  assert.equal(c.sections.length,5);assert.match(JSON.stringify(c),/32 horas/);assert.match(JSON.stringify(c),/California Western School of Law/);assert.match(JSON.stringify(c),/Derecho Colectivo del Trabajo en Chile/);
  assert.equal(cauce.data.sections.length,9);const html=cauceMarkup(cauce,records);assert.match(html,/Información no disponible/);assert.match(html,/tramos de vigencia/);assert.match(html,/profesionales jurídicos/);assert.ok(!html.includes('interestCriteria'));
 });
-test('Perfiles, fotografías originales y CAUCE existen; solo hay cuatro áreas principales',async()=>{
+test('Perfiles, fotografías originales y CAUCE existen; Turismo completa las cinco áreas principales',async()=>{
  for(const r of records.filter(r=>r.kind==='professional')){await access(new URL('../'+profilePath(r.id),import.meta.url));if(r.data.image)await access(new URL('../'+r.data.image,import.meta.url))}
- const home=await readFile(new URL('../index.html',import.meta.url),'utf8');assert.equal((home.match(/class="practice"/g)||[]).length,4);assert.ok(!home.includes('id="acuicultura"'));assert.match(home,/Concesiones de acuicultura/);assert.ok(!/Derecho(?:<br>| )corporativo|Derecho inmobiliario/i.test(home));await access(new URL('../cauce/index.html',import.meta.url));
+ const home=await readFile(new URL('../index.html',import.meta.url),'utf8');assert.equal((home.match(/class="practice"/g)||[]).length,5);assert.ok(!home.includes('id="acuicultura"'));assert.match(home,/Concesiones de acuicultura/);assert.ok(!/Derecho(?:<br>| )corporativo|Derecho inmobiliario/i.test(home));await access(new URL('../cauce/index.html',import.meta.url));
  assert.ok(!/<h[23][^>]*>Acuicultura/i.test(home),'Acuicultura no debe quedar como tarjeta principal');
 });
 test('La migración protege borradores y configuración privada, y guarda con revisión',async()=>{
