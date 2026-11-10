@@ -9,3 +9,5 @@ Los registros de servicios y profesionales también se actualizaron en el CMS de
 Se corrigió el generador de la firma para renovar las secciones que ya tienen atributos `data-firm-*`, conservando las actualizaciones al regenerar. El manifiesto del editor visual se actualizó con las nuevas secciones e imágenes.
 
 Verificación: 36 pruebas automatizadas aprobadas. Inicio, Makarena, Luis y CAUCE revisados con Edge a 1440 y 390 píxeles, sin imágenes rotas, desbordes horizontales ni errores de JavaScript. Evidencia local en `artifacts/arreglos/` (carpeta excluida de Git).
+
+La comprobación posterior, punto por punto, está en [COMPROBACION-ARREGLOS.md](COMPROBACION-ARREGLOS.md). Incluye la corrección del título de la tarjeta marítima y la revisión de las diez páginas a 1440, 390 y 320 píxeles.

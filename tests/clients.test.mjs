@@ -4,8 +4,18 @@ import {readFile} from 'node:fs/promises';
 import {parseClientsCsv} from '../scripts/import-clients.mjs';
 import {publishedClients,clientStatistics,validateClient,validateLogoFile,websiteUrl,logoLocalPath} from '../js/clients-model.js';
 import {clientsMarkup,clientCard} from '../js/clients-render.js';
-const root=new URL('../',import.meta.url),raw=await readFile(new URL('clientes/clientes_confian_en_nosotros.csv',root),'utf8'),rows=JSON.parse(await readFile(new URL('supabase/seeds/clients.json',root),'utf8'));
+const root=new URL('../',import.meta.url),raw=await readFile(new URL('clientes/clientes_confian_en_nosotros.csv',root),'utf8'),allRows=JSON.parse(await readFile(new URL('supabase/seeds/clients.json',root),'utf8'));
+const originalSlugs=new Set(parseClientsCsv(raw).map(r=>r.slug)),rows=allRows.filter(r=>originalSlugs.has(r.slug));
 const approved=r=>({...r,id:'123e4567-e89b-12d3-a456-426614174000',active:true,published:true,relation_authorized:true});
+
+test('Casa Vander se conserva como cliente adicional con web oficial y logotipo válido',async()=>{
+ const additions=JSON.parse(await readFile(new URL('clientes/clientes-adicionales.json',root),'utf8'));
+ const client=allRows.find(r=>r.slug==='casa-vander');assert.ok(client&&validateClient(client));
+ assert.equal(allRows.filter(r=>r.slug===client.slug).length,1);assert.equal(client.sector,'turismo');
+ assert.ok(additions.some(r=>r.slug===client.slug));assert.ok(publishedClients([client]).length===1);
+ const card=clientCard(client);assert.match(card,/href="https:\/\/www.casavander.cl\/"/);assert.match(card,/assets\/clientes\/casa-vander.png/);
+ const bytes=await readFile(new URL(client.logo_local_path,root));await validateLogoFile(new File([bytes],'casa-vander.png',{type:'image/png'}));
+});
 
 test('Estadísticas distinguen publicación efectiva y autorizaciones, sin contar permisos de logo inexistentes',()=>{
  const stats=clientStatistics(rows);assert.equal(stats.total,22);assert.equal(stats.published,0);assert.equal(stats.pending,22);assert.equal(stats.withLogo,13);assert.equal(stats.withoutLogo,9);assert.equal(stats.featured,10);assert.equal(Object.values(stats.sectors).reduce((a,b)=>a+b,0),22);

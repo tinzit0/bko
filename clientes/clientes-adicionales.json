@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "casa-vander",
+    "name": "Casa Vander",
+    "original_name": "Casa Vander",
+    "website_url": "https://www.casavander.cl/",
+    "website_original": "https://www.casavander.cl/",
+    "website_verified": true,
+    "logo_local_path": "assets/clientes/casa-vander.png",
+    "logo_storage_path": "",
+    "logo_verified": true,
+    "logo_authorized": true,
+    "logo_source": "https://www.casavander.cl/img/logo-oscuro.png",
+    "logo_source_original": "https://www.casavander.cl/",
+    "logo_status_original": "Logotipo original de la cabecera del sitio oficial",
+    "verification_status": "verified",
+    "observations": "Cliente agregado por instrucción del responsable del sitio. Logotipo oficial preparado localmente para su próxima publicación; el CMS público utiliza el nombre mientras el archivo no esté desplegado.",
+    "sector": "turismo",
+    "sector_source": "https://www.casavander.cl/",
+    "description": "Hotel boutique en Cerro Alegre, Valparaíso.",
+    "sort_order": 230,
+    "active": true,
+    "published": true,
+    "featured": false,
+    "relation_authorized": true,
+    "authorization_reference": "Instrucción del responsable del sitio en esta conversación: https://www.casavander.cl/, Otro nuevo cliente.",
+    "logo_authorization_reference": "Instrucción de incorporar al cliente en la sección de empresas, siguiendo la preferencia previa del responsable de mostrar sus logotipos.",
+    "original_row": "https://www.casavander.cl/, Otro nuevo cliente",
+    "logo_width": 846,
+    "logo_height": 226,
+    "logo_background": "white"
+  }
+]

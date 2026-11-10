@@ -2,6 +2,14 @@
 
 Fecha: 7 de noviembre de 2026.
 
+## Alta posterior: Casa Vander
+
+Se incorporó **Casa Vander**, hotel boutique en Cerro Alegre, Valparaíso, a petición del responsable del sitio, con enlace verificado a https://www.casavander.cl/ y sector Hotelería y turismo. Su registro en Supabase está activo y publicado, con su logotipo oficial visible.
+
+El logotipo original de la cabecera oficial, `https://www.casavander.cl/img/logo-oscuro.png`, se conserva sin modificaciones en `assets/clientes/casa-vander.png` (846 × 226 píxeles). Tras la petición expresa de mostrarlo, se cargó en el bucket privado `bko-client-logos` como `casa-vander-c7eaf619917fa256.png`, se comprobó su SHA-256 y se activaron la verificación y autorización del registro. El endpoint existente `client-logo` sirve el archivo a la web pública; no hace falta desplegar el frontend para este cambio. La sesión administrativa se utilizó solo en memoria, sin guardar credenciales en archivos ni mostrarlas en la salida.
+
+El catálogo local contiene ahora 23 registros. Las 22 filas históricas del CSV original se conservan intactas; las incorporaciones posteriores viven en `clientes/clientes-adicionales.json` y se incorporan al regenerar el seed. La importación mantiene `on conflict(slug) do nothing` para conservar los cambios del CMS. Las pruebas distinguen la importación histórica del catálogo ampliado.
+
 ## Logotipos publicados — estado vigente
 
 El usuario indicó expresamente «pero no se ven los logos quiero que se vean». Se habilitaron los trece logotipos originales previamente verificados de organizaciones publicadas y se registró esa instrucción como referencia de autorización de uso en Supabase. Esta operación modifica únicamente `logo_authorized` y `logo_authorization_reference`; la publicación de nombres mantiene su propia referencia. No se modificaron archivos, colores de marcas, relaciones comerciales, enlaces ni políticas.
