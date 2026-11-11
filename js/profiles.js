@@ -1,10 +1,12 @@
 import { initLuxury } from './luxury.js';
 import { initCinema } from './cinema.js';
+import { initMusic } from './music.js';
 import { initAnchorScroll } from './anchor-scroll.js';
 import { config } from './config.js';
 initAnchorScroll();
 initLuxury();
 initCinema();
+initMusic();
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('#navigation');
 const header=document.querySelector('#header');

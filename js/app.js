@@ -3,10 +3,12 @@ import { validateConsultation } from './validation.js';
 import { initMotion } from './motion.js';
 import { initLuxury } from './luxury.js';
 import { initCinema } from './cinema.js';
+import { initMusic } from './music.js';
 import { initContentTabs } from './content-tabs.js';
 import { initAnchorScroll } from './anchor-scroll.js';
 initLuxury();
 initCinema();
+initMusic();
 initContentTabs();
 
 const $ = selector => document.querySelector(selector);

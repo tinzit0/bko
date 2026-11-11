@@ -5,7 +5,7 @@ import {publicClientColumns} from '../js/clients-model.js';
 
 const root = resolve(import.meta.dirname, '..');
 const port = Number(process.env.PORT || 3000);
-const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.xml':'application/xml','.txt':'text/plain; charset=utf-8'};
+const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.xml':'application/xml','.txt':'text/plain; charset=utf-8','.mp3':'audio/mpeg'};
 const publicRoots = new Set(['index.html','robots.txt','sitemap.xml','assets','css','js','equipo','seguros','cauce','admin']);
 createServer(async (req,res) => {
   try {
@@ -28,6 +28,15 @@ createServer(async (req,res) => {
     if (!['GET','HEAD'].includes(req.method)) { res.writeHead(405).end(); return; }
     if (!(await stat(path)).isFile()) { res.writeHead(404).end('Not found'); return; }
     let body = await readFile(path);
+    // Audio: rangos de bytes (como Cloudflare) para poder retomar la música desde cualquier punto.
+    const range=extname(path)==='.mp3'&&/^bytes=(\d*)-(\d*)$/.exec(req.headers.range||'');
+    if(range){
+      const size=body.length,start=range[1]?Number(range[1]):Math.max(0,size-Number(range[2])),end=range[1]&&range[2]?Math.min(Number(range[2]),size-1):size-1;
+      if(start>=size||start>end){res.writeHead(416,{'Content-Range':`bytes */${size}`}).end();return;}
+      const part=body.subarray(start,end+1);
+      res.writeHead(206,{'Content-Type':'audio/mpeg','Content-Length':part.length,'Content-Range':`bytes ${start}-${end}/${size}`,'Accept-Ranges':'bytes','X-Content-Type-Options':'nosniff','Cache-Control':'no-cache'});
+      res.end(req.method==='HEAD'?undefined:part);return;
+    }
     if(relative==='index.html'&&requestUrl.searchParams.get('clientes')!=='publicados')body=Buffer.from(body.toString('utf8').replace('</head>','<meta name="bko-clients-preview" content="local"></head>'));
     res.writeHead(200, {
       'Content-Type': types[extname(path)] || 'application/octet-stream',
@@ -35,6 +44,7 @@ createServer(async (req,res) => {
       'X-Content-Type-Options':'nosniff',
       'Referrer-Policy':'strict-origin-when-cross-origin',
       'Cache-Control':'no-cache',
+      ...(extname(path)==='.mp3'?{'Accept-Ranges':'bytes'}:{}),
     });
     res.end(req.method === 'HEAD' ? undefined : body);
   } catch { res.writeHead(404).end('Not found'); }
