@@ -15,8 +15,9 @@ Fuente: `Arreglos a la página II.docx`, carpetas `seguro maritimo/` y `clientes
 
 ## Pendiente para publicar
 
-1. Ejecutar `supabase/updates/20261111_arreglos_ii.sql` en el editor SQL de Supabase. El sitio publicado lee de Supabase el equipo, los textos, los seguros y los clientes. Mientras no se ejecute, se verá el contenido anterior y los enlaces #mineria y #generales del menú no tendrán destino.
+1. Hecho (11-11-2026): `supabase/updates/20261111_arreglos_ii.sql` ejecutado en producción con la CLI (`supabase db query --remote`). Se corrigió el script para completar `logo_source` antes de verificar logotipos (restricción `client_logo_verified`).
 2. Publicar los archivos: assets, CSS, JS y HTML.
-3. Por confirmar: «Falta un punto entre cauce y equipo».
+3. Hecho: punto separador dorado entre CAUCE y Equipo en el menú de escritorio (`css/firm.css`).
+4. Hecho: foto de Roxana en el muelle (`assets/personas/en seguros.jpeg`, recortada a `assets/seguros/roxana-muelle-480|720.webp`) en el recuadro de la encargada de Negocios y Seguros (`js/insurance-render.js`, `seguros/index.html`, `css/insurance.css`).
 
 Pruebas: 37 de 37 aprobadas (`npm test`).

@@ -5,5 +5,5 @@ export const config = Object.freeze({
   siteUrl: '', // Se completa con npm run configure-domain -- https://dominio-real.cl
   turnstileSiteKey: '', // Opcional: activar junto con TURNSTILE_SECRET_KEY en Supabase.
   analytics: { gtmId: '', ga4Id: '' }, // Reservados. No se cargan trackers sin consentimiento.
-  emails: { general: '', calama: '', santiagoPuertoVaras: '' },
+  emails: { general: 'contacto@bko.cl', calama: '', santiagoPuertoVaras: '' },
 });

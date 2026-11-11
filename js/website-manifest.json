@@ -537,6 +537,54 @@
         "label": "Página · Conecta con BKO"
       },
       {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(1)>dd:nth-of-type(1)>strong:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Sedes",
+        "label": "Página · Sedes"
+      },
+      {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(1)>dd:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Calama, Santiago y Puerto Varas",
+        "label": "Página · Calama, Santiago y Puerto Varas"
+      },
+      {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(2)>dt:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "+2.000",
+        "label": "Página · +2.000"
+      },
+      {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(2)>dt:nth-of-type(1)>small:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "km",
+        "label": "Página · km"
+      },
+      {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(2)>dd:nth-of-type(1)>strong:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "De norte a sur",
+        "label": "Página · De norte a sur"
+      },
+      {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(2)>dd:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Del desierto minero a los lagos del sur",
+        "label": "Página · Del desierto minero a los lagos del sur"
+      },
+      {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(3)>dd:nth-of-type(1)>strong:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Equipo interdisciplinario",
+        "label": "Página · Equipo interdisciplinario"
+      },
+      {
+        "key": "#contenido>section:nth-of-type(6)>dl:nth-of-type(1)>div:nth-of-type(3)>dd:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Jurídico, médico, social, contable y de seguros",
+        "label": "Página · Jurídico, médico, social, contable y de seguros"
+      },
+      {
         "key": "#contenido>section:nth-of-type(6)>span:nth-of-type(1)|text:0",
         "type": "text",
         "value": "CHILE / 22° S — 41° S",
@@ -557,32 +605,38 @@
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Responsabilidad Civil",
-        "label": "seguros · Responsabilidad Civil"
+        "value": "Seguros para la minería",
+        "label": "seguros · Seguros para la minería"
       },
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
         "type": "text",
-        "value": "Constructoras y maquinaria",
-        "label": "seguros · Constructoras y maquinaria"
+        "value": "Seguros marítimos",
+        "label": "seguros · Seguros marítimos"
       },
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
         "type": "text",
-        "value": "Licitaciones y garantías",
-        "label": "seguros · Licitaciones y garantías"
+        "value": "Garantías y licitaciones",
+        "label": "seguros · Garantías y licitaciones"
       },
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
         "type": "text",
-        "value": "Vida, ahorro y protección patrimonial",
-        "label": "seguros · Vida, ahorro y protección patrimonial"
+        "value": "Empresas constructoras y maquinaria",
+        "label": "seguros · Empresas constructoras y maquinaria"
       },
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
         "type": "text",
-        "value": "Seguros marítimos",
-        "label": "seguros · Seguros marítimos"
+        "value": "Responsabilidad Civil",
+        "label": "seguros · Responsabilidad Civil"
+      },
+      {
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(6)|text:0",
+        "type": "text",
+        "value": "Seguros generales",
+        "label": "seguros · Seguros generales"
       },
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
@@ -591,13 +645,13 @@
         "label": "seguros · EXPLORAR NEGOCIOS Y SEGUROS"
       },
       {
-        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
         "type": "text",
         "value": "ENCARGADA DEL ÁREA",
         "label": "seguros · ENCARGADA DEL ÁREA"
       },
       {
-        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Conoce su perfil ↗",
         "label": "seguros · Conoce su perfil ↗"
@@ -1028,6 +1082,13 @@
         "label": "Fotografía · Composición de hotel y restaurante junto a un lago y montañas"
       },
       {
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(2)>figure:nth-of-type(1)>img:nth-of-type(1)|image",
+        "type": "image",
+        "value": "assets/seguros/roxana-muelle-480.webp",
+        "alt": "Roxana Ximena Oyarzún Bustamante en un muelle de carga del sur de Chile",
+        "label": "Fotografía · Roxana Ximena Oyarzún Bustamante en un muelle de carga del sur de Chile"
+      },
+      {
         "key": "#oficina-calama>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
         "value": "assets/oficinas/calama/calama.png",
@@ -1202,12 +1263,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -1230,12 +1285,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -1262,22 +1311,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -1556,12 +1599,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -1584,12 +1621,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -1616,22 +1647,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -1903,12 +1928,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -1931,12 +1950,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -1963,22 +1976,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -2232,12 +2239,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -2260,12 +2261,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -2292,22 +2287,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -2561,12 +2550,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -2589,12 +2572,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -2621,22 +2598,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -2890,12 +2861,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -2918,12 +2883,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -2950,22 +2909,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -3219,12 +3172,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -3247,12 +3194,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -3279,22 +3220,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -3548,12 +3483,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -3576,12 +3505,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -3608,22 +3531,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -3877,12 +3794,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -3905,12 +3816,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -3937,22 +3842,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -4206,12 +4105,6 @@
         "label": "Página · Calama, Región de Antofagasta."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>h2:nth-of-type(1)|text:0",
         "type": "text",
         "value": "Santiago",
@@ -4234,12 +4127,6 @@
         "type": "text",
         "value": "Santiago de Chile.",
         "label": "Página · Santiago de Chile."
-      },
-      {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
       },
       {
         "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>h2:nth-of-type(1)|text:0",
@@ -4266,22 +4153,16 @@
         "label": "Página · Región de Los Lagos."
       },
       {
-        "key": "footer>div:nth-of-type(2)>div:nth-of-type(4)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Correo de oficina por confirmar.",
-        "label": "Página · Correo de oficina por confirmar."
-      },
-      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(1)|text:0",
         "type": "text",
         "value": "+56 9 7482 6025",
         "label": "Página · +56 9 7482 6025"
       },
       {
-        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)|text:0",
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(1)>a:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "Correo general por confirmar.",
-        "label": "Página · Correo general por confirmar."
+        "value": "contacto@bko.cl",
+        "label": "Página · contacto@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",

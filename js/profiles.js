@@ -1,5 +1,6 @@
 import { initLuxury } from './luxury.js';
 import { initAnchorScroll } from './anchor-scroll.js';
+import { config } from './config.js';
 initAnchorScroll();
 initLuxury();
 const menu=document.querySelector('.menu-toggle');
@@ -17,3 +18,6 @@ document.querySelectorAll('#navigation a').forEach(a=>{a.classList.remove('activ
 document.querySelector('#year').textContent=new Date().getFullYear();
 for(const [selector,id]of [['[data-open-privacy]','privacy-dialog'],['[data-open-credits]','credits-dialog']])document.querySelectorAll(selector).forEach(b=>b.addEventListener('click',()=>document.getElementById(id).showModal()));
 document.querySelectorAll('[data-close-dialog]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
+
+// Correos del pie: se muestran solo los configurados; los vacíos no se exponen como texto provisional.
+document.querySelectorAll('[data-email]').forEach(slot=>{const email=config.emails[slot.dataset.email];if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){slot.remove();return}const a=document.createElement('a');a.href=`mailto:${email}`;a.textContent=email;slot.replaceChildren(a)});

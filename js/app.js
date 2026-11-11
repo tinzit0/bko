@@ -90,7 +90,7 @@ $$('[data-whatsapp]').forEach(link => {
 });
 $$('[data-email]').forEach(slot => {
   const email = config.emails[slot.dataset.email];
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { slot.remove(); return; }
   const link = document.createElement('a'); link.href = `mailto:${email}`; link.textContent = email;
   slot.replaceChildren(link);
 });
