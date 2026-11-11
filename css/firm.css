@@ -224,3 +224,8 @@ html::after{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;o
   @keyframes bko-ihv-inset{from{opacity:0;translate:-24px 24px}}
   @keyframes bko-ihv-frame{from{opacity:0;translate:18px -18px}}
 }
+
+/* Sector Marítimo, naviero y lacustre: fotografías de terreno que rotan con fundido lento. */
+.sector-slideshow img{opacity:0;transition:opacity 1.6s cubic-bezier(.4,0,.2,1)}
+.sector-slideshow img.is-active{opacity:1}
+.sector-slideshow img[src$="movimiento-1.webp"]{object-position:50% 52%}.sector-slideshow img[src$="movimiento-2.webp"]{object-position:50% 4%}.sector-slideshow img[src$="movimiento-3.webp"]{object-position:50% 62%}

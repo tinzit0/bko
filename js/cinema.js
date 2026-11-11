@@ -82,6 +82,32 @@ export function initCinema() {
   });
   addSpots();
 
+  // 4. Fotos que rotan (sector Marítimo, naviero y lacustre): fundido cada 4,5 s mientras la tarjeta
+  //    está a la vista y la pestaña activa. La foto siguiente se precarga antes de mostrarse.
+  document.querySelectorAll('[data-sector-slideshow]').forEach(show => {
+    const slides = [...show.querySelectorAll('img')];
+    if (slides.length < 2) return;
+    let index = Math.max(0, slides.findIndex(img => img.classList.contains('is-active')));
+    let visible = !io, timer = 0;
+    const preload = i => { const img = slides[i % slides.length]; img.loading = 'eager'; return img.decode?.().catch(() => {}); };
+    const next = async () => {
+      const upcoming = (index + 1) % slides.length;
+      await preload(upcoming);
+      slides[index].classList.remove('is-active');
+      slides[upcoming].classList.add('is-active');
+      index = upcoming;
+      preload(index + 1);
+    };
+    const sync = () => {
+      const run = visible && !document.hidden;
+      if (run && !timer) { preload(index + 1); timer = setInterval(next, 4500); }
+      else if (!run && timer) { clearInterval(timer); timer = 0; }
+    };
+    if (io) new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; sync(); }, {threshold: .2}).observe(show);
+    document.addEventListener('visibilitychange', sync);
+    sync();
+  });
+
   // El CMS vuelve a dibujar Personas, CAUCE y Seguros después de cargar: se enganchan los nodos nuevos.
   for (const name of ['bko:firm-loaded', 'bko:content-updated', 'bko:clients-loaded']) document.addEventListener(name, () => requestAnimationFrame(() => { watchTitles(); addSpots(); }));
 }
