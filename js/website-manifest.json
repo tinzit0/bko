@@ -585,7 +585,7 @@
         "label": "Página · Jurídico, médico, social, contable y de seguros"
       },
       {
-        "key": "#contenido>section:nth-of-type(6)>span:nth-of-type(1)|text:0",
+        "key": "#contenido>section:nth-of-type(6)>span:nth-of-type(2)|text:0",
         "type": "text",
         "value": "CHILE / 22° S — 41° S",
         "label": "Página · CHILE / 22° S — 41° S"

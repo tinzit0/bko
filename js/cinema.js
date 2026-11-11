@@ -76,3 +76,26 @@ export function initCinema() {
   // El CMS vuelve a dibujar Personas, CAUCE y Seguros después de cargar: se enganchan los nodos nuevos.
   for (const name of ['bko:firm-loaded', 'bko:content-updated', 'bko:clients-loaded']) document.addEventListener(name, () => requestAnimationFrame(() => { watchTitles(); addSpots(); }));
 }
+
+// Cierre animado de las ventanas (.modal): espera la salida antes de cerrar. Sin animación, cierra al instante.
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+function closeModal(dialog) {
+  if (!dialog.open || dialog.classList.contains('is-closing')) return;
+  if (reducedMotion.matches) { dialog.close(); return; }
+  dialog.classList.add('is-closing');
+  const done = () => { dialog.classList.remove('is-closing'); dialog.close(); };
+  dialog.addEventListener('animationend', e => { if (e.target === dialog) done(); }, {once: true});
+  setTimeout(() => { if (dialog.open && dialog.classList.contains('is-closing')) done(); }, 600);
+}
+document.addEventListener('click', e => {
+  const close = e.target.closest('.modal [data-close-dialog]');
+  if (close) { e.preventDefault(); e.stopImmediatePropagation(); closeModal(close.closest('dialog')); return; }
+  // Clic fuera del contenido (en el fondo oscuro) también cierra.
+  if (e.target instanceof HTMLDialogElement && e.target.classList.contains('modal')) {
+    const r = e.target.getBoundingClientRect();
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeModal(e.target);
+  }
+}, true);
+document.addEventListener('cancel', e => {
+  if (e.target instanceof HTMLDialogElement && e.target.classList.contains('modal')) { e.preventDefault(); closeModal(e.target); }
+}, true);

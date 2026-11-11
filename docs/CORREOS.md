@@ -32,3 +32,23 @@ Cuando se completen, el sitio reemplaza automáticamente los avisos pendientes p
 8. Completar `emails` en el sitio. El alojamiento web y Supabase no crean buzones por sí mismos.
 
 No se proporcionan valores MX, DKIM ni direcciones de reporte ficticios. Si un servicio backend enviará avisos del formulario, autorizar también su dominio remitente sin exponer sus credenciales.
+
+## Estado al 11-11-2026
+
+- Buzones en **Zoho Mail**: **contacto@bko.cl** (consultas) y **administracion@bko.cl**. Ambos se muestran en Contacto y en el pie (`js/config.js` → `emails.general` y `emails.administracion`).
+- El formulario guarda cada consulta en Supabase y envía un aviso a `CONTACT_NOTIFY_TO` (por defecto contacto@bko.cl) por **SMTP de Zoho** (smtp.zoho.com, puerto 465 SSL; smtppro.zoho.com responde «Access Restricted» para esta cuenta), con remitente la propia cuenta y `Reply-To` de quien escribió: responder el aviso contesta directamente a la persona.
+- Si el correo falla, la consulta igual queda guardada y la persona ve el mensaje de éxito.
+
+### Activación (una sola vez)
+
+1. En Zoho Mail (contacto@bko.cl): Mi cuenta → Seguridad → **Contraseñas específicas de aplicación** → generar una para «Sitio web BKO». Si la cuenta no tiene verificación en dos pasos, se puede usar la contraseña normal, pero se recomienda la específica.
+2. Verificar que SMTP esté habilitado: Configuración → Cuentas de correo → IMAP/POP/SMTP.
+3. Configurar secretos y desplegar (en la terminal del proyecto):
+
+```
+npx supabase secrets set --project-ref kxldsjodgfonrrlwjbws ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000,https://bko.concepcion.workers.dev,https://bko.cl,https://www.bko.cl CONTACT_NOTIFY_TO=contacto@bko.cl ZOHO_SMTP_USER=contacto@bko.cl ZOHO_SMTP_PASSWORD=CONTRASEÑA_DE_APLICACION
+npx supabase functions deploy contact --project-ref kxldsjodgfonrrlwjbws --use-api
+```
+
+Por defecto se usa `smtp.zoho.com` (comprobado: autenticación correcta el 11-11-2026). Si la cuenta cambia de plan o de centro de datos, definir `ZOHO_SMTP_HOST`. El plan gratuito «Forever Free» de Zoho no incluye acceso SMTP/IMAP: se requiere un plan Mail Lite o superior.
+`ALLOWED_ORIGINS` debe incluir cada dominio desde el que se publica el sitio; si falta, el formulario responde 403.
