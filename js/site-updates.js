@@ -65,6 +65,13 @@ const miningServices = [
   ['transporte-carga', 'Transporte de Insumos y Equipos', 'Seguros Empresariales', 'Coberturas para el traslado de insumos, equipos y materiales hacia y desde las faenas, según las condiciones del seguro.', ['Transporte terrestre de insumos', 'Traslado de maquinaria']]
 ];
 
+/** Especialidades de Roxana: «Seguros marítimos y embarcaciones» siempre primero (pedido del 11-11-2026). */
+export function maritimeFirst(list) {
+  if (!Array.isArray(list)) return list;
+  const isMaritime = s => /^seguros mar[ií]timos/i.test(String(s).trim());
+  return [...list.filter(isMaritime), ...list.filter(s => !isMaritime(s))];
+}
+
 /** Reorganiza Negocios y Seguros conservando el resto del contenido editado en el CMS. */
 export function transformInsurance(source) {
   const c = structuredClone(source);
@@ -93,7 +100,7 @@ export function transformInsurance(source) {
     c.services.push({ ...template, id, group: 'mineria', title, category, description, risks, order: nextOrder + i, active: true, informational: false, image: '', imageAlt: '', cta: template.cta || 'SOLICITAR ASESORÍA' });
   });
   c.highlights = ['Seguros marítimos', 'Seguros para la minería', 'Garantías y licitaciones', 'Empresas constructoras', 'Responsabilidad Civil', 'Seguros generales'];
-  c.roxana = { ...c.roxana, description: roxanaIntro };
+  c.roxana = { ...c.roxana, description: roxanaIntro, specialties: maritimeFirst(c.roxana?.specialties) };
   return c;
 }
 

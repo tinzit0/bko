@@ -1,4 +1,5 @@
 import {mediaUrl} from './insurance-render.js';
+import {maritimeFirst} from './site-updates.js';
 export const knownProfiles=['makarena-andrea-ponce-villarroel','jorge-ivan-saavedra-bentjerodt','camila-alejandra-kopplin-lanata','fenella-reyes-gonzalo','luis-miranda-chavarria','roxana-ximena-oyarzun-bustamante','estefania-benitez-garcia'];
 export const relatedAreas={corporativo:'Corporativo',mineria:'Minería, Construcción y Servicios Asociados',maritimo:'Marítimo, Naviero, Lacustre y Acuícola',turismo:'Turismo',inmobiliario:'Inmobiliario',familia:'Derecho de Familia',laboral:'Derecho Laboral',cauce:'CAUCE Gestión Integral',seguros:'Negocios y Seguros'};
 export const profilePath=id=>knownProfiles.includes(id)?`equipo/${id}.html`:`equipo/perfil.html?id=${encodeURIComponent(id)}`;
@@ -18,7 +19,8 @@ export function validateRecord(r){
  return false;
 }
 export function insuranceProfile(row,insurance){
- if(row.id!=='roxana-ximena-oyarzun-bustamante'||!insurance)return row;
+ if(row.id!=='roxana-ximena-oyarzun-bustamante')return row;
+ if(!insurance)return {...row,data:{...row.data,specialties:maritimeFirst(row.data?.specialties)}};
  const r=insurance.roxana;
  return {...row,data:{...row.data,name:r.name,role:r.role,image:r.image,intro:r.description,specialties:r.specialties}};
 }

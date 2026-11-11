@@ -1,11 +1,13 @@
 import {config} from './config.js';
 import {validateInsuranceContent} from './insurance-content.js';
+import {maritimeFirst} from './site-updates.js';
 import {insuranceMarkup,roxanaMarkup,mediaUrl} from './insurance-render.js';
 const base=document.querySelector('script[src*="cms-public.js"]')?.getAttribute('src')?.startsWith('../')?'../':'';
 export async function loadInsuranceContent(){
  try{
   const response=await fetch(`${config.supabaseUrl}/rest/v1/site_content?key=eq.insurance&select=value`,{headers:{apikey:config.supabasePublishableKey},signal:AbortSignal.timeout(5000),cache:'no-store'});
   if(!response.ok)return null;const rows=await response.json();const c=rows[0]?.value;if(!validateInsuranceContent(c))return null;
+  c.roxana.specialties=maritimeFirst(c.roxana.specialties);
   return c;
  }catch{return null}
 }
