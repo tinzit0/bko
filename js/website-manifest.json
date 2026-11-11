@@ -1096,13 +1096,6 @@
         "label": "Fotografía · Espacio de trabajo de BKO en Santiago"
       },
       {
-        "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/oficinas/calama/WhatsApp%20Image%202026-11-05%20at%2022.51.17.jpeg",
-        "alt": "Acceso a la sede de Calama, junto a un vehículo de servicios industriales",
-        "label": "Fotografía · Acceso a la sede de Calama, junto a un vehículo de servicios industriales"
-      },
-      {
         "key": "#sectores>div:nth-of-type(2)>a:nth-of-type(3)>div:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
         "value": "assets/actualizacion/image3.png",
