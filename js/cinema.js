@@ -35,6 +35,15 @@ export function initCinema() {
     counters.forEach(dt => observer.observe(dt));
   }
 
+  // Numerales editoriales: toma «02 — ÁREAS…» o «01 / NEGOCIOS…» del antetítulo de cada sección.
+  const numberHeadings = () => document.querySelectorAll('.section-heading:not([data-num])').forEach(h => {
+    const m = (h.querySelector('.eyebrow')?.textContent || '').trim().match(/^(\d{2})\s*[—\/]/);
+    if (m) h.dataset.num = m[1];
+  });
+  numberHeadings();
+  document.addEventListener('bko:firm-loaded', numberHeadings);
+  document.addEventListener('bko:content-updated', numberHeadings);
+
   // 2. Títulos: marca de visibilidad para el brillo dorado de las cursivas y otros revelados.
   const titledSelector = '.section-heading, .people-services blockquote, .insurance-home-photo, .insurance-leadership-photo, .insurance-presenter-photo, .band-figures, .cauce-preview';
   const titleObserver = io ? new IntersectionObserver(entries => entries.forEach(entry => {
