@@ -39,11 +39,11 @@ export function firmPatches() {
   return patches;
 }
 
-export const insuranceGroupOrder = ['mineria', 'maritimos', 'garantias', 'constructoras', 'responsabilidad-civil', 'generales'];
+export const insuranceGroupOrder = ['maritimos', 'mineria', 'garantias', 'constructoras', 'responsabilidad-civil', 'generales'];
 export const insuranceNavigation = [
   ['financiamiento', 'Financiamiento'],
-  ['mineria', 'Seguros para la minería'],
   ['maritimos', 'Seguros marítimos'],
+  ['mineria', 'Seguros para la minería'],
   ['garantias', 'Garantías y Licitaciones'],
   ['constructoras', 'Empresas Constructoras'],
   ['responsabilidad-civil', 'Responsabilidad Civil'],
@@ -92,7 +92,7 @@ export function transformInsurance(source) {
     if (c.services.some(s => s.id === id)) return;
     c.services.push({ ...template, id, group: 'mineria', title, category, description, risks, order: nextOrder + i, active: true, informational: false, image: '', imageAlt: '', cta: template.cta || 'SOLICITAR ASESORÍA' });
   });
-  c.highlights = ['Seguros para la minería', 'Seguros marítimos', 'Garantías y licitaciones', 'Empresas constructoras', 'Responsabilidad Civil', 'Seguros generales'];
+  c.highlights = ['Seguros marítimos', 'Seguros para la minería', 'Garantías y licitaciones', 'Empresas constructoras', 'Responsabilidad Civil', 'Seguros generales'];
   c.roxana = { ...c.roxana, description: roxanaIntro };
   return c;
 }

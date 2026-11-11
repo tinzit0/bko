@@ -22,6 +22,7 @@
 @media(prefers-reduced-motion:no-preference){.insurance-presenter-photo img{clip-path:inset(100% 0 0 0);scale:1.1;transition:clip-path 1.3s cubic-bezier(.76,0,.24,1),scale 1.8s cubic-bezier(.16,1,.3,1)}.insurance-presenter-photo.cinema-in img{clip-path:inset(0);scale:1}}
 /* Carrusel de Seguros marítimos: retratos en terreno, encuadre centrado en el rostro. */
 .insurance-gallery .photo-marquee-track img{object-position:50% 62%}
+.insurance-gallery .photo-marquee-track img[src$="movimiento-2.webp"]{object-position:50% 6%}
 /* Retrato de la encargada del área: encuadre en el rostro. */
 .insurance-home-photo img,.insurance-leadership-photo img{object-position:50% 22%}
 /* Financiamiento en la sección de inicio de Negocios y Seguros. */
