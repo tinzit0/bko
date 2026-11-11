@@ -36,7 +36,7 @@ No se proporcionan valores MX, DKIM ni direcciones de reporte ficticios. Si un s
 ## Estado al 11-11-2026
 
 - Buzones en **Zoho Mail**: **contacto@bko.cl** (consultas) y **administracion@bko.cl**. Ambos se muestran en Contacto y en el pie (`js/config.js` → `emails.general` y `emails.administracion`).
-- El formulario guarda cada consulta en Supabase y envía un aviso a `CONTACT_NOTIFY_TO` (por defecto contacto@bko.cl) por **SMTP de Zoho** (smtp.zoho.com, puerto 465 SSL; smtppro.zoho.com responde «Access Restricted» para esta cuenta), con remitente la propia cuenta y `Reply-To` de quien escribió: responder el aviso contesta directamente a la persona.
+- El formulario guarda cada consulta en Supabase y envía un aviso a `CONTACT_NOTIFY_TO` (por defecto contacto@bko.cl) por **SMTP de Zoho** (smtp.zoho.com, puerto 465 SSL; cliente SMTP propio sin librerías, ya que la carga remota de denomailer no envió correos en Supabase), con remitente la propia cuenta y `Reply-To` de quien escribió: responder el aviso contesta directamente a la persona.
 - Si el correo falla, la consulta igual queda guardada y la persona ve el mensaje de éxito.
 
 ### Activación (una sola vez)

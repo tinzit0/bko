@@ -1,6 +1,77 @@
-// Deno y API REST oficial de Supabase. El aviso por correo usa SMTP de Zoho Mail (denomailer, carga diferida).
+// Sin dependencias externas: Deno, API REST oficial de Supabase y un cliente SMTP mínimo para Zoho Mail.
 import { validateConsultation } from '../../../js/validation.js';
 import { validateInsurance, insuranceArea } from '../../../js/insurance-validation.js';
+
+type SmtpConn = { read(p: Uint8Array): Promise<number | null>; write(p: Uint8Array): Promise<number>; close(): void };
+
+// Base64 de texto UTF-8, por bloques para no exceder la pila con mensajes largos.
+const b64 = (value: string) => {
+  const bytes = new TextEncoder().encode(value);
+  let binary = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) binary += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(binary);
+};
+const CRLF = '\r\n';
+const wrap76 = (value: string) => value.replace(/.{1,76}/g, '$&' + CRLF);
+const encodeHeader = (value: string) => /^[\x20-\x7e]*$/.test(value) ? value : `=?UTF-8?B?${b64(value)}?=`;
+
+// Cliente SMTP mínimo (RFC 5321) sobre una conexión TLS ya abierta: AUTH LOGIN, un mensaje y QUIT.
+export async function smtpSend(conn: SmtpConn, mail: { user: string; password: string; fromName: string; to: string[]; replyTo?: string; subject: string; text: string; html: string }) {
+  const encoder = new TextEncoder(), decoder = new TextDecoder();
+  let buffer = '';
+  const readReply = async (): Promise<string> => {
+    while (true) {
+      const lines = buffer.split(CRLF);
+      for (let i = 0; i < lines.length - 1; i++) {
+        if (/^\d{3} /.test(lines[i])) { buffer = lines.slice(i + 1).join(CRLF); return lines[i]; }
+      }
+      const chunk = new Uint8Array(8192);
+      const n = await conn.read(chunk);
+      if (n === null) throw new Error('smtp_connection_closed');
+      buffer += decoder.decode(chunk.subarray(0, n), { stream: true });
+    }
+  };
+  const writeAll = async (text: string) => {
+    let data = encoder.encode(text);
+    while (data.length) data = data.subarray(await conn.write(data));
+  };
+  const step = async (line: string | null, code: string, label: string) => {
+    if (line !== null) await writeAll(line + CRLF);
+    const reply = await readReply();
+    if (!reply.startsWith(code)) throw new Error(`smtp_${label}_${reply.slice(0, 3)}`);
+  };
+  const boundary = `bko-${crypto.randomUUID()}`;
+  const headers = [
+    `From: ${encodeHeader(mail.fromName)} <${mail.user}>`,
+    `To: ${mail.to.join(', ')}`,
+    ...(mail.replyTo ? [`Reply-To: <${mail.replyTo}>`] : []),
+    `Subject: ${encodeHeader(mail.subject)}`,
+    `Date: ${new Date().toUTCString()}`,
+    `Message-ID: <${crypto.randomUUID()}@${mail.user.split('@')[1]}>`,
+    'MIME-Version: 1.0',
+    `Content-Type: multipart/alternative; boundary="${boundary}"`,
+  ];
+  const body = [
+    `--${boundary}`, 'Content-Type: text/plain; charset=utf-8', 'Content-Transfer-Encoding: base64', '', wrap76(b64(mail.text)),
+    `--${boundary}`, 'Content-Type: text/html; charset=utf-8', 'Content-Transfer-Encoding: base64', '', wrap76(b64(mail.html)),
+    `--${boundary}--`,
+  ];
+  try {
+    await step(null, '220', 'greeting');
+    await step(`EHLO ${mail.user.split('@')[1]}`, '250', 'ehlo');
+    await step('AUTH LOGIN', '334', 'auth');
+    await step(btoa(mail.user), '334', 'auth_user');
+    await step(b64(mail.password), '235', 'auth_password');
+    await step(`MAIL FROM:<${mail.user}>`, '250', 'mail_from');
+    for (const rcpt of mail.to) await step(`RCPT TO:<${rcpt}>`, '250', 'rcpt');
+    await step('DATA', '354', 'data');
+    // Base64 en líneas de 76 caracteres: ninguna línea empieza con punto, no hace falta «dot-stuffing».
+    await step([...headers, '', ...body].join(CRLF) + CRLF + '.', '250', 'message');
+    await writeAll('QUIT' + CRLF).catch(() => {});
+  } finally {
+    try { conn.close(); } catch { /* ya cerrada */ }
+  }
+}
 
 const escapeHtml = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c] as string));
 
@@ -11,7 +82,6 @@ async function notifyByEmail(payload: Record<string, unknown>, id: string, insur
   const password = Deno.env.get('ZOHO_SMTP_PASSWORD');
   if (!user || !password) return;
   const to = (Deno.env.get('CONTACT_NOTIFY_TO') || 'contacto@bko.cl').split(',').map(v => v.trim()).filter(Boolean);
-  const from = `Sitio web BKO <${user}>`; // Zoho exige que el remitente sea la cuenta autenticada.
   const labels: [string, string][] = [
     ['name','Nombre'],['company','Empresa'],['email','Correo'],['phone','Teléfono'],['city','Ciudad'],['area','Área de interés'],
     ...(insurance ? [['insuranceType','Tipo de seguro'],['companyRut','RUT empresa'],['activity','Actividad'],['expectedDate','Fecha estimada']] as [string,string][] : []),
@@ -28,16 +98,13 @@ async function notifyByEmail(payload: Record<string, unknown>, id: string, insur
   const text = labels.filter(([key]) => String(payload[key] ?? '').trim()).map(([key, label]) => `${label}: ${payload[key]}`).join('\n') + `\n\nMensaje:\n${payload.message}\n\nRegistro: ${id}`;
   const subject = `Nueva ${insurance ? 'solicitud de seguros' : 'consulta'} web — ${String(payload.area || '').slice(0, 60)} — ${String(payload.name || '').slice(0, 60)}`.replace(/[\r\n]+/g, ' ');
   const replyTo = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(String(payload.email || '')) ? String(payload.email) : undefined;
-  // Carga diferida: la librería solo se descarga cuando hay credenciales (las pruebas en Node no la necesitan).
-  const { SMTPClient } = await import('https://deno.land/x/denomailer@1.6.0/mod.ts');
-  const client = new SMTPClient({ connection: { hostname: Deno.env.get('ZOHO_SMTP_HOST') || 'smtp.zoho.com', port: 465, tls: true, auth: { username: user, password } } });
+  const hostname = Deno.env.get('ZOHO_SMTP_HOST') || 'smtp.zoho.com';
+  const conn = await Deno.connectTls({ hostname, port: 465 });
+  const timer = setTimeout(() => { try { conn.close(); } catch { /* cerrada */ } }, 15000);
   try {
-    await Promise.race([
-      client.send({ from, to, replyTo, subject, content: text, html }),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('smtp_timeout')), 10000)),
-    ]);
+    await smtpSend(conn, { user, password, fromName: 'Sitio web BKO', to, replyTo, subject, text, html });
   } finally {
-    await client.close().catch(() => {});
+    clearTimeout(timer);
   }
 }
 
@@ -117,7 +184,7 @@ Deno.serve(async (request: Request) => {
     }
     if (typeof result !== 'string' || !/^[0-9a-f-]{36}$/i.test(result)) return json({ok:false,error:'invalid_storage_response'},503);
     // Aviso por correo a contacto@bko.cl. La consulta ya quedó guardada: un fallo aquí no afecta a quien escribe.
-    await notifyByEmail(payload, result, insurance).catch(() => console.error('contact_notify_failed'));
+    await notifyByEmail(payload, result, insurance).catch(error => console.error('contact_notify_failed', error instanceof Error ? error.message : 'unknown'));
     return json({ok:true,id:result},201);
   } catch (error) {
     if (error instanceof SyntaxError) return json({ok:false,error:'invalid_json'},400);
