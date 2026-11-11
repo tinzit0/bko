@@ -25,7 +25,8 @@ test('Página de seguros tiene anclas, recursos y categorías del formulario vá
  for(const m of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(m[1]),m[1]);
  for(const m of html.matchAll(/(?:src|href)="(\.\.\/(?:assets|css|js)\/[^\"]+)"/g))await access(new URL('../seguros/'+m[1],import.meta.url));
  for(const category of insuranceCategories)assert.ok(html.includes(`<option>${category}</option>`));
- assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.equal((html.match(/class="insurance-card"/g)||[]).length,30);
+ assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.equal((html.match(/class="insurance-card"/g)||[]).length,33);
+ const financing=html.match(/<section id="financiamiento"[\s\S]*?<\/section>/)?.[0]||'';assert.equal((financing.match(/class="insurance-card"/g)||[]).length,3);
 });
 let handler;globalThis.Deno={env:{get:key=>({ALLOWED_ORIGINS:'http://localhost:3000',BKO_PUBLISHABLE_KEY:'public-test',SUPABASE_URL:'https://test.supabase.co',SUPABASE_SERVICE_ROLE_KEY:'server-test',CONTACT_FINGERPRINT_SECRET:'secret-for-testing-only-1234567890'})[key]},serve:fn=>handler=fn};
 await import('../supabase/functions/contact/index.ts');

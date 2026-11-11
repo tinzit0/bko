@@ -593,8 +593,8 @@
       {
         "key": "#seguros>p:nth-of-type(1)|text:0",
         "type": "text",
-        "value": "NEGOCIOS Y SEGUROS CORPORATIVOS",
-        "label": "seguros · NEGOCIOS Y SEGUROS CORPORATIVOS"
+        "value": "NEGOCIOS, FINANCIAMIENTO Y SEGUROS CORPORATIVOS",
+        "label": "seguros · NEGOCIOS, FINANCIAMIENTO Y SEGUROS CORPORATIVOS"
       },
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>h3:nth-of-type(1)|text:0",
@@ -603,37 +603,55 @@
         "label": "seguros · Una mirada estratégica para proteger tu actividad."
       },
       {
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "FINANCIAMIENTO",
+        "label": "seguros · FINANCIAMIENTO"
+      },
+      {
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>p:nth-of-type(2)|text:0",
+        "type": "text",
+        "value": "Vinculamos a pequeñas y medianas empresas con agentes financiadores para adquirir maquinaria o desarrollar proyectos, acompañando la presentación de sus necesidades de inversión y la búsqueda de alternativas.",
+        "label": "seguros · Vinculamos a pequeñas y medianas empresas con agentes financiadores para adquirir maq"
+      },
+      {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Financiamiento de proyectos y maquinaria",
+        "label": "seguros · Financiamiento de proyectos y maquinaria"
+      },
+      {
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
         "type": "text",
         "value": "Seguros para la minería",
         "label": "seguros · Seguros para la minería"
       },
       {
-        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)|text:0",
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
         "type": "text",
         "value": "Seguros marítimos",
         "label": "seguros · Seguros marítimos"
       },
       {
-        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)|text:0",
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
         "type": "text",
         "value": "Garantías y licitaciones",
         "label": "seguros · Garantías y licitaciones"
       },
       {
-        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(4)|text:0",
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
         "type": "text",
         "value": "Empresas constructoras y maquinaria",
         "label": "seguros · Empresas constructoras y maquinaria"
       },
       {
-        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(5)|text:0",
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(6)|text:0",
         "type": "text",
         "value": "Responsabilidad Civil",
         "label": "seguros · Responsabilidad Civil"
       },
       {
-        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(6)|text:0",
+        "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(7)|text:0",
         "type": "text",
         "value": "Seguros generales",
         "label": "seguros · Seguros generales"
@@ -1023,6 +1041,30 @@
         "label": "contacto · Escríbenos por WhatsApp"
       },
       {
+        "key": "#contacto>div:nth-of-type(1)>dl:nth-of-type(1)>div:nth-of-type(1)>dt:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Consultas",
+        "label": "contacto · Consultas"
+      },
+      {
+        "key": "#contacto>div:nth-of-type(1)>dl:nth-of-type(1)>div:nth-of-type(1)>dd:nth-of-type(1)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "contacto@bko.cl",
+        "label": "contacto · contacto@bko.cl"
+      },
+      {
+        "key": "#contacto>div:nth-of-type(1)>dl:nth-of-type(1)>div:nth-of-type(2)>dt:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "Administración",
+        "label": "contacto · Administración"
+      },
+      {
+        "key": "#contacto>div:nth-of-type(1)>dl:nth-of-type(1)>div:nth-of-type(2)>dd:nth-of-type(1)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "contacto · administracion@bko.cl"
+      },
+      {
         "key": "#contacto>div:nth-of-type(1)>div:nth-of-type(1)>span:nth-of-type(1)|text:0",
         "type": "text",
         "value": "CALAMA",
@@ -1084,9 +1126,9 @@
       {
         "key": "#seguros>div:nth-of-type(1)>div:nth-of-type(2)>figure:nth-of-type(1)>img:nth-of-type(1)|image",
         "type": "image",
-        "value": "assets/seguros/roxana-muelle-480.webp",
-        "alt": "Roxana Ximena Oyarzún Bustamante en un muelle de carga del sur de Chile",
-        "label": "Fotografía · Roxana Ximena Oyarzún Bustamante en un muelle de carga del sur de Chile"
+        "value": "assets/seguros/roxana-maritimo.webp",
+        "alt": "Retrato de Roxana Ximena Oyarzún Bustamante, encargada del área de Negocios y Seguros",
+        "label": "Fotografía · Retrato de Roxana Ximena Oyarzún Bustamante, encargada del área de Negocios y Seguros"
       },
       {
         "key": "#oficina-calama>div:nth-of-type(1)>img:nth-of-type(1)|image",
@@ -1321,6 +1363,12 @@
         "type": "text",
         "value": "contacto@bko.cl",
         "label": "Página · contacto@bko.cl"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -1659,6 +1707,12 @@
         "label": "Página · contacto@bko.cl"
       },
       {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
+      },
+      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
         "type": "text",
         "value": "WhatsApp ↗",
@@ -1988,6 +2042,12 @@
         "label": "Página · contacto@bko.cl"
       },
       {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
+      },
+      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
         "type": "text",
         "value": "WhatsApp ↗",
@@ -2297,6 +2357,12 @@
         "type": "text",
         "value": "contacto@bko.cl",
         "label": "Página · contacto@bko.cl"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -2610,6 +2676,12 @@
         "label": "Página · contacto@bko.cl"
       },
       {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
+      },
+      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
         "type": "text",
         "value": "WhatsApp ↗",
@@ -2919,6 +2991,12 @@
         "type": "text",
         "value": "contacto@bko.cl",
         "label": "Página · contacto@bko.cl"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -3232,6 +3310,12 @@
         "label": "Página · contacto@bko.cl"
       },
       {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
+      },
+      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
         "type": "text",
         "value": "WhatsApp ↗",
@@ -3541,6 +3625,12 @@
         "type": "text",
         "value": "contacto@bko.cl",
         "label": "Página · contacto@bko.cl"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
@@ -3854,6 +3944,12 @@
         "label": "Página · contacto@bko.cl"
       },
       {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
+      },
+      {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",
         "type": "text",
         "value": "WhatsApp ↗",
@@ -4163,6 +4259,12 @@
         "type": "text",
         "value": "contacto@bko.cl",
         "label": "Página · contacto@bko.cl"
+      },
+      {
+        "key": "footer>div:nth-of-type(3)>span:nth-of-type(2)>a:nth-of-type(1)|text:0",
+        "type": "text",
+        "value": "administracion@bko.cl",
+        "label": "Página · administracion@bko.cl"
       },
       {
         "key": "footer>div:nth-of-type(3)>a:nth-of-type(2)|text:0",

@@ -41,6 +41,7 @@ export function firmPatches() {
 
 export const insuranceGroupOrder = ['mineria', 'maritimos', 'garantias', 'constructoras', 'responsabilidad-civil', 'generales'];
 export const insuranceNavigation = [
+  ['financiamiento', 'Financiamiento'],
   ['mineria', 'Seguros para la minería'],
   ['maritimos', 'Seguros marítimos'],
   ['garantias', 'Garantías y Licitaciones'],
