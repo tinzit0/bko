@@ -18,7 +18,7 @@ test('Casa Vander se conserva como cliente adicional con web oficial y logotipo 
 });
 
 test('Estadísticas distinguen publicación efectiva y autorizaciones, sin contar permisos de logo inexistentes',()=>{
- const stats=clientStatistics(rows);assert.equal(stats.total,22);assert.equal(stats.published,0);assert.equal(stats.pending,22);assert.equal(stats.withLogo,13);assert.equal(stats.withoutLogo,9);assert.equal(stats.featured,10);assert.equal(Object.values(stats.sectors).reduce((a,b)=>a+b,0),22);
+ const stats=clientStatistics(rows);assert.equal(stats.total,22);assert.equal(stats.published,0);assert.equal(stats.pending,22);assert.equal(stats.withLogo,16);assert.equal(stats.withoutLogo,6);assert.equal(stats.featured,10);assert.equal(Object.values(stats.sectors).reduce((a,b)=>a+b,0),22);
  const textOnly={...approved(rows.find(r=>!r.logo_local_path)),logo_authorized:false};
  assert.equal(clientStatistics([textOnly]).pending,0);
  assert.equal(clientStatistics([{...approved(rows[0]),active:false}]).published,0);
@@ -36,7 +36,7 @@ test('Recupera las 22 filas del CSV irregular y conserva nombres, enlaces y obse
  const parsed=parseClientsCsv(raw);assert.equal(parsed.length,22);assert.equal(new Set(parsed.map(r=>r.slug)).size,22);assert.equal(parsed[0].name,'Afüen / Afüen y Cía.');assert.equal(parsed[13].name,'CAUCE Gestión Integral');assert.equal(parsed[13].original_name,'CAUCE Gestión Integral / caucegestion.cl');assert.equal(parsed[13].website_url,'');assert.equal(parsed[16].website_url,'');assert.match(parsed[16].observations,/Puerto Varas; sin web oficial confirmada/);assert.match(parsed[18].observations,/directorios; comprobar vigencia/);assert.equal(parsed[3].website_url,'http://www.franciscocayo.cl/');assert.ok(parsed.every(r=>r.original_row.length>0));assert.throws(()=>parseClientsCsv(raw.split('\n').slice(0,-3).join('\n')));
 });
 test('Importación repetible no sobrescribe datos del CMS y conserva los 22 registros',async()=>{
- const sql=await readFile(new URL('supabase/seeds/clients.sql',root),'utf8');assert.match(sql,/on conflict\(slug\) do nothing/);assert.ok(rows.every(validateClient));assert.equal(rows.filter(r=>r.logo_verified).length,13);assert.equal(rows.filter(r=>r.published).length,0);assert.equal(rows.filter(r=>!r.logo_local_path).length,9);
+ const sql=await readFile(new URL('supabase/seeds/clients.sql',root),'utf8');assert.match(sql,/on conflict\(slug\) do nothing/);assert.ok(rows.every(validateClient));assert.equal(rows.filter(r=>r.logo_verified).length,16);assert.equal(rows.filter(r=>r.published).length,0);assert.equal(rows.filter(r=>!r.logo_local_path).length,6);
 });
 test('Publica solo relaciones autorizadas; un sitio web no verifica el logotipo',()=>{
  const r=rows[0];assert.equal(clientsMarkup(rows), '');assert.equal(publishedClients([{...approved(r),active:false}]).length,0);assert.equal(publishedClients([{...approved(r),relation_authorized:false}]).length,0);

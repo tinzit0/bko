@@ -1,4 +1,6 @@
 import { initLuxury } from './luxury.js';
+import { initAnchorScroll } from './anchor-scroll.js';
+initAnchorScroll();
 initLuxury();
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('#navigation');

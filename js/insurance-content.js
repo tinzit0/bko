@@ -1,10 +1,7 @@
+import {transformInsurance,roxanaIntro} from './site-updates.js';
 export const insuranceCategories=['Responsabilidad Civil','Construcción','Licitaciones y Garantías','Maquinaria','Seguros Empresariales','Vida y Ahorro','APV','Cesantía','Embarcaciones','Responsabilidad Civil Marítima','Otros seguros'];
-export const roxanaDescription=[
-  'Profesional especializada en el área de negocios y seguros corporativos, encargada de desarrollar soluciones de protección y gestión de riesgos para empresas, constructoras y personas.',
-  'Su trabajo se orienta especialmente a la asesoría en Responsabilidad Civil, seguros para empresas constructoras, coberturas para licitaciones, protección de maquinaria, seguros de vida y soluciones aseguradoras para actividades marítimas y comerciales.',
-  'Desde BKO, lidera el desarrollo del área de seguros, proporcionando orientación para identificar necesidades de cobertura y encontrar alternativas acordes con las características de cada actividad económica.'
-];
-export const insuranceDefault={
+export const roxanaDescription=roxanaIntro.split(/\n\n/);
+const baseInsurance={
   title:'Protegemos tus negocios. Aseguramos tu crecimiento.',
   subtitle:'Soluciones de seguros para empresas, constructoras, profesionales y personas. Asesoría especializada para proteger operaciones, patrimonio y proyectos.',
   cta:'SOLICITAR ASESORÍA EN SEGUROS',
@@ -50,6 +47,8 @@ export const insuranceDefault={
     ['trabajo-maritimo','maritimos','Embarcaciones de Trabajo','Embarcaciones','Soluciones según el uso y actividad comercial de cada embarcación.',['Pesca','Turismo','Transporte','Actividades comerciales']]
   ].map(([id,group,title,category,description,risks],order)=>({id,group,title,category,description,risks,order,active:true,image:({'rc-empresas':'assets/oficinas/santiago/WhatsApp%20Image%202026-11-05%20at%2022.48.40.jpeg','equipos':'assets/oficinas/calama/WhatsApp%20Image%202026-11-05%20at%2022.51.17.jpeg','trabajo-maritimo':'assets/oficinas/puerto%20varas/WhatsApp%20Image%202026-11-05%20at%2022.48.53.jpeg'})[id]||'',imageAlt:({'rc-empresas':'Sala de reuniones de la oficina BKO en Santiago','equipos':'Vehículo de servicios industriales junto al acceso de BKO en Calama','trabajo-maritimo':'Entorno lacustre visto desde la terraza de BKO en Puerto Varas'})[id]||'',cta:'SOLICITAR ASESORÍA',informational:id==='afc'}))
 };
+// Reorganización de «Arreglos a la página II» sobre el contenido base.
+export const insuranceDefault=transformInsurance(baseInsurance);
 
 // Shared schema used before CMS writes and before public rendering.
 export function validateInsuranceContent(value){

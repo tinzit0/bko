@@ -146,7 +146,7 @@
   {
     "id": "fenella-reyes-gonzalo",
     "kind": "professional",
-    "sort_order": 30,
+    "sort_order": 50,
     "active": true,
     "published": true,
     "data": {
@@ -167,7 +167,7 @@
       "seoDescription": "Fenella Reyes Gonzalo: atención médico-psiquiátrica infantojuvenil y participación en el enfoque interdisciplinario de BKO para personas y familias.",
       "name": "Fenella Reyes Gonzalo",
       "role": "Atención médico-psiquiátrica infantojuvenil",
-      "intro": "Atención médico-psiquiátrica infantojuvenil, integrada a un enfoque interdisciplinario que considera las dimensiones médicas, jurídicas y psicosociales de las situaciones familiares y personales.",
+      "intro": "La Dra. Fenella Reyes Gonzalo es Médico Cirujano por la Universidad de Santiago de Chile y especialista certificada en Psiquiatría Pediátrica y de la Adolescencia por la misma universidad. Complementa su formación con estudios de posgrado en otras instituciones. Entre ellos se encuentran el Diplomado en Destrezas Clínicas en Adicciones de la Pontificia Universidad Católica de Chile y el Diplomado en Apego y Psicopatología del Desarrollo del Centro de Apego y Regulación Emocional (CARE) de la Universidad del Desarrollo.\n\nA lo largo de su trayectoria ha profundizado especialmente en el abordaje del trauma y sus manifestaciones en niños, niñas y adolescentes. En este ámbito, ha incorporado formación y entrenamiento en EMDR (Eye Movement Desensitization and Reprocessing, o Desensibilización y Reprocesamiento por Movimientos Oculares). Este enfoque psicoterapéutico se utiliza en el abordaje de experiencias traumáticas y recuerdos perturbadores. Su formación incluye entrenamiento en protocolos EMDR para atención temprana y estrés traumático continuo, así como en EMDR y habilidades parentales.\n\nEsta preparación se complementa con formación en terapia cognitivo-conductual, intervención temprana, microanálisis y videofeedback, terapia de juego infantil y neurodesarrollo, configurando una mirada especializada sobre la salud mental infantojuvenil y los múltiples factores que pueden incidir en el desarrollo y bienestar de niños, niñas y adolescentes.\n\nSu intervención en el Estudio se concentra especialmente en casos de alta complejidad, particularmente en aquellos relacionados con el ámbito proteccional y con situaciones de vulneración de derechos de niños, niñas y adolescentes, en los que la naturaleza de los antecedentes hace relevante incorporar una perspectiva médica y psiquiátrica especializada al análisis del caso.\n\nEn estas situaciones, la Dra. trabaja de manera coordinada con el equipo jurídico y social, incorporando la perspectiva médico-psiquiátrica infantojuvenil a un abordaje interdisciplinario que considera conjuntamente las dimensiones médicas, de salud mental, familiares, jurídicas y psicosociales presentes en cada situación.\n\nSu participación adquiere especial relevancia en aquellos casos en los que resulta necesario comprender cómo determinados procesos traumáticos, condiciones de salud mental, elementos del desarrollo o circunstancias familiares y psicosociales pueden estar incidiendo en la situación del niño, niña o adolescente.\n\nDe esta manera, el trabajo interdisciplinario permite abordar los casos de mayor complejidad desde una perspectiva más amplia e integrada, articulando el análisis jurídico y social con el conocimiento especializado de la psiquiatría infantojuvenil, y situando las necesidades, el bienestar y las circunstancias particulares de cada niño, niña o adolescente como centro de la intervención.",
       "functions": "",
       "discipline": "medical"
     }
@@ -211,7 +211,7 @@
   {
     "id": "roxana-ximena-oyarzun-bustamante",
     "kind": "professional",
-    "sort_order": 50,
+    "sort_order": 30,
     "active": true,
     "published": true,
     "data": {
@@ -239,7 +239,7 @@
       "seoDescription": "Roxana Ximena Oyarzún Bustamante: Negocios y Seguros Corporativos BKO. Responsabilidad Civil, garantías para licitaciones, maquinaria y seguros marítimos.",
       "name": "Roxana Ximena Oyarzún Bustamante",
       "role": "Experta en Negocios y Seguros Corporativos | Encargada del Área de Seguros BKO",
-      "intro": "Profesional especializada en el área de negocios y seguros corporativos, encargada de desarrollar soluciones de protección y gestión de riesgos para empresas, constructoras y personas.\n\nSu trabajo se orienta especialmente a la asesoría en Responsabilidad Civil, seguros para empresas constructoras, coberturas para licitaciones, protección de maquinaria, seguros de vida y soluciones aseguradoras para actividades marítimas y comerciales.\n\nDesde BKO, lidera el desarrollo del área de seguros, proporcionando orientación para identificar necesidades de cobertura y encontrar alternativas acordes con las características de cada actividad económica.",
+      "intro": "Profesional especializada en financiamiento de proyectos, negocios y seguros corporativos, con un enfoque de asesoría a empresas y personas de los sectores minero, marítimo, de la construcción y comercial.\n\nEspecialista en intermediación para vincular a pequeñas y medianas empresas con agentes financiadores. Su labor facilita la búsqueda de financiamiento, el diálogo entre las partes y apoya la presentación de necesidades de inversión y la búsqueda de alternativas, especialmente para adquirir maquinaria o desarrollar proyectos, de acuerdo con las características y los objetivos de cada iniciativa.\n\nDesde BKO, lidera el desarrollo del área de seguros y financiamiento, orientando a sus clientes en la identificación de coberturas acordes con su actividad económica. Su asesoría abarca garantías y licitaciones, responsabilidad civil, seguros para empresas, protección de maquinaria, seguros de vida y soluciones para actividades mineras, marítimas y comerciales.",
       "sharedInsurance": true,
       "functions": "",
       "discipline": "business"
@@ -248,7 +248,7 @@
   {
     "id": "estefania-benitez-garcia",
     "kind": "professional",
-    "sort_order": 60,
+    "sort_order": 70,
     "active": true,
     "published": true,
     "data": {
@@ -257,7 +257,8 @@
       "imageAlt": "Retrato de Estefanía Benítez García",
       "areas": [],
       "specialties": [
-        "Asistencia contable"
+        "Asistencia contable",
+        "Gestión de CAUCE"
       ],
       "sections": [],
       "timeline": [],
@@ -266,8 +267,8 @@
       "seoTitle": "",
       "seoDescription": "",
       "name": "Estefanía Benítez García",
-      "role": "Asistente contable",
-      "intro": "Estefanía es la asistente contable de BKO Bentjerodt Koplin y Oyarzun Consultores y apoya la gestión contable de la firma.",
+      "role": "Asistente contable | Gestión de CAUCE",
+      "intro": "Estefanía es asistente contable de BKO y está a cargo de la gestión de CAUCE Gestión Integral, el sistema de la oficina para organizar y dar seguimiento documental a las carteras de cobranza. Su labor comprende la organización y revisión de antecedentes comerciales y contables, la conciliación de pagos y el seguimiento de saldos, identificando inconsistencias y documentación pendiente. Asimismo, apoya la preparación de expedientes para su evaluación por el área jurídica, contribuyendo a mantener información ordenada, respaldada y trazable durante las distintas etapas del proceso de recuperación.",
       "functions": "",
       "discipline": "support"
     }
@@ -526,7 +527,7 @@
   {
     "id": "makarena-andrea-ponce-villarroel",
     "kind": "professional",
-    "sort_order": 65,
+    "sort_order": 60,
     "active": true,
     "published": true,
     "data": {

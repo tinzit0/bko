@@ -5,7 +5,7 @@ import {validateRecord,visibleRecords,profilePath} from '../js/firm-model.js';
 import {teamMarkup,profileMarkup,cauceMarkup} from '../js/firm-render.js';
 const records=JSON.parse(await readFile(new URL('../supabase/seeds/firm.json',import.meta.url),'utf8'));
 test('Equipo conserva el orden solicitado y permite modificarlo desde los datos',()=>{
- const team=visibleRecords(records).filter(r=>r.kind==='professional');assert.deepEqual(team.map(r=>r.id),['jorge-ivan-saavedra-bentjerodt','camila-alejandra-kopplin-lanata','fenella-reyes-gonzalo','luis-miranda-chavarria','roxana-ximena-oyarzun-bustamante','estefania-benitez-garcia','makarena-andrea-ponce-villarroel']);
+ const team=visibleRecords(records).filter(r=>r.kind==='professional');assert.deepEqual(team.map(r=>r.id),['jorge-ivan-saavedra-bentjerodt','camila-alejandra-kopplin-lanata','roxana-ximena-oyarzun-bustamante','luis-miranda-chavarria','fenella-reyes-gonzalo','makarena-andrea-ponce-villarroel','estefania-benitez-garcia']);
  const reordered=team.map(r=>({...r,sort_order:r.id.startsWith('luis')?-1:r.sort_order}));assert.equal(visibleRecords(reordered)[0].id,'luis-miranda-chavarria');
  assert.ok(records.every(validateRecord));
 });

@@ -3,6 +3,7 @@ import { validateConsultation } from './validation.js';
 import { initMotion } from './motion.js';
 import { initLuxury } from './luxury.js';
 import { initContentTabs } from './content-tabs.js';
+import { initAnchorScroll } from './anchor-scroll.js';
 initLuxury();
 initContentTabs();
 
@@ -78,6 +79,9 @@ window.addEventListener('hashchange', () => openPractice(location.hash));
 openPractice(location.hash);
 document.addEventListener('click',e=>{const link=e.target.closest('[data-area]');if(link)$('#area').value=link.dataset.area});
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(a?.hash)openPractice(a.hash)});
+
+// Presencia, Contacto y demás enlaces "index.html#seccion": sin recarga y alineados tras dibujar el CMS.
+initAnchorScroll({ onNavigate: openPractice });
 
 const whatsappMessage = 'Hola, quisiera solicitar información sobre los servicios de BKO Bentjerodt Koplin y Oyarzun Consultores.';
 $$('[data-whatsapp]').forEach(link => {

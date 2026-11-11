@@ -65,3 +65,23 @@
 @keyframes bko-photo-reveal{from{clip-path:inset(0 0 13% 0)}to{clip-path:inset(0)}}
 @keyframes bko-seal{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
 @media (prefers-reduced-motion:reduce){.hero-content,.firm-visual,.band-landscape{translate:none!important}.person-portrait img,.office-image img{rotate:none!important;transform:none!important}}
+
+/* Fotos en movimiento (Arreglos II): galerías continuas y acercamiento lento de las fotografías. */
+.photo-marquee{overflow:hidden;margin:28px 0 40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.photo-marquee-track{display:flex;gap:16px;width:max-content;list-style:none;margin:0;padding:0}
+.photo-marquee-track>li{flex:0 0 auto;width:clamp(210px,24vw,330px);aspect-ratio:4/5;overflow:hidden;background:#102f44}
+.photo-marquee-track img{width:100%;height:100%;object-fit:cover;display:block}
+.clients-marquee-wrap{overflow:hidden;padding:6px 0 10px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.clients-marquee-wrap+.clients-marquee-wrap{margin-top:14px}
+.clients-grid.clients-marquee{display:flex;width:max-content;gap:16px}
+.clients-marquee .client-card{flex:0 0 clamp(170px,17vw,230px)}
+@keyframes bko-marquee{to{transform:translateX(calc(-50% - 8px))}}
+@keyframes bko-kenburns{from{scale:1;translate:0 0}to{scale:1.09;translate:-1.5% -1%}}
+@media (prefers-reduced-motion:no-preference){
+  .photo-marquee-track,.clients-marquee{animation:bko-marquee var(--marquee-duration,48s) linear infinite}
+  .clients-marquee.is-reverse{animation-direction:reverse}
+  .photo-marquee:hover .photo-marquee-track,.photo-marquee:focus-within .photo-marquee-track,.clients-marquee-wrap:hover .clients-marquee,.clients-marquee-wrap:focus-within .clients-marquee{animation-play-state:paused}
+  .photo-marquee-track img,.sector-photo img,.office-image img,.firm-office-photo img,.insurance-card-photo img{animation:bko-kenburns 16s ease-in-out infinite alternate;will-change:scale}
+  .sector:nth-child(2n) .sector-photo img,.office:nth-child(2n) .office-image img,.photo-marquee-track>li:nth-child(2n) img{animation-delay:-8s}
+}
+@media (prefers-reduced-motion:reduce){.photo-marquee{overflow-x:auto}.photo-marquee-track>li[aria-hidden]{display:none}}
