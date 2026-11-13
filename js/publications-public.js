@@ -80,7 +80,7 @@ function renderDetail(slug){
  const cover=coverUrl(p.cover_url,root),file=fileUrl(p.file_url),kind=publicationKinds[p.kind];
  document.title=`${p.title} | BKO Consultores`;
  const description=document.querySelector('meta[name="description"]');if(description&&p.summary)description.content=p.summary;
- page.innerHTML=`${editor?`<div class="publications-tools" data-publications-tools><div><strong>Administración</strong><span>${p.published?'Publicada: visible para todos.':'Borrador: solo la ve el equipo.'}</span></div><button type="button" data-pub-edit="${h(p.id)}">EDITAR ESTA PUBLICACIÓN</button><p data-pub-status role="status" aria-live="polite"></p></div>`:''}
+ page.innerHTML=`${editor?`<div class="publications-tools" data-publications-tools><div><strong>Administración</strong><span>${p.published?'Publicada: visible para todos.':'Borrador: solo la ve el equipo.'}</span></div><button type="button" data-pub-edit="${h(p.id)}">EDITAR ESTA PUBLICACIÓN</button><button type="button" data-pub-copy>COPIAR ENLACE</button><p data-pub-status role="status" aria-live="polite"></p></div>`:''}
  <article class="publication-article">
   <a class="publication-back" href="${h(pageUrl())}">← TODOS LOS ARTÍCULOS Y ESTUDIOS</a>
   <p class="eyebrow">${h((kind+(p.area?' · '+p.area:'')).toUpperCase())}</p>
@@ -88,11 +88,12 @@ function renderDetail(slug){
   <p class="publication-byline">${p.author?`<span>${h(p.author)}</span>`:''}<time datetime="${h(p.published_on)}">${h(formatDate(p.published_on))}</time></p>
   ${p.summary?`<p class="publication-lead">${h(p.summary)}</p>`:''}
   ${cover?`<figure class="publication-cover"><img src="${h(cover)}" alt="${h(p.cover_alt)}" decoding="async"></figure>`:''}
-  <div class="publication-body">${bodyMarkup(p.body)}</div>
+  <div class="publication-body">${bodyMarkup(p.body,root)}</div>
   ${file?`<div class="publication-file"><div><strong>${p.kind==='estudio'?'Documento del estudio':'Documento adjunto'}</strong><span>${h(p.file_name||'PDF')}</span></div><a class="button button-gold" href="${h(file)}" target="_blank" rel="noopener">ABRIR PDF <span aria-hidden="true">↗</span></a></div>`:''}
   <div class="publication-contact"><p>¿Quieres conversar sobre este tema con nuestro equipo?</p><a class="button profile-link" href="${h(root)}index.html#contacto">CONTACTAR A BKO</a></div>
  </article>`;
  bind(page);
+ page.querySelector('[data-pub-copy]')?.addEventListener('click',async()=>{const msg=page.querySelector('[data-pub-status]');try{await navigator.clipboard.writeText(pageUrl(p.slug));msg.textContent=p.published?'Enlace copiado. Ya puedes compartirlo.':'Enlace copiado. Recuerda: es un borrador y solo lo ve el equipo.'}catch{msg.textContent='Copia este enlace: '+pageUrl(p.slug)}});
 }
 
 function render(){

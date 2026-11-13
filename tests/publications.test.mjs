@@ -16,6 +16,12 @@ test('El contenido se escapa y respeta párrafos, subtítulos y listas',()=>{
  const html=bodyMarkup('Hola <script>x</script>\nlínea 2\n\n## Subtítulo\n\n- uno\n- dos');
  assert.equal(html,'<p>Hola &lt;script&gt;x&lt;/script&gt;<br>línea 2</p><h2>Subtítulo</h2><ul><li>uno</li><li>dos</li></ul>');
 });
+test('Formato enriquecido seguro: negrita, cursiva, enlaces, citas, listas numeradas e imágenes',()=>{
+ const html=bodyMarkup('**Hola** *mundo* [BKO](https://bko.cl) [x](javascript:alert(1))\n\n### Menor\n\n1. uno\n2. dos\n\n> cita\n\n![Equipo](https://x.cl/a.webp)\n\n![Mal](javascript:1)');
+ assert.ok(html.startsWith('<p><strong>Hola</strong> <em>mundo</em> <a href="https://bko.cl" target="_blank" rel="noopener noreferrer">BKO</a> [x](javascript:alert(1))</p>'));
+ assert.ok(html.includes('<h3>Menor</h3><ol><li>uno</li><li>dos</li></ol><blockquote><p>cita</p></blockquote><figure class="publication-figure"><img src="https://x.cl/a.webp" alt="Equipo"'));
+ assert.ok(!html.includes('src="javascript')&&!html.includes('href="javascript'));
+});
 test('Orden: destacadas y luego más recientes',()=>{
  const rows=[{...base,slug:'a',published_on:'2026-01-01'},{...base,slug:'b',published_on:'2026-05-01'},{...base,slug:'c',published_on:'2025-01-01',featured:true}];
  assert.deepEqual(sortPublications(rows).map(r=>r.slug),['c','b','a']);assert.match(formatDate('2026-11-12'),/12.*noviembre.*2026/);

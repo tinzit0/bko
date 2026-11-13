@@ -76,3 +76,33 @@
  .admin-publications thead{display:none}.admin-publications tr{border-bottom:1px solid var(--line);padding:10px 0}.admin-publications td{border:0;padding:6px 14px}
  .admin-publications td:last-child{text-align:left}
 }
+
+/* Formato enriquecido del contenido */
+.publication-body h3{font-size:clamp(22px,2.2vw,28px);margin:1.4em 0 .5em}
+.publication-body ol{margin:0 0 1.3em;padding-left:1.4em}
+.publication-body strong{font-weight:700}
+.publication-body a{color:#7e552c;text-decoration:underline;text-underline-offset:3px}
+.publication-body blockquote{margin:1.6em 0;padding:6px 0 6px 22px;border-left:3px solid var(--gold,#c09564);font:italic clamp(19px,2vw,23px)/1.6 var(--serif,Georgia,serif);color:#33444f}
+.publication-body blockquote p{margin:0}
+.publication-figure{margin:1.8em 0}
+.publication-figure img{display:block;width:100%;height:auto}
+.publication-figure figcaption{font-size:13px;color:#667079;margin-top:8px}
+
+/* Editor: barra de formato, vista previa y ayuda */
+.bko-edit-dialog form>.bko-pub-body{display:block;margin:20px 0}
+.bko-pub-label{display:block;font-size:14px;margin-bottom:8px}
+.bko-pub-toolbar{display:flex;flex-wrap:wrap;gap:4px;padding:6px;border:1px solid #aab5b9;border-bottom:0;background:#ebe5da}
+.bko-edit-dialog .bko-pub-toolbar button{min-height:36px;padding:6px 10px;font-size:12px;letter-spacing:0;background:white;border-color:#cfc6b6}
+.bko-edit-dialog .bko-pub-toolbar button:hover{border-color:#c09564;background:#fffaf2}
+.bko-edit-dialog .bko-pub-toolbar [data-pub-preview-toggle]{margin-left:auto;font-weight:600;letter-spacing:.6px}
+.bko-edit-dialog .bko-pub-toolbar [aria-pressed=true]{background:#071c2b;color:#f5f1e9;border-color:#071c2b}
+.bko-pub-body textarea{display:block;font-family:inherit}
+.bko-pub-preview{border:1px solid #aab5b9;background:white;padding:18px 22px;min-height:260px;max-height:55dvh;overflow:auto}
+.bko-pub-preview .bko-pub-empty{color:#667079}
+.bko-pub-help{margin-top:8px;font-size:13px;color:#4d5b63}
+.bko-pub-help summary{cursor:pointer;min-height:32px;display:flex;align-items:center}
+.bko-pub-help ul{margin:6px 0;padding-left:18px;line-height:1.8}
+.bko-pub-help code{background:#ebe5da;padding:1px 5px;font-size:12px}
+.bko-pub-restore{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 12px;background:#fff4dc;border:1px solid #e2c88f;font-size:14px}
+.bko-edit-dialog .bko-pub-restore button{min-height:36px;padding:6px 12px}
+@media(max-width:700px){.bko-edit-dialog .bko-pub-toolbar [data-pub-preview-toggle]{margin-left:0;flex-basis:100%}}

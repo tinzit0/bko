@@ -29,12 +29,25 @@ export function validatePublication(p){
 export function sortPublications(rows){
  return [...rows].sort((a,b)=>Number(b.featured)-Number(a.featured)||b.published_on.localeCompare(a.published_on)||String(b.created_at||'').localeCompare(String(a.created_at||'')));
 }
-// Texto plano a HTML seguro: párrafos separados por línea vacía, «## » para subtítulos y «- » para listas.
-export function bodyMarkup(body){
+// Formato en línea sobre texto escapado: **negrita**, *cursiva* y [texto](https://… o mailto:…).
+export function inlineMarkup(text){
+ return escapeHtml(text)
+  .replace(/\[([^\]\n]+)\]\(((?:https:\/\/|mailto:)[^\s()]+)\)/g,(m,label,url)=>`<a href="${url}"${url.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':''}>${label}</a>`)
+  .replace(/\*\*([^*\n]+?)\*\*/g,'<strong>$1</strong>')
+  .replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g,'$1<em>$2</em>');
+}
+// Texto plano a HTML seguro. Bloques separados por línea vacía:
+// «## » subtítulo, «### » subtítulo menor, «- » lista, «1. » lista numerada, «> » cita, «![descripción](https://…)» imagen.
+export function bodyMarkup(body,base=''){
  return String(body||'').replace(/\r\n?/g,'\n').split(/\n\s*\n/).map(block=>block.trim()).filter(Boolean).map(block=>{
-  if(block.startsWith('## '))return `<h2>${escapeHtml(block.slice(3).trim())}</h2>`;
+  if(block.startsWith('### '))return `<h3>${inlineMarkup(block.slice(4).trim())}</h3>`;
+  if(block.startsWith('## '))return `<h2>${inlineMarkup(block.slice(3).trim())}</h2>`;
+  const image=block.match(/^!\[([^\]\n]*)\]\((\S+)\)$/);
+  if(image){const src=coverUrl(image[2],base);if(src)return `<figure class="publication-figure"><img src="${escapeHtml(src)}" alt="${escapeHtml(image[1])}" loading="lazy" decoding="async">${image[1]?`<figcaption>${escapeHtml(image[1])}</figcaption>`:''}</figure>`}
   const lines=block.split('\n').map(l=>l.trim());
-  if(lines.every(l=>/^[-•]\s+/.test(l)))return `<ul>${lines.map(l=>`<li>${escapeHtml(l.replace(/^[-•]\s+/,''))}</li>`).join('')}</ul>`;
-  return `<p>${lines.map(escapeHtml).join('<br>')}</p>`;
+  if(lines.every(l=>/^[-•]\s+/.test(l)))return `<ul>${lines.map(l=>`<li>${inlineMarkup(l.replace(/^[-•]\s+/,''))}</li>`).join('')}</ul>`;
+  if(lines.every(l=>/^\d+[.)]\s+/.test(l)))return `<ol>${lines.map(l=>`<li>${inlineMarkup(l.replace(/^\d+[.)]\s+/,''))}</li>`).join('')}</ol>`;
+  if(lines.every(l=>l.startsWith('>')))return `<blockquote><p>${lines.map(l=>inlineMarkup(l.replace(/^>\s?/,''))).join('<br>')}</p></blockquote>`;
+  return `<p>${lines.map(inlineMarkup).join('<br>')}</p>`;
  }).join('');
 }
