@@ -108,7 +108,47 @@ async function notifyByEmail(payload: Record<string, unknown>, id: string, insur
   }
 }
 
-const allowedOrigins = (Deno.env.get('ALLOWED_ORIGINS') || 'http://localhost:3000,http://127.0.0.1:3000')
+// Texto del aviso por WhatsApp: los mismos campos del correo y el mensaje completo, tal cual lo escribió la persona.
+export function whatsAppText(payload: Record<string, unknown>, id: string, insurance: boolean) {
+  const labels: [string, string][] = [
+    ['name','Nombre'],['company','Empresa'],['email','Correo'],['phone','Teléfono'],['city','Ciudad'],['area','Área'],
+    ...(insurance ? [['insuranceType','Tipo de seguro'],['companyRut','RUT empresa'],['activity','Actividad'],['expectedDate','Fecha estimada']] as [string,string][] : []),
+  ];
+  const fields = labels.filter(([key]) => String(payload[key] ?? '').trim()).map(([key, label]) => `*${label}:* ${payload[key]}`).join('\n');
+  return `*Nueva ${insurance ? 'solicitud de seguros' : 'consulta'} — sitio web BKO*\n\n${fields}\n\n*Mensaje:*\n${payload.message}\n\nRegistro: ${id}`;
+}
+// Divide textos largos en partes que CallMeBot acepta, sin cortar palabras cuando es posible.
+export function splitWhatsApp(text: string, max = 1400) {
+  const parts: string[] = [];
+  let rest = text;
+  while (rest.length > max) {
+    let cut = rest.lastIndexOf('\n', max);
+    if (cut < max * 0.5) cut = rest.lastIndexOf(' ', max);
+    if (cut < max * 0.5) cut = max;
+    parts.push(rest.slice(0, cut).trimEnd());
+    rest = rest.slice(cut).trimStart();
+  }
+  if (rest) parts.push(rest);
+  return parts.length > 1 ? parts.map((p, i) => `(${i + 1}/${parts.length})\n${p}`) : parts;
+}
+// Aviso por WhatsApp mediante CallMeBot (https://www.callmebot.com). Sin CALLMEBOT_APIKEY no se envía nada.
+async function notifyByWhatsApp(payload: Record<string, unknown>, id: string, insurance: boolean) {
+  const apikey = Deno.env.get('CALLMEBOT_APIKEY');
+  if (!apikey) return;
+  const phone = (Deno.env.get('WHATSAPP_NOTIFY_PHONE') || '+56974826025').replace(/[^\d+]/g, '');
+  const parts = splitWhatsApp(whatsAppText(payload, id, insurance));
+  for (const [i, text] of parts.entries()) {
+    if (i) await new Promise(resolve => setTimeout(resolve, 2500)); // Mantiene el orden de las partes.
+    const url = `https://api.callmebot.com/whatsapp.php?${new URLSearchParams({ phone, text, apikey })}`;
+    const response = await fetch(url, { signal: AbortSignal.timeout(15000) });
+    const body = await response.text().catch(() => '');
+    if (!response.ok) throw new Error(`whatsapp_http_${response.status}`);
+    // CallMeBot responde 200 incluso con clave inválida; se registra (sin datos personales) para revisar en los logs.
+    if (!/queued|sent/i.test(body)) console.error('contact_whatsapp_unconfirmed', `part_${i + 1}_of_${parts.length}`);
+  }
+}
+
+const allowedOrigins =(Deno.env.get('ALLOWED_ORIGINS') || 'http://localhost:3000,http://127.0.0.1:3000')
   .split(',').map(value => value.trim()).filter(Boolean);
 
 Deno.serve(async (request: Request) => {
@@ -183,8 +223,11 @@ Deno.serve(async (request: Request) => {
       return json({ok:false,error:'storage_unavailable'},503);
     }
     if (typeof result !== 'string' || !/^[0-9a-f-]{36}$/i.test(result)) return json({ok:false,error:'invalid_storage_response'},503);
-    // Aviso por correo a contacto@bko.cl. La consulta ya quedó guardada: un fallo aquí no afecta a quien escribe.
-    await notifyByEmail(payload, result, insurance).catch(error => console.error('contact_notify_failed', error instanceof Error ? error.message : 'unknown'));
+    // Avisos por correo (contacto@bko.cl) y WhatsApp, en paralelo. La consulta ya quedó guardada: un fallo aquí no afecta a quien escribe.
+    await Promise.all([
+      notifyByEmail(payload, result, insurance).catch(error => console.error('contact_notify_failed', error instanceof Error ? error.message : 'unknown')),
+      notifyByWhatsApp(payload, result, insurance).catch(error => console.error('contact_whatsapp_failed', error instanceof Error ? error.message : 'unknown')),
+    ]);
     return json({ok:true,id:result},201);
   } catch (error) {
     if (error instanceof SyntaxError) return json({ok:false,error:'invalid_json'},400);

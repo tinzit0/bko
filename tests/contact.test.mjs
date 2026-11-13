@@ -35,3 +35,24 @@ test('Solo confirma éxito al recibir UUID de almacenamiento',async()=>{
     assert.equal((await handler(request())).status,503);
   }finally{globalThis.fetch=original}
 });
+test('Aviso por WhatsApp incluye todos los campos y el mensaje completo, dividido si es largo',async()=>{
+  const {whatsAppText,splitWhatsApp}=await import('../supabase/functions/contact/index.ts');
+  const text=whatsAppText({...valid,phone:'+56 9 1111 1111',message:'Línea 1\nLínea 2 *tal cual*'},'abc',false);
+  for(const part of ['*Nombre:* Persona de Prueba','*Correo:* prueba@example.org','*Teléfono:* +56 9 1111 1111','*Ciudad:* Calama','*Área:* Derecho laboral','Línea 1\nLínea 2 *tal cual*','Registro: abc'])assert.ok(text.includes(part),part);
+  assert.ok(!text.includes('Empresa'));
+  const long='palabra '.repeat(600),parts=splitWhatsApp(long);
+  assert.ok(parts.length>1&&parts.every(p=>p.length<=1420));assert.match(parts[0],/^\(1\/\d\)\n/);
+  assert.equal(parts.map(p=>p.replace(/^\(\d+\/\d+\)\n/,'')).join(' ').replace(/\s+/g,' ').trim(),long.trim());
+  assert.deepEqual(splitWhatsApp('corto'),['corto']);
+});
+test('Con CALLMEBOT_APIKEY envía la consulta al número asociado y un fallo no afecta la respuesta',async()=>{
+  const original=globalThis.fetch,calls=[];env.CALLMEBOT_APIKEY='clave-prueba';
+  try{
+    globalThis.fetch=async(url)=>{calls.push(String(url));if(String(url).includes('callmebot'))return new Response('Message queued',{status:200});return new Response(JSON.stringify('123e4567-e89b-12d3-a456-426614174000'),{status:200})};
+    assert.equal((await handler(request())).status,201);
+    const wa=new URL(calls.find(u=>u.includes('callmebot')));
+    assert.equal(wa.searchParams.get('phone'),'+56974826025');assert.equal(wa.searchParams.get('apikey'),'clave-prueba');assert.ok(wa.searchParams.get('text').includes(valid.message));
+    globalThis.fetch=async(url)=>String(url).includes('callmebot')?new Response('x',{status:500}):new Response(JSON.stringify('123e4567-e89b-12d3-a456-426614174000'),{status:200});
+    assert.equal((await handler(request())).status,201);
+  }finally{globalThis.fetch=original;delete env.CALLMEBOT_APIKEY}
+});

@@ -897,96 +897,6 @@
         "label": "actualidad · Espacio editorial en preparación."
       },
       {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "ESPACIO DE DEMOSTRACIÓN",
-        "label": "actualidad · ESPACIO DE DEMOSTRACIÓN"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "ACTUALIDAD EMPRESARIAL",
-        "label": "actualidad · ACTUALIDAD EMPRESARIAL"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2)>span:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Sin publicar",
-        "label": "actualidad · Sin publicar"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(1)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Próximamente: noticias de interés empresarial",
-        "label": "actualidad · Próximamente: noticias de interés empresarial"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(1)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Espacio reservado para una publicación real de la firma.",
-        "label": "actualidad · Espacio reservado para una publicación real de la firma."
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(2)>div:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "ESPACIO DE DEMOSTRACIÓN",
-        "label": "actualidad · ESPACIO DE DEMOSTRACIÓN"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(2)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "ANÁLISIS JURÍDICO",
-        "label": "actualidad · ANÁLISIS JURÍDICO"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(2)>div:nth-of-type(2)>span:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Sin publicar",
-        "label": "actualidad · Sin publicar"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(2)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Próximamente: análisis y perspectivas jurídicas",
-        "label": "actualidad · Próximamente: análisis y perspectivas jurídicas"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(2)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Espacio reservado para una publicación real de la firma.",
-        "label": "actualidad · Espacio reservado para una publicación real de la firma."
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(1)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "ESPACIO DE DEMOSTRACIÓN",
-        "label": "actualidad · ESPACIO DE DEMOSTRACIÓN"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(2)>span:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "PUBLICACIONES BKO",
-        "label": "actualidad · PUBLICACIONES BKO"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(2)>span:nth-of-type(2)|text:0",
-        "type": "text",
-        "value": "Sin publicar",
-        "label": "actualidad · Sin publicar"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(3)>h3:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Próximamente: artículos y publicaciones",
-        "label": "actualidad · Próximamente: artículos y publicaciones"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(3)>p:nth-of-type(1)|text:0",
-        "type": "text",
-        "value": "Espacio reservado para una publicación real de la firma.",
-        "label": "actualidad · Espacio reservado para una publicación real de la firma."
-      },
-      {
         "key": "#contenido>p:nth-of-type(1)|text:0",
         "type": "text",
         "value": "¿Buscas protección para tu empresa o proyecto?",
@@ -1136,27 +1046,6 @@
         "value": "assets/oficinas/puerto%20varas/puerto%20varas.png",
         "alt": "Oficina de BKO en Puerto Varas",
         "label": "Fotografía · Oficina de BKO en Puerto Varas"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/editorial/actualidad.svg",
-        "alt": "Composición editorial de indicadores y actividad empresarial",
-        "label": "Fotografía · Composición editorial de indicadores y actividad empresarial"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(2)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/editorial/analisis.svg",
-        "alt": "Composición editorial de una balanza para el análisis jurídico",
-        "label": "Fotografía · Composición editorial de una balanza para el análisis jurídico"
-      },
-      {
-        "key": "#actualidad>div:nth-of-type(2)>article:nth-of-type(3)>div:nth-of-type(1)>img:nth-of-type(1)|image",
-        "type": "image",
-        "value": "assets/editorial/publicaciones.svg",
-        "alt": "Composición editorial de documentos y publicaciones",
-        "label": "Fotografía · Composición editorial de documentos y publicaciones"
       },
       {
         "key": "footer>div:nth-of-type(1)>a:nth-of-type(1)>span:nth-of-type(1)|text:0",

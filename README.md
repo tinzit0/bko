@@ -1,5 +1,7 @@
 # BKO — Bentjerodt Koplin y Oyarzun Consultores
 
+**Artículos y estudios**: con la sesión iniciada se agregan, editan y publican directamente en la portada (sección Actualidad) o desde Gestión → ARTÍCULOS Y ESTUDIOS. Ver [uso, archivos y activación](docs/PUBLICACIONES.md).
+
 La sección institucional de clientes está integrada en la portada y dispone de **GESTIÓN DE CLIENTES** en el CMS. Se importaron 22 registros y se incorporaron 13 logotipos oficiales; la publicación está pendiente de sus autorizaciones. Ver [archivos, fuentes, administración, pruebas y pendientes](docs/CLIENTES.md).
 
 La actualización de equipo, Personas y CAUCE está implementada en el proyecto y conectada a Supabase. Administración → **EQUIPO, PERSONAS Y CAUCE** permite editar perfiles, orden, publicación, relaciones y servicios. Ver [implementación, archivos, pruebas y pendientes](docs/ACTUALIZACION-INTEGRAL.md).

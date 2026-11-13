@@ -6,7 +6,7 @@ import {publicClientColumns} from '../js/clients-model.js';
 const root = resolve(import.meta.dirname, '..');
 const port = Number(process.env.PORT || 3000);
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.xml':'application/xml','.txt':'text/plain; charset=utf-8','.mp3':'audio/mpeg'};
-const publicRoots = new Set(['index.html','robots.txt','sitemap.xml','assets','css','js','equipo','seguros','cauce','admin']);
+const publicRoots = new Set(['index.html','robots.txt','sitemap.xml','assets','css','js','equipo','seguros','cauce','publicaciones','admin']);
 createServer(async (req,res) => {
   try {
     const requestUrl = new URL(req.url, 'http://localhost');

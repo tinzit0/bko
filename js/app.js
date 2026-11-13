@@ -1,5 +1,6 @@
 import { config } from './config.js';
 import { validateConsultation } from './validation.js';
+import { showWhatsAppHandoff, hideWhatsAppHandoff } from './whatsapp-handoff.js';
 import { initMotion } from './motion.js';
 import { initLuxury } from './luxury.js';
 import { initCinema } from './cinema.js';
@@ -89,7 +90,7 @@ initAnchorScroll({ onNavigate: openPractice });
 
 const whatsappMessage = 'Hola, quisiera solicitar información sobre los servicios de BKO Bentjerodt Koplin y Oyarzun Consultores.';
 $$('[data-whatsapp]').forEach(link => {
-  link.href = `https://wa.me/56974826025?text=${encodeURIComponent(whatsappMessage)}`;
+  link.href = `https://wa.me/${config.whatsappNumber.replace(/D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
   link.addEventListener('click', () => window.dispatchEvent(new CustomEvent('bko:contact-click', {detail:{channel:'whatsapp'}})));
 });
 $$('[data-email]').forEach(slot => {
@@ -147,7 +148,7 @@ form.addEventListener('submit', async event => {
   if (config.turnstileSiteKey && !turnstileToken) { showStatus('Completa la verificación de seguridad.', 'error'); return; }
   const button = form.querySelector('[type=submit]');
   submitting = true; button.disabled = true; button.querySelector('span').textContent = 'Enviando consulta…'; form.setAttribute('aria-busy', 'true');
-  showStatus('Estamos enviando tu consulta.', 'pending');
+  showStatus('Estamos enviando tu consulta.', 'pending'); hideWhatsAppHandoff(status);
   try {
     const response = await fetch(`${config.supabaseUrl}/functions/v1/contact`, {
       method:'POST', headers:{'Content-Type':'application/json','apikey':config.supabasePublishableKey},
@@ -157,10 +158,12 @@ form.addEventListener('submit', async event => {
     if (response.status === 429) throw new Error('Has realizado varias consultas. Espera una hora o escríbenos por WhatsApp.');
     if (!response.ok || result.ok !== true || typeof result.id !== 'string') throw new Error('No pudimos confirmar la recepción. Inténtalo más tarde o contáctanos por WhatsApp al +56 9 7482 6025.');
     showStatus('Tu consulta fue recibida correctamente. Gracias por contactar a BKO.', 'success');
+    showWhatsAppHandoff(status, data, { id: result.id });
     // Conversión sin datos personales: conectar GTM/GA4 solo después del consentimiento.
     window.dispatchEvent(new CustomEvent('bko:consultation-sent', {detail:{channel:'form'}}));
     form.reset(); formStartedAt = Date.now();
   } catch (error) {
+    showWhatsAppHandoff(status, data, { sent: false });
     showStatus(error.name === 'TimeoutError' ? 'La conexión tardó demasiado. No pudimos confirmar la recepción; contáctanos por WhatsApp al +56 9 7482 6025 antes de reenviar.' : error.message === 'Failed to fetch' ? 'No pudimos conectar con el formulario. Tus datos siguen aquí. Puedes escribirnos por WhatsApp al +56 9 7482 6025.' : error.message, 'error');
   } finally {
     submitting = false; button.disabled = false; button.querySelector('span').textContent = 'Enviar consulta'; form.removeAttribute('aria-busy');
