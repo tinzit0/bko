@@ -88,7 +88,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a');if(a?.hash)o
 // Presencia, Contacto y demás enlaces "index.html#seccion": sin recarga y alineados tras dibujar el CMS.
 initAnchorScroll({ onNavigate: openPractice });
 
-const whatsappMessage = 'Hola, quisiera solicitar información sobre los servicios de BKO Bentjerodt Koplin y Oyarzun Consultores.';
+const whatsappMessage = 'Hola, quisiera solicitar información sobre los servicios de BKO Bentjerodt Koplin y Oyarzún Consultores.';
 $$('[data-whatsapp]').forEach(link => {
   link.href = `https://wa.me/${config.whatsappNumber.replace(/D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
   link.addEventListener('click', () => window.dispatchEvent(new CustomEvent('bko:contact-click', {detail:{channel:'whatsapp'}})));

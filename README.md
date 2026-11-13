@@ -1,4 +1,4 @@
-# BKO — Bentjerodt Koplin y Oyarzun Consultores
+# BKO — Bentjerodt Koplin y Oyarzún Consultores
 
 **Artículos y estudios**: con la sesión iniciada se agregan, editan y publican directamente en la portada (sección Actualidad) o desde Gestión → ARTÍCULOS Y ESTUDIOS. Ver [uso, archivos y activación](docs/PUBLICACIONES.md).
 
