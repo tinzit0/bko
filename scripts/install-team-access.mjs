@@ -8,6 +8,6 @@ for (const path of pages) {
   html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}css/team-access.css"></head>`);
   html = html.replace(/<a class="(?:admin-access|mobile-admin-access)"[^>]*>[\s\S]*?<\/a>\s*/g, '');
   html = html.replace(/href="(?:\.\.\/)?admin\/index\.html"/g, `href="${prefix}admin/index.html"`);
-  html = html.replace(/<a(?: class="footer-admin-access")? href="(?:\.\.\/)?admin\/index\.html">[^<]*<\/a>/g, ''); // El pie público ya no enlaza a Administración (12-11-2026).
+  html = html.replace(/<a(?: class="footer-admin-access")? href="(?:\.\.\/)?admin\/index\.html">[^<]*<\/a>/g, `<a class="footer-admin-access" href="${prefix}admin/index.html">Administración</a>`);
   await writeFile(new URL(path, root), html);
 }

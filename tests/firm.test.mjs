@@ -38,7 +38,7 @@ test('Las páginas conservan metadatos, recursos y enlaces internos válidos',as
  for(const path of paths)pages.set(path,await readFile(new URL('../'+path,import.meta.url),'utf8'));
  for(const [path,html]of pages){
   assert.equal((html.match(/<h1\b/g)||[]).length,1,path);assert.match(html,/<meta name="description" content="[^\"]+"/);JSON.parse(html.match(/application\/ld\+json"[^>]*>(.*?)<\/script>/s)[1]);
-  assert.equal((html.match(/class="footer-admin-access"/g)||[]).length,0,`${path}: el pie público no debe enlazar a Administración`);
+  assert.equal((html.match(/class="footer-admin-access"/g)||[]).length,1,`${path}: acceso administrativo duplicado`);
   const ids=[...html.matchAll(/\bid="([^\"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length,path);
   for(const m of html.matchAll(/(?:href|src)="([^\"]+)"/g)){
    const href=m[1];if(/^[a-z]+:|^\/\//i.test(href))continue;

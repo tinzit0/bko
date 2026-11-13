@@ -14,7 +14,7 @@ export async function buildInsurance(){
  home=home.replace('    <section id="contacto"','    <p class="insurance-contact-route">¿Buscas protección para tu empresa o proyecto? <a href="seguros/index.html#solicitud-seguros">Solicita asesoría en seguros ↗</a></p>\n    <section id="contacto"').replace(/(?:    <p class="insurance-contact-route">[\s\S]*?<\/p>\n){2}/,'');
  // Existing route is retained; avoid adding a second insurance teaser.
  home=home.replace(/<a(?: class="footer-admin-access")? href="admin\/index\.html">[^<]*<\/a>/g,'');
- // El acceso a Administración ya no se muestra en el pie público (12-11-2026); el panel sigue en admin/index.html.
+ home=home.replace('<div class="footer-bottom">','<div class="footer-bottom"><a class="footer-admin-access" href="admin/index.html">Administración</a>');
  await writeFile(new URL('index.html',root),home);
  const wrap=(main,title,description,script='')=>home.replace(/<main id="contenido">[\s\S]*?<\/main>/,main).replace(/<p class="insurance-contact-route">[\s\S]*?<\/p>/g,'').replace(/href="#(?!i-)([^\"]+)"/g,(m,id)=>id==='contenido'?m:`href="../index.html#${id}"`).replace(/(?:src|href)="((?:assets|css|js|equipo|admin|seguros)\/)/g,(m,p)=>m.replace(p,'../'+p)).replace('src="../js/app.js"','src="../js/profiles.js"').replace(/<title>[\s\S]*?<\/title>/,`<title>${title}</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${h(description)}">`).replace(/<meta property="og:title" content="[^"]*">/,`<meta property="og:title" content="${h(title)}">`).replace(/<meta property="og:description" content="[^"]*">/,`<meta property="og:description" content="${h(description)}">`).replace('</head>',script+'</head>');
  await mkdir(new URL('seguros/',root),{recursive:true});
