@@ -1,6 +1,6 @@
 import { config } from './config.js';
 import { validateConsultation } from './validation.js';
-import { showWhatsAppHandoff, hideWhatsAppHandoff } from './whatsapp-handoff.js';
+import { openWhatsApp, showWhatsAppHandoff, hideWhatsAppHandoff } from './whatsapp-handoff.js';
 import { initMotion } from './motion.js';
 import { initLuxury } from './luxury.js';
 import { initCinema } from './cinema.js';
@@ -146,27 +146,28 @@ form.addEventListener('submit', async event => {
   if (Object.keys(errors).length) { showStatus('Revisa los campos indicados antes de enviar.', 'error'); $(`#${Object.keys(errors)[0]}`).focus(); return; }
   if (data.website || Date.now() - formStartedAt < 3000) { showStatus('Espera unos segundos e inténtalo nuevamente.', 'error'); return; }
   if (config.turnstileSiteKey && !turnstileToken) { showStatus('Completa la verificación de seguridad.', 'error'); return; }
+  openWhatsApp(data); // Durante el clic, para que el navegador no bloquee WhatsApp.
   const button = form.querySelector('[type=submit]');
   submitting = true; button.disabled = true; button.querySelector('span').textContent = 'Enviando consulta…'; form.setAttribute('aria-busy', 'true');
   showStatus('Estamos enviando tu consulta.', 'pending'); hideWhatsAppHandoff(status);
   try {
     const response = await fetch(`${config.supabaseUrl}/functions/v1/contact`, {
       method:'POST', headers:{'Content-Type':'application/json','apikey':config.supabasePublishableKey},
-      body:JSON.stringify({...data, startedAt:formStartedAt, turnstileToken}), signal:AbortSignal.timeout(18000),
+      body:JSON.stringify({...data, startedAt:formStartedAt, turnstileToken}), signal:AbortSignal.timeout(18000), keepalive:true,
     });
     const result = await response.json().catch(() => ({}));
     if (response.status === 429) throw new Error('Has realizado varias consultas. Espera una hora o escríbenos por WhatsApp.');
     if (!response.ok || result.ok !== true || typeof result.id !== 'string') throw new Error('No pudimos confirmar la recepción. Inténtalo más tarde o contáctanos por WhatsApp al +56 9 7482 6025.');
-    showStatus('Tu consulta fue recibida correctamente. Gracias por contactar a BKO.', 'success');
-    showWhatsAppHandoff(status, data, { id: result.id });
+    showStatus('Listo: se abrió WhatsApp con tu consulta para BKO. Toca Enviar en WhatsApp para completarla. También la recibimos por correo.', 'success');
+    showWhatsAppHandoff(status, data);
     // Conversión sin datos personales: conectar GTM/GA4 solo después del consentimiento.
     window.dispatchEvent(new CustomEvent('bko:consultation-sent', {detail:{channel:'form'}}));
     form.reset(); formStartedAt = Date.now();
   } catch (error) {
-    showWhatsAppHandoff(status, data, { sent: false });
+    showWhatsAppHandoff(status, data);
     showStatus(error.name === 'TimeoutError' ? 'La conexión tardó demasiado. No pudimos confirmar la recepción; contáctanos por WhatsApp al +56 9 7482 6025 antes de reenviar.' : error.message === 'Failed to fetch' ? 'No pudimos conectar con el formulario. Tus datos siguen aquí. Puedes escribirnos por WhatsApp al +56 9 7482 6025.' : error.message, 'error');
   } finally {
-    submitting = false; button.disabled = false; button.querySelector('span').textContent = 'Enviar consulta'; form.removeAttribute('aria-busy');
+    submitting = false; button.disabled = false; button.querySelector('span').textContent = 'Enviar consulta por WhatsApp'; form.removeAttribute('aria-busy');
     if (widgetId !== undefined && window.turnstile) { window.turnstile.reset(widgetId); turnstileToken = ''; }
   }
 });

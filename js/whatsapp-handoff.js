@@ -1,6 +1,6 @@
 // Envío de la consulta por WhatsApp desde el teléfono del visitante (gratis, sin servicios externos).
-// Después de enviar el formulario aparece un botón que abre WhatsApp con la consulta ya escrita
-// para el número de BKO. Si el formulario falla, el mismo botón sirve como respaldo.
+// El botón del formulario abre WhatsApp con la consulta ya escrita para el número de BKO y, al mismo
+// tiempo, la registra y la envía por correo. Queda un enlace de respaldo por si el navegador bloquea la ventana.
 import {config} from './config.js';
 
 const labels=[['name','Nombre'],['company','Empresa'],['email','Correo'],['phone','Teléfono'],['city','Ciudad'],['area','Área'],['insuranceType','Tipo de seguro'],['companyRut','RUT empresa'],['activity','Actividad'],['expectedDate','Fecha estimada']];
@@ -12,7 +12,7 @@ export function whatsAppConsultation(data,{title='Consulta desde el sitio web BK
  const message=clean(data.message||data.description).slice(0,3000);
  return `*${title}*\n\n${fields}${message?`\n\n*Mensaje:*\n${message}`:''}${id?`\n\nRegistro: ${id}`:''}`;
 }
-export function whatsAppLink(text,number=config.formWhatsAppNumber||config.whatsappNumber){return `https://wa.me/${String(number).replace(/\D/g,'')}?text=${encodeURIComponent(text)}`}
+export function whatsAppLink(text,number=config.whatsappNumber){return `https://wa.me/${String(number).replace(/\D/g,'')}?text=${encodeURIComponent(text)}`}
 
 let styled=false;
 function style(){
@@ -21,15 +21,19 @@ function style(){
  document.head.append(s);
 }
 
-/** Muestra (o actualiza) el botón de WhatsApp junto al mensaje de estado del formulario. */
-export function showWhatsAppHandoff(statusEl,data,{sent=true,title,id}={}){
+/** Abre WhatsApp con la consulta escrita. Debe llamarse durante el clic (antes de cualquier await) para que el navegador no lo bloquee. */
+export function openWhatsApp(data,{title}={}){
+ window.dispatchEvent(new CustomEvent('bko:contact-click',{detail:{channel:'whatsapp-form'}}));
+ try{const w=window.open(whatsAppLink(whatsAppConsultation(data,{title})),'_blank');if(w)try{w.opener=null}catch{}return !!w}catch{return false}
+}
+
+/** Botón de respaldo para volver a abrir WhatsApp con la consulta (si el navegador bloqueó la ventana o la persona la cerró). */
+export function showWhatsAppHandoff(statusEl,data,{title}={}){
  style();
  let box=statusEl.nextElementSibling?.classList.contains('wa-handoff')?statusEl.nextElementSibling:null;
  if(!box){box=document.createElement('div');box.className='wa-handoff';statusEl.after(box)}
- box.innerHTML=`<a target="_blank" rel="noopener noreferrer"></a><p></p>`;
- const a=box.querySelector('a');a.href=whatsAppLink(whatsAppConsultation(data,{title,id}));
- a.textContent=sent?'ENVIAR TAMBIÉN POR WHATSAPP →':'ENVIAR LA CONSULTA POR WHATSAPP →';
- box.querySelector('p').textContent=sent?'Recomendado: así tu consulta llega de inmediato al WhatsApp de BKO. Se abre con el mensaje listo; solo toca Enviar.':'Se abre WhatsApp con tu consulta ya escrita; solo toca Enviar.';
+ box.innerHTML=`<a target="_blank" rel="noopener noreferrer">ABRIR WHATSAPP CON MI CONSULTA →</a><p>Si WhatsApp no se abrió, toca aquí. El mensaje ya va escrito; solo toca Enviar.</p>`;
+ const a=box.querySelector('a');a.href=whatsAppLink(whatsAppConsultation(data,{title}));
  a.addEventListener('click',()=>window.dispatchEvent(new CustomEvent('bko:contact-click',{detail:{channel:'whatsapp-form'}})));
 }
 export function hideWhatsAppHandoff(statusEl){if(statusEl.nextElementSibling?.classList.contains('wa-handoff'))statusEl.nextElementSibling.remove()}

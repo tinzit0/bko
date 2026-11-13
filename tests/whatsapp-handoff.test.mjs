@@ -12,5 +12,5 @@ test('la consulta por WhatsApp incluye todos los datos y el mensaje completo', (
 test('el enlace apunta al número de BKO con el texto codificado', () => {
   const link = whatsAppLink('Hola & chao', '+56 9 7482 6025');
   assert.equal(link, 'https://wa.me/56974826025?text=Hola%20%26%20chao');
-  assert.match(whatsAppLink('x'), /^https:\/\/wa\.me\/569\d{8}\?/);
+  assert.match(whatsAppLink('x'), /^https:\/\/wa\.me\/56974826025\?/);
 });

@@ -55,7 +55,7 @@ Por defecto se usa `smtp.zoho.com` (comprobado: autenticación correcta el 11-11
 
 ## Aviso por WhatsApp
 
-**Botón en el formulario (activo, gratis).** Después de enviar cualquier formulario (contacto, seguros, CAUCE) aparece el botón verde **Enviar también por WhatsApp**. Abre WhatsApp en el teléfono del visitante con la consulta completa ya escrita para el número `formWhatsAppNumber` de `js/config.js` (en pruebas: +56 9 4598 1933; en producción debe ser +56 9 7482 6025), y el visitante solo toca Enviar. Si el formulario falla, el botón queda disponible como respaldo. Código: `js/whatsapp-handoff.js`.
+**Botón del formulario (activo, gratis).** En los formularios de contacto, seguros y CAUCE el botón es **Enviar consulta por WhatsApp**: abre WhatsApp en el teléfono del visitante con la consulta completa ya escrita para `whatsappNumber` de `js/config.js` (+56 9 7482 6025) y, al mismo tiempo, la registra y la envía por correo a contacto@bko.cl. El visitante solo toca Enviar en WhatsApp. Queda un enlace de respaldo por si el navegador bloquea la ventana. Código: `js/whatsapp-handoff.js`.
 
 **Aviso automático por CallMeBot (opcional).** CallMeBot no acepta usuarios nuevos cuando está lleno (noviembre 2026). Cuando vuelva a mostrar su número, se activa con los pasos siguientes.
 
