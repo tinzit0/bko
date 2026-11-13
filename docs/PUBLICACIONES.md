@@ -7,7 +7,9 @@ Módulo para subir artículos y estudios. Se administra desde la propia página 
 1. Inicia sesión en `admin/index.html` con una cuenta `admin` o `editor`.
 2. Abre la portada. En la barra inferior de administración, **+ Subir artículo o estudio** (botón naranjo) abre el formulario desde cualquier página del sitio. En la sección **Actualidad** aparece el recuadro **Administración** con **+ Agregar artículo**, **+ Agregar estudio** y **Gestionar todas**. Cada tarjeta muestra el botón **Editar**. La barra también tiene **Ver publicaciones** para ir al listado completo.
 3. El formulario incluye tipo, fecha, título, resumen, contenido, autor, área, imagen de portada, PDF opcional, **Destacar** y **Publicada**.
-   - Contenido: separa los párrafos con una línea vacía. Usa `## ` para un subtítulo y `- ` para una lista. El texto se guarda como texto plano y nunca se interpreta como HTML.
+   - Contenido: la barra de formato aplica **negrita**, *cursiva*, subtítulos, listas con viñetas o numeradas, citas, enlaces e imágenes dentro del texto (sube la foto y la inserta). **Vista previa** muestra cómo quedará. Atajos: Ctrl+B (negrita) y Ctrl+I (cursiva). La guía **Cómo dar formato al texto** explica las marcas (`**negrita**`, `*cursiva*`, `## `, `### `, `- `, `1. `, `> `, `[texto](https://…)`, `![descripción](https://…)`). El texto se guarda como texto plano y nunca se interpreta como HTML; los enlaces solo aceptan https:// o correo.
+   - Mientras escribes, el texto se guarda solo en el navegador. Si cierras sin guardar o se corta la conexión, al volver a abrir el formulario aparece **Recuperar**. Al cerrar con cambios pendientes, el sitio pide confirmación.
+   - En la página de cada publicación, **Copiar enlace** copia la dirección para compartirla.
    - Sin la casilla **Publicada**, la publicación queda como **borrador** y solo la ve el equipo.
    - Al editar, el enlace (slug) no cambia, así que los enlaces compartidos siguen funcionando.
 4. En el panel, la pestaña **Artículos y estudios** lista todas las publicaciones con el mismo formulario, incluido **Eliminar**.

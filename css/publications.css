@@ -106,3 +106,4 @@
 .bko-pub-restore{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 12px;background:#fff4dc;border:1px solid #e2c88f;font-size:14px}
 .bko-edit-dialog .bko-pub-restore button{min-height:36px;padding:6px 12px}
 @media(max-width:700px){.bko-edit-dialog .bko-pub-toolbar [data-pub-preview-toggle]{margin-left:0;flex-basis:100%}}
+.bko-pub-help summary::before{content:"▸";margin-right:8px}.bko-pub-help[open] summary::before{content:"▾"}
