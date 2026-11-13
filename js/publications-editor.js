@@ -101,7 +101,7 @@ function build(){
    <span class="bko-rt-group"><button type="button" data-rt="bold" aria-pressed="false" title="Negrita (Ctrl+B)"><b>N</b></button><button type="button" data-rt="italic" aria-pressed="false" title="Cursiva (Ctrl+I)"><i>C</i></button></span>
    <span class="bko-rt-group"><button type="button" data-rt="ul" aria-pressed="false" title="Lista con viñetas">• Lista</button><button type="button" data-rt="ol" aria-pressed="false" title="Lista numerada">1. Lista</button><button type="button" data-rt="quote" aria-pressed="false" title="Cita destacada">“ Cita</button></span>
    <span class="bko-rt-group"><button type="button" data-rt="link" title="Agregar enlace">Enlace</button><button type="button" data-rt="unlink" title="Quitar enlace">Quitar enlace</button><button type="button" data-rt="image" title="Insertar imagen">Imagen</button></span>
-   <span class="bko-rt-group"><button type="button" data-rt="undo" title="Deshacer (Ctrl+Z)" aria-label="Deshacer">↶</button><button type="button" data-rt="redo" title="Rehacer (Ctrl+Y)" aria-label="Rehacer">↷</button></span>
+   <span class="bko-rt-group"><button type="button" data-rt="undo" title="Deshacer (Ctrl+Z)">↶ Deshacer</button><button type="button" data-rt="redo" title="Rehacer (Ctrl+Y)">↷ Rehacer</button></span>
   </div>
   <div class="bko-pub-rich publication-body" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="bko-pub-body-label" data-placeholder="Escribe o pega aquí el texto. Puedes copiarlo desde Word o Google Docs: se mantienen títulos, negritas, listas y enlaces. Arrastra fotos para insertarlas." spellcheck="true" lang="es"></div>
   <textarea name="body" hidden></textarea>

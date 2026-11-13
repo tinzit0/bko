@@ -37,7 +37,9 @@ export const wordCount=body=>plainText(body).split(' ').filter(Boolean).length;
 export const readingMinutes=body=>Math.max(1,Math.round(wordCount(body)/200));
 /** Primeras frases del contenido, hasta `max` caracteres, sin cortar palabras. */
 export function excerpt(body,max=240){
- const text=plainText(body);if(text.length<=max)return text;
+ // Solo párrafos normales: los subtítulos, listas, citas e imágenes no sirven como resumen.
+ const paragraphs=String(body||'').replace(/\r\n?/g,'\n').split(/\n\s*\n/).map(b=>b.trim()).filter(b=>b&&!/^(#{2,3} |[-•] |\d+[.)] |> ?|!\[)/.test(b));
+ const text=plainText(paragraphs.join('\n\n'))||plainText(body);if(text.length<=max)return text;
  const cut=text.slice(0,max),sentence=cut.lastIndexOf('. ');
  return sentence>max*0.5?cut.slice(0,sentence+1):cut.slice(0,cut.lastIndexOf(' ')).replace(/[,;:]$/,'')+'…';
 }

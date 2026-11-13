@@ -173,3 +173,6 @@
  .bko-edit-dialog form>.bko-pub-actions button{flex:1 1 auto}
  .bko-publication-dialog [data-pub-delete]{margin-left:0}
 }
+.bko-edit-dialog .bko-pub-actions [data-action=draft]{background:#fff;color:#071c2b;border-color:#c09564}
+.bko-edit-dialog .bko-pub-actions [data-action=draft]:hover{background:#fffaf2}
+.bko-pub-advanced summary::before{content:"▸";margin-right:8px}.bko-pub-advanced[open] summary::before{content:"▾"}
