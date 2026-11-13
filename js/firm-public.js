@@ -1,4 +1,5 @@
 import {config} from './config.js';
+import './news-visibility.js';
 import {validateRecord,visibleRecords,insuranceProfile,profilePath} from './firm-model.js';
 import {teamMarkup,peopleMarkup,practiceMarkup,profileMarkup,cauceMarkup,caucePreview,firmNavigation} from './firm-render.js';
 import {loadInsuranceContent,applyInsuranceContent} from './cms-public.js';

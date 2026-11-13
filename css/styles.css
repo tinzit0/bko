@@ -85,3 +85,6 @@ em{color:var(--accent-dark)}
 .nav>a.active,.nav>a:hover{color:var(--accent-soft)}
 .hero-eyebrow,.hero h1 em{color:var(--accent-soft)}
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline-color:var(--accent-dark)}
+
+/* Actualidad: oculta hasta que haya publicaciones (js/news-visibility.js) */
+html:not(.bko-news) #actualidad,html:not(.bko-news) a[href$="#actualidad"]{display:none!important}

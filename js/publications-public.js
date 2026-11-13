@@ -1,6 +1,7 @@
 // Artículos y estudios: portada (#actualidad) y página publicaciones/index.html.
 // Visitantes ven solo lo publicado. Con sesión admin/editor aparecen los controles para agregar y editar.
 import {config} from './config.js';
+import {setNewsVisible} from './news-visibility.js';
 import {publicationKinds,publicationColumns,defaultCovers,coverUrl,fileUrl,formatDate,bodyMarkup,sortPublications,validatePublication,escapeHtml as h} from './publications-model.js';
 
 const root=new URL('../',import.meta.url).href;
@@ -100,7 +101,7 @@ function render(){
 }
 async function refresh(message){
  try{await load()}catch{rows=[]}
- render();
+ render();setNewsVisible(editor||rows.some(r=>r.published));
  if(message)document.querySelectorAll('[data-pub-status]').forEach(el=>el.textContent=message);
 }
 if(home||page){
