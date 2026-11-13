@@ -250,3 +250,24 @@ html::after{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;o
 .sector-slideshow img{opacity:0;transition:opacity 1.6s cubic-bezier(.4,0,.2,1)}
 .sector-slideshow img.is-active{opacity:1}
 .sector-slideshow img[src$="movimiento-1.webp"]{object-position:50% 52%}.sector-slideshow img[src$="movimiento-2.webp"]{object-position:50% 4%}.sector-slideshow img[src$="movimiento-3.webp"]{object-position:50% 62%}
+/* Alianza BKO + CAUCE (12-11-2026): logotipos, etapas y entregables. */
+.alliance-logos{display:inline-flex;align-items:center;gap:22px;margin:22px 0 4px;padding:16px 26px;background:#fff;border:1px solid #c0956480;max-width:100%}
+.alliance-bko{font:600 clamp(36px,4.4vw,54px)/1 var(--serif);color:#071c2b;letter-spacing:1px}.alliance-bko>span{color:#e87524}
+.alliance-plus{font:300 clamp(26px,3vw,36px)/1 var(--sans);color:#c09564}
+.alliance-logos img{display:block;width:clamp(150px,22vw,250px);height:auto}
+.cauce-alliance,.cauce-deliverables{margin-bottom:70px}
+.cauce-alliance>p:not(.eyebrow){margin-top:-6px}
+.cauce-alliance ol{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cauce-alliance li{position:relative;padding:26px 22px 22px;background:#fff;border:1px solid #c0956460;border-top:3px solid #2c5f86;display:flex;flex-direction:column;gap:10px}
+.cauce-alliance li.is-bko{border-top-color:#e87524;background:#f5f1e9}
+.cauce-alliance h3{font:500 22px/1.25 var(--serif);color:#071c2b;margin:0}
+.cauce-alliance li p{font-size:14.5px;line-height:1.75;margin:0;flex:1}
+.alliance-step{font:12px/1 var(--sans);letter-spacing:2px;color:#a5662d}
+.alliance-owner{align-self:flex-start;font:600 11px/1 var(--sans);letter-spacing:2px;padding:7px 10px;background:#071c2b;color:#f5f1e9}
+.is-bko .alliance-owner{background:#e87524;color:#071c2b}
+.cauce-deliverables{padding:40px;border:1px solid #c0956480;background:#fff}
+.cauce-deliverables ul{padding-left:20px;columns:2;column-gap:48px}.cauce-deliverables li{break-inside:avoid;margin-bottom:6px}
+.cauce-audience{margin:18px 0 0;padding-top:18px;border-top:1px solid #c0956460}
+@media(max-width:1000px){.cauce-alliance ol{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.cauce-deliverables{padding:26px}.cauce-deliverables ul{columns:1}.cauce-alliance,.cauce-deliverables{margin-bottom:45px}}
+@media(max-width:480px){.cauce-alliance ol{grid-template-columns:1fr}.alliance-logos{gap:12px;padding:12px 16px}}

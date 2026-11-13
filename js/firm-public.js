@@ -3,6 +3,7 @@ import './news-visibility.js';
 import {validateRecord,visibleRecords,insuranceProfile,profilePath} from './firm-model.js';
 import {teamMarkup,peopleMarkup,practiceMarkup,profileMarkup,cauceMarkup,caucePreview,firmNavigation} from './firm-render.js';
 import {loadInsuranceContent,applyInsuranceContent} from './cms-public.js';
+import {allianceRecord} from './cauce-alliance.js';
 const base=new URL('../',import.meta.url),local=location.pathname===base.pathname||location.pathname===base.pathname+'index.html'?'':'../';
 const targets=[...document.querySelectorAll('[data-firm-team],[data-firm-people],[data-firm-practices],[data-firm-cauce],[data-firm-profile],[data-cauce-preview]')];
 const notice='<div class="firm-unavailable" role="status"><h2>Contenido no disponible</h2><p>Intenta recargar la página o contacta a BKO para recibir orientación.</p></div>';
@@ -13,7 +14,7 @@ export async function loadFirm(){
 }
 function seo(row){const d=row.data,title=d.seoTitle||`${d.name||d.title} | BKO Consultores`,description=d.seoDescription||d.intro.split('\n\n')[0];document.title=title;for(const [s,value]of [['meta[name=description]',description],['meta[property="og:title"]',title],['meta[property="og:description"]',description]])document.querySelector(s)?.setAttribute('content',value);const schema=document.querySelector('script[type="application/ld+json"]');if(schema)schema.textContent=JSON.stringify({'@context':'https://schema.org','@type':row.kind==='professional'?'Person':'Service',name:d.name||d.title,description,url:location.href.split('?')[0]});}
 try{
- const [rows,insurance]=await Promise.all([loadFirm(),loadInsuranceContent()]);const records=visibleRecords(rows).map(r=>insuranceProfile(r,insurance));
+ const [rows,insurance]=await Promise.all([loadFirm(),loadInsuranceContent()]);const records=visibleRecords(rows).map(r=>allianceRecord(insuranceProfile(r,insurance)));
  for(const root of targets){
   if(root.hasAttribute('data-firm-team'))root.innerHTML=teamMarkup(records,local);
   if(root.hasAttribute('data-firm-people'))root.innerHTML=peopleMarkup(records,local);

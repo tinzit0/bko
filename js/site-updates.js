@@ -27,15 +27,15 @@ export const fenellaIntro = [
   'De esta manera, el trabajo interdisciplinario permite abordar los casos de mayor complejidad desde una perspectiva más amplia e integrada, articulando el análisis jurídico y social con el conocimiento especializado de la psiquiatría infantojuvenil, y situando las necesidades, el bienestar y las circunstancias particulares de cada niño, niña o adolescente como centro de la intervención.'
 ].join('\n\n');
 
-export const estefaniaRole = 'Asistente contable | Gestión de CAUCE';
-export const estefaniaIntro = 'Estefanía es asistente contable de BKO y está a cargo de la gestión de CAUCE Gestión Integral, el sistema de la oficina para organizar y dar seguimiento documental a las carteras de cobranza. Su labor comprende la organización y revisión de antecedentes comerciales y contables, la conciliación de pagos y el seguimiento de saldos, identificando inconsistencias y documentación pendiente. Asimismo, apoya la preparación de expedientes para su evaluación por el área jurídica, contribuyendo a mantener información ordenada, respaldada y trazable durante las distintas etapas del proceso de recuperación.';
+export const estefaniaRole = 'Asistente contable | Coordinación de cobranza';
+export const estefaniaIntro = 'Estefanía es asistente contable de BKO y apoya la coordinación de los casos de cobranza que prepara CAUCE. Su labor comprende la organización y revisión de antecedentes comerciales y contables, la conciliación de pagos y el seguimiento de saldos, identificando inconsistencias y documentación pendiente. Asimismo, apoya la preparación de expedientes para su evaluación por el área jurídica, contribuyendo a mantener información ordenada, respaldada y trazable durante las distintas etapas del proceso de recuperación.';
 
 /** Cambios por registro de bko_content (se fusionan con los datos existentes). */
 export function firmPatches() {
   const patches = Object.fromEntries(teamOrder.map((id, i) => [id, { sort_order: (i + 1) * 10, data: {} }]));
   patches['roxana-ximena-oyarzun-bustamante'].data = { intro: roxanaIntro };
   patches['fenella-reyes-gonzalo'].data = { intro: fenellaIntro };
-  patches['estefania-benitez-garcia'].data = { role: estefaniaRole, intro: estefaniaIntro, specialties: ['Asistencia contable', 'Gestión de CAUCE'], areas: [] };
+  patches['estefania-benitez-garcia'].data = { role: estefaniaRole, intro: estefaniaIntro, specialties: ['Asistencia contable', 'Coordinación de casos de cobranza'], areas: [] };
   return patches;
 }
 

@@ -2,6 +2,8 @@
 import { validateConsultation } from '../../../js/validation.js';
 import { validateInsurance, insuranceArea } from '../../../js/insurance-validation.js';
 
+const cauceArea = 'CAUCE Gestión Integral';
+
 type SmtpConn = { read(p: Uint8Array): Promise<number | null>; write(p: Uint8Array): Promise<number>; close(): void };
 
 // Base64 de texto UTF-8, por bloques para no exceder la pila con mensajes largos.
@@ -82,6 +84,8 @@ async function notifyByEmail(payload: Record<string, unknown>, id: string, insur
   const password = Deno.env.get('ZOHO_SMTP_PASSWORD');
   if (!user || !password) return;
   const to = (Deno.env.get('CONTACT_NOTIFY_TO') || 'contacto@bko.cl').split(',').map(v => v.trim()).filter(Boolean);
+  // Las solicitudes de CAUCE llegan también a su fundador (alianza BKO + CAUCE, 12-11-2026).
+  if (payload.area === cauceArea) for (const extra of (Deno.env.get('CAUCE_NOTIFY_TO') || 'luis.miranda@caucegestion.cl').split(',').map(v => v.trim()).filter(Boolean)) if (!to.includes(extra)) to.push(extra);
   const labels: [string, string][] = [
     ['name','Nombre'],['company','Empresa'],['email','Correo'],['phone','Teléfono'],['city','Ciudad'],['area','Área de interés'],
     ...(insurance ? [['insuranceType','Tipo de seguro'],['companyRut','RUT empresa'],['activity','Actividad'],['expectedDate','Fecha estimada']] as [string,string][] : []),

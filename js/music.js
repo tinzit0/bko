@@ -10,8 +10,8 @@ const FADE_OUT = 1200;
 let audio, button, playing = false, fadeFrame = 0;
 
 function remember(on) { try { localStorage.setItem(STORE, on ? 'on' : 'off'); } catch {} }
-// Suena por defecto; solo se queda en silencio si el visitante la pausó a propósito.
-function wanted() { try { return localStorage.getItem(STORE) !== 'off'; } catch { return true; } }
+// No suena al entrar: solo continúa en otras páginas si el visitante la activó con el botón (12-11-2026).
+function wanted() { try { return localStorage.getItem(STORE) === 'on'; } catch { return false; } }
 function savedTime() { try { return Number(sessionStorage.getItem(POSITION)) || 0; } catch { return 0; } }
 function saveTime() { try { if (audio) sessionStorage.setItem(POSITION, String(audio.currentTime)); } catch {} }
 

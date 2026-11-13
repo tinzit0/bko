@@ -193,16 +193,16 @@
       "sections": [
         {
           "title": "Experiencia en gestión de carteras",
-          "body": "Su experiencia se extiende a la organización y gestión de carteras de crédito, análisis de cuentas por cobrar, conciliación de pagos, determinación de saldos y preparación de antecedentes para procesos de recuperación.\n\nLos expedientes elaborados por CAUCE reflejan un trabajo que integra facturas y documentos tributarios electrónicos, notas de crédito, guías de despacho, estados de pago, cotizaciones, respaldos bancarios y antecedentes complementarios."
+          "body": "Su experiencia se extiende a la organización y gestión de carteras de crédito, análisis de cuentas por cobrar, conciliación de pagos, determinación de saldos y preparación de antecedentes para procesos de recuperación.\n\nLos expedientes elaborados por CAUCE integran facturas y documentos tributarios electrónicos, notas de crédito, guías de despacho, estados de pago, cotizaciones, respaldos bancarios y antecedentes complementarios."
         }
       ],
       "timeline": [],
       "email": "",
       "contactAuthorized": false,
       "seoTitle": "",
-      "seoDescription": "Luis Miranda Chavarría, ingeniero civil y creador de CAUCE Gestión Integral. Gestión de carteras de crédito, conciliación de pagos y asesoría empresarial.",
+      "seoDescription": "Luis Miranda Chavarría, ingeniero civil y fundador de CAUCE Gestión Integral. Gestión de carteras de crédito, conciliación de pagos y asesoría empresarial.",
       "name": "Luis Miranda Chavarría",
-      "role": "Ingeniero Civil | Creador de CAUCE Gestión Integral",
+      "role": "Ingeniero Civil | Fundador de CAUCE Gestión Integral",
       "intro": "Luis Miranda Chavarría, ingeniero civil, desarrolla su actividad en gestión de proyectos, intermediación y asesoría empresarial, con especial vinculación a empresas proveedoras de servicios para la minería y actividades afines, tanto en Calama como en Santiago.",
       "functions": "",
       "discipline": "business"
@@ -258,7 +258,7 @@
       "areas": [],
       "specialties": [
         "Asistencia contable",
-        "Gestión de CAUCE"
+        "Coordinación de casos de cobranza"
       ],
       "sections": [],
       "timeline": [],
@@ -267,8 +267,8 @@
       "seoTitle": "",
       "seoDescription": "",
       "name": "Estefanía Benítez García",
-      "role": "Asistente contable | Gestión de CAUCE",
-      "intro": "Estefanía es asistente contable de BKO y está a cargo de la gestión de CAUCE Gestión Integral, el sistema de la oficina para organizar y dar seguimiento documental a las carteras de cobranza. Su labor comprende la organización y revisión de antecedentes comerciales y contables, la conciliación de pagos y el seguimiento de saldos, identificando inconsistencias y documentación pendiente. Asimismo, apoya la preparación de expedientes para su evaluación por el área jurídica, contribuyendo a mantener información ordenada, respaldada y trazable durante las distintas etapas del proceso de recuperación.",
+      "role": "Asistente contable | Coordinación de cobranza",
+      "intro": "Estefanía es asistente contable de BKO y apoya la coordinación de los casos de cobranza que prepara CAUCE. Su labor comprende la organización y revisión de antecedentes comerciales y contables, la conciliación de pagos y el seguimiento de saldos, identificando inconsistencias y documentación pendiente. Asimismo, apoya la preparación de expedientes para su evaluación por el área jurídica, contribuyendo a mantener información ordenada, respaldada y trazable durante las distintas etapas del proceso de recuperación.",
       "functions": "",
       "discipline": "support"
     }
@@ -436,7 +436,7 @@
     "data": {
       "title": "CAUCE GESTIÓN INTEGRAL",
       "intro": "Gestión, control y trazabilidad de carteras de crédito, procesos de recuperación y cobranza en general.",
-      "description": "Creado por Luis Miranda Chavarría, ingeniero civil, CAUCE Gestión Integral es una solución especializada en la organización, análisis, control y seguimiento de carteras de crédito y procesos de cobranza, orientada a transformar antecedentes comerciales y financieros dispersos en información estructurada, trazable y útil para la gestión de recuperación.",
+      "description": "CAUCE Gestión Integral, fundada por Luis Miranda Chavarría, trabaja en alianza con BKO para resolver la cobranza de empresas del norte de Chile. CAUCE levanta y ordena la información de cada deuda (facturas, pagos, correspondencia y antecedentes del deudor) y la entrega lista para que el equipo jurídico de BKO evalúe la causa y conduzca el cobro.",
       "quote": "Organizamos, analizamos y trazamos cada cartera desde el origen de la operación comercial hasta las distintas etapas de su recuperación, proporcionando al cliente información estructurada para conocer y controlar la evolución de sus cuentas por cobrar.",
       "services": [
         "Organización y análisis de carteras de crédito",
@@ -467,7 +467,7 @@
         },
         {
           "title": "Control y conciliación de pagos",
-          "body": "Otro componente relevante es la identificación y conciliación de los pagos efectuados por el deudor.\n\nEn los antecedentes analizados se individualizan pagos por fecha, importe, cuenta receptora, concepto o glosa, respaldo disponible y aplicación dentro de la cartera.\n\nEste proceso permite diferenciar los pagos asociados a documentos determinados de aquellos cuya aplicación requiere otro tratamiento o antecedentes adicionales, contribuyendo a construir un estado de deuda respaldado documentalmente."
+          "body": "Otro componente relevante es la identificación y conciliación de los pagos efectuados por el deudor.\n\nEn cada cartera se individualizan los pagos por fecha, importe, cuenta receptora, concepto o glosa, respaldo disponible y aplicación dentro de la cartera.\n\nEste proceso permite diferenciar los pagos asociados a documentos determinados de aquellos cuya aplicación requiere otro tratamiento o antecedentes adicionales, contribuyendo a construir un estado de deuda respaldado documentalmente."
         },
         {
           "title": "Determinación y seguimiento de saldos",
@@ -479,7 +479,7 @@
         },
         {
           "title": "Identificación de inconsistencias y antecedentes pendientes",
-          "body": "CAUCE no se limita a registrar la información disponible. La metodología documentada también identifica expresamente diferencias, inconsistencias y antecedentes que no se encuentran disponibles en el expediente.\n\nEl informe de traspaso examinado contiene una sección específica dedicada a información que no estaba disponible en la carpeta, incluyendo determinados respaldos bancarios, antecedentes sobre la correspondencia entre estados de pago y facturación, documentación contractual e informes técnicos.\n\nEste enfoque permite distinguir claramente entre los antecedentes efectivamente disponibles y aquellos que requieren ser complementados o aclarados."
+          "body": "CAUCE no se limita a registrar la información disponible. La metodología documentada también identifica expresamente diferencias, inconsistencias y antecedentes que no se encuentran disponibles en el expediente.\n\nCada informe de traspaso contiene una sección dedicada a la información que no está disponible en la carpeta, incluyendo determinados respaldos bancarios, antecedentes sobre la correspondencia entre estados de pago y facturación, documentación contractual e informes técnicos.\n\nEste enfoque permite distinguir claramente entre los antecedentes efectivamente disponibles y aquellos que requieren ser complementados o aclarados."
         },
         {
           "title": "Preparación de expedientes para profesionales jurídicos",
