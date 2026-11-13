@@ -29,6 +29,28 @@ export function validatePublication(p){
 export function sortPublications(rows){
  return [...rows].sort((a,b)=>Number(b.featured)-Number(a.featured)||b.published_on.localeCompare(a.published_on)||String(b.created_at||'').localeCompare(String(a.created_at||'')));
 }
+// Texto sin marcas de formato (para resúmenes, búsqueda y conteo de palabras).
+export function plainText(body){
+ return String(body||'').replace(/!\[[^\]\n]*\]\(\S+\)/g,' ').replace(/\[([^\]\n]+)\]\([^)\s]+\)/g,'$1').replace(/^(#{2,3} |[-•] |\d+[.)] |> ?)/gm,'').replace(/\*\*|\*/g,'').replace(/\s+/g,' ').trim();
+}
+export const wordCount=body=>plainText(body).split(' ').filter(Boolean).length;
+export const readingMinutes=body=>Math.max(1,Math.round(wordCount(body)/200));
+/** Primeras frases del contenido, hasta `max` caracteres, sin cortar palabras. */
+export function excerpt(body,max=240){
+ const text=plainText(body);if(text.length<=max)return text;
+ const cut=text.slice(0,max),sentence=cut.lastIndexOf('. ');
+ return sentence>max*0.5?cut.slice(0,sentence+1):cut.slice(0,cut.lastIndexOf(' ')).replace(/[,;:]$/,'')+'…';
+}
+export function matchesSearch(p,query){
+ const norm=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+ const words=norm(query).split(/\s+/).filter(Boolean);if(!words.length)return true;
+ const hay=norm([p.title,p.summary,p.author,p.area,publicationKinds[p.kind],plainText(p.body)].join(' '));
+ return words.every(w=>hay.includes(w));
+}
+/** Otras publicaciones para «Sigue leyendo»: primero del mismo tipo y área. */
+export function relatedPublications(p,rows,limit=3){
+ return sortPublications(rows.filter(r=>r.slug!==p.slug&&r.published)).map(r=>[r,(r.kind===p.kind?2:0)+(p.area&&r.area===p.area?3:0)]).sort((a,b)=>b[1]-a[1]).slice(0,limit).map(([r])=>r);
+}
 // Formato en línea sobre texto escapado: **negrita**, *cursiva* y [texto](https://… o mailto:…).
 export function inlineMarkup(text){
  return escapeHtml(text)

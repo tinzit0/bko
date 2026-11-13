@@ -22,6 +22,18 @@ test('Formato enriquecido seguro: negrita, cursiva, enlaces, citas, listas numer
  assert.ok(html.includes('<h3>Menor</h3><ol><li>uno</li><li>dos</li></ol><blockquote><p>cita</p></blockquote><figure class="publication-figure"><img src="https://x.cl/a.webp" alt="Equipo"'));
  assert.ok(!html.includes('src="javascript')&&!html.includes('href="javascript'));
 });
+test('Resumen automático, tiempo de lectura, búsqueda y relacionadas',async()=>{
+ const {excerpt,readingMinutes,wordCount,matchesSearch,relatedPublications,plainText}=await import('../js/publications-model.js');
+ const body='## Contexto\n\nLa **nueva ley** cambia la jornada. Las empresas deben adaptarse pronto.\n\n- uno\n- dos\n\n![Foto](https://x.cl/a.webp)';
+ assert.equal(plainText(body),'Contexto La nueva ley cambia la jornada. Las empresas deben adaptarse pronto. uno dos');
+ assert.equal(wordCount(body),14);assert.equal(readingMinutes(body),1);assert.equal(readingMinutes('palabra '.repeat(1000)),5);
+ assert.equal(excerpt('Primera frase completa aquí. Segunda frase que es bastante más larga que el límite.',40),'Primera frase completa aquí.');
+ assert.ok(excerpt('palabra '.repeat(100),30).endsWith('…'));
+ const p={...base,title:'Jornada laboral',area:'Derecho Laboral',author:'Camila',body};
+ assert.ok(matchesSearch(p,'ley jornada'));assert.ok(matchesSearch(p,'LABORAL camila'));assert.ok(matchesSearch(p,'jornáda'));assert.ok(!matchesSearch(p,'minería'));
+ const rows=[p,{...base,slug:'b',kind:'estudio'},{...base,slug:'c',area:'Derecho Laboral'},{...base,slug:'d',published:false}];
+ assert.deepEqual(relatedPublications(p,rows).map(r=>r.slug),['c','b']);
+});
 test('Orden: destacadas y luego más recientes',()=>{
  const rows=[{...base,slug:'a',published_on:'2026-01-01'},{...base,slug:'b',published_on:'2026-05-01'},{...base,slug:'c',published_on:'2025-01-01',featured:true}];
  assert.deepEqual(sortPublications(rows).map(r=>r.slug),['c','b','a']);assert.match(formatDate('2026-11-12'),/12.*noviembre.*2026/);
