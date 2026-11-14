@@ -1,0 +1,87 @@
+/* Refinamientos visuales (noviembre 2026).
+   Se carga al final para pulir sin tocar las hojas existentes ni el marcado del CMS. */
+
+/* 1. Los números decorativos en contorno (02, 03, 05…) chocaban con el texto lateral
+      y repetían el número que ya muestra la ceja de cada sección. */
+.section-heading[data-num]::before{content:none}
+
+/* 2. Menú: el punto aislado antes de «Equipo» se leía como un error. */
+.nav>a[href$="cauce/index.html"]+.nav-group>summary::before{content:none}
+
+/* 3. La firma: la foto habla sola, sin rótulo debajo. */
+.firm-visual .image-caption{display:none}
+
+/* 4. Empresas: los nombres sin logotipo quedan centrados en su tarjeta, igual que los logos. */
+.client-card>a,.client-card>div{height:100%}
+.client-card>a>.client-logo:only-child,.client-card>div>.client-logo:only-child{flex:1}
+.client-caption{transition:color .25s ease}
+.client-card:hover .client-caption{color:#071c2b}
+
+/* 5. Negocios y seguros: una sola fila de acciones, la principal primero. */
+.insurance-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.insurance-actions .button{margin:0;justify-content:center}
+.insurance-preview .profile-tags{margin-bottom:0}
+@media(max-width:700px){.insurance-actions{flex-direction:column}.insurance-actions .button{width:100%}}
+
+/* 6. Botones: respuesta táctil al presionar (además del levantamiento en hover). */
+.button,.text-link,.header-cta{-webkit-tap-highlight-color:transparent}
+.button:active{transform:translateY(0) scale(.97);transition-duration:.08s}
+@media(hover:none){.button:hover{transform:none}}
+
+/* 7. Ritmo de lectura: párrafos largos con una medida cómoda y titulares equilibrados. */
+.section-heading h2,.people-heading h2,.insurance-service>h2{text-wrap:balance}
+.section-heading>p,.insurance-service>p,.person p{text-wrap:pretty}
+
+/* ───────── Capa premium de movimiento ─────────
+   Todo usa la curva de la casa (--ease-luxe) y solo transform, opacity y clip-path.
+   Se ve una vez por sección al entrar; nada se repite con el scroll. */
+@media(prefers-reduced-motion:no-preference){
+
+  /* 8. Títulos de sección: suben desde una ranura fija en vez de solo aparecer.
+        El clip y el desplazamiento avanzan juntos, así el borde inferior queda quieto. */
+  .js-motion .section-heading.is-visible h2,
+  .js-motion .team-heading.is-visible h2,
+  .js-motion .contact-copy.is-visible h2{animation:bko-slot-rise 1.15s var(--ease-luxe,cubic-bezier(.16,1,.3,1)) .05s both}
+
+  /* 9. Sectores: cada foto se descubre como una cortina de abajo hacia arriba y se asienta
+        desde un leve acercamiento; el texto llega cuando la cortina ya va por la mitad. */
+  /* La tarjeta en sí no se recorta (el IntersectionObserver necesita verla); la cortina va en la foto. */
+  .js-motion .sector.reveal{transition:opacity .6s ease;transition-delay:var(--entrance-delay,0ms)}
+  .js-motion .sector.reveal:not(.is-visible){transform:none}
+  .js-motion .sector.reveal .sector-photo,.js-motion .sector.reveal::after{clip-path:inset(0);transition:clip-path 1.1s var(--ease-luxe,cubic-bezier(.16,1,.3,1)) var(--entrance-delay,0ms),transform 1.6s var(--ease-luxe,cubic-bezier(.16,1,.3,1)) var(--entrance-delay,0ms)}
+  .js-motion .sector.reveal:not(.is-visible) .sector-photo,.js-motion .sector.reveal:not(.is-visible)::after{clip-path:inset(100% 0 0 0)}
+  .js-motion .sector.reveal:not(.is-visible) .sector-photo{transform:scale(1.14)}
+  .js-motion .sector.reveal.is-visible:hover .sector-photo{transition:clip-path 0s,transform .8s cubic-bezier(.2,.6,.3,1)}
+  .js-motion .sector.reveal .sector-content{transition:opacity .7s ease,transform .9s var(--ease-luxe,cubic-bezier(.16,1,.3,1));transition-delay:calc(var(--entrance-delay,0ms) + .38s)}
+  .js-motion .sector.reveal:not(.is-visible) .sector-content{opacity:0;transform:translateY(18px)}
+
+  /* 10. Áreas de práctica: el acordeón abre y cierra con su altura real (Chrome/Edge 131+;
+         en otros navegadores sigue abriendo al instante, como hoy). */
+  .practice-list{interpolate-size:allow-keywords}
+  .practice::details-content{height:0;overflow:clip;transition:height .45s var(--ease-luxe,cubic-bezier(.16,1,.3,1)),content-visibility .45s allow-discrete}
+  .practice[open]::details-content{height:auto}
+  .practice .plus{transition:background .25s,border-color .25s,transform .45s var(--ease-luxe,cubic-bezier(.16,1,.3,1))}
+  .practice[open] .plus{transform:rotate(180deg);border-color:var(--gold-light,#dbb98c)}
+
+  /* 11. Formulario: una línea dorada se dibuja desde la izquierda en el campo activo. */
+  .field input,.field select,.field textarea{background-image:linear-gradient(var(--gold,#c09564),var(--gold,#c09564));background-repeat:no-repeat;background-position:0 100%;background-size:0 1px;transition:background-size .5s var(--ease-luxe,cubic-bezier(.16,1,.3,1)),background-color .3s,border-color .3s}
+  .field input:focus,.field select:focus,.field textarea:focus{background-size:100% 1px}
+
+  /* 12. Detalles al pasar el cursor: ciudades del hero y logotipos de empresas. */
+  @media(hover:hover) and (pointer:fine){
+    .hero-locations a small{transition:letter-spacing .5s var(--ease-luxe,cubic-bezier(.16,1,.3,1)),color .3s}
+    .hero-locations a:hover small{letter-spacing:2.4px;color:var(--gold-light,#dbb98c)}
+    .client-card .client-logo img{transition:transform .5s var(--ease-luxe,cubic-bezier(.16,1,.3,1))}
+    .client-card:hover .client-logo img{transform:scale(1.04)}
+  }
+}
+
+@keyframes bko-slot-rise{
+  from{opacity:0;transform:translateY(55%);clip-path:inset(-10% -4% 55% -4%)}
+  35%{opacity:1}
+  to{opacity:1;transform:none;clip-path:inset(-10% -4% -30% -4%)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .button:active{transform:none}
+}
