@@ -28,11 +28,13 @@ Los textos nuevos viven en `js/cauce-alliance.js`. Se aplican también al conten
 | Ibanez Soluciones | `assets/clientes/ibanez-soluciones.jpg` (logo oficial de ibanezsoluciones.cl) | https://www.ibanezsoluciones.cl/ |
 | SISA Ingeniería, Arriendos y Obras Civiles | `assets/clientes/sisa.png` (desde `clientes/Logo SisA.png`, reducido a 540 px) | sin sitio web |
 | Capitalfin | `assets/clientes/capitalfin.png` (logo oficial de capitalfin.cl) | https://capitalfin.cl/ |
+| Almasur Inmobiliaria | `assets/clientes/almasur-inmobiliaria.jpg` (desde `clientes/alamasur inmobiliaria.jpeg`) | https://almasurinmobiliaria.cl/ |
+| Autovaras Motors | `assets/clientes/autovaras-motors.jpg` (desde `clientes/autovarasmotors.jpeg`) | sin sitio web |
 
 ## Verificación
 
 - `npm test`: 48 pruebas aprobadas.
-- Sitio publicado: menú, portada, página CAUCE, formulario y pie comprobados; 27 empresas visibles y los tres logotipos nuevos cargan correctamente.
+- Sitio publicado: menú, portada, página CAUCE, formulario y pie comprobados; 27 empresas visibles y los tres logotipos nuevos cargan correctamente. Almasur y Autovaras se agregan con `supabase/updates/20261113_clientes_almasur_autovaras.sql` (29 empresas).
 - Función `contact` desplegada y SQL ejecutado en Supabase; textos y clientes comprobados con la API pública.
 
 ## Pendiente
