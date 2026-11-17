@@ -1,0 +1,8 @@
+-- Nuevo cliente con su logotipo: Centro Comercial Doña Ema (17-11-2026).
+-- Logotipo oficial tomado de https://centrocomercialdonaema.cl/ (texto blanco: se muestra sobre fondo navy).
+-- Ejecutar una vez en el editor SQL de Supabase (proyecto BKO).
+begin;
+
+insert into public.bko_clients(slug,name,original_name,website_url,website_original,website_verified,logo_local_path,logo_storage_path,logo_verified,logo_authorized,logo_source,logo_source_original,logo_status_original,verification_status,observations,sector,sector_source,description,sort_order,active,published,featured,relation_authorized,authorization_reference,logo_authorization_reference,original_row,logo_width,logo_height,logo_background) values('centro-comercial-dona-ema','Centro Comercial Doña Ema','Centro Comercial Doña Ema','https://centrocomercialdonaema.cl/','https://centrocomercialdonaema.cl/',true,'assets/clientes/centro-comercial-dona-ema.png','',true,true,'https://centrocomercialdonaema.cl/wp-content/uploads/2024/10/dona-ema-ok-2-768x884.png','https://centrocomercialdonaema.cl/','Logotipo oficial de la web','verified','Cliente agregado por instrucción del responsable del sitio (17-11-2026).','comercio','https://centrocomercialdonaema.cl/','Centro comercial: un espacio para la familia.',320,true,true,true,true,'Instrucción del responsable del sitio, 17-11-2026: agregar Centro Comercial Doña Ema a la sección de empresas con su logotipo.','Instrucción del responsable del sitio, 17-11-2026, de mostrar el logotipo de Centro Comercial Doña Ema.','https://centrocomercialdonaema.cl/, nuevo cliente con su logo',651,679,'navy') on conflict(slug) do nothing;
+
+commit;

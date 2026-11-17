@@ -30,11 +30,12 @@ Los textos nuevos viven en `js/cauce-alliance.js`. Se aplican también al conten
 | Capitalfin | `assets/clientes/capitalfin.png` (logo oficial de capitalfin.cl) | https://capitalfin.cl/ |
 | Almasur Inmobiliaria | `assets/clientes/almasur-inmobiliaria.jpg` (desde `clientes/alamasur inmobiliaria.jpeg`) | https://almasurinmobiliaria.cl/ |
 | Autovaras Motors | `assets/clientes/autovaras-motors.jpg` (desde `clientes/autovarasmotors.jpeg`) | sin sitio web |
+| Centro Comercial Doña Ema | `assets/clientes/centro-comercial-dona-ema.png` (logo oficial de centrocomercialdonaema.cl, fondo navy por su texto blanco) | https://centrocomercialdonaema.cl/ |
 
 ## Verificación
 
 - `npm test`: 48 pruebas aprobadas.
-- Sitio publicado: menú, portada, página CAUCE, formulario y pie comprobados; 27 empresas visibles y los tres logotipos nuevos cargan correctamente. Almasur y Autovaras se agregan con `supabase/updates/20261113_clientes_almasur_autovaras.sql` y `supabase/updates/20261113_autovaras_unificar.sql` (28 empresas).
+- Sitio publicado: menú, portada, página CAUCE, formulario y pie comprobados; 27 empresas visibles y los tres logotipos nuevos cargan correctamente. Almasur y Autovaras se agregan con `supabase/updates/20261113_clientes_almasur_autovaras.sql` y `supabase/updates/20261113_autovaras_unificar.sql` (28 empresas). Centro Comercial Doña Ema se agrega con `supabase/updates/20261117_cliente_dona_ema.sql` (29 empresas).
 - Función `contact` desplegada y SQL ejecutado en Supabase; textos y clientes comprobados con la API pública.
 
 ## Pendiente
