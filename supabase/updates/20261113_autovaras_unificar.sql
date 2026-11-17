@@ -22,3 +22,10 @@ where slug = 'autovaras';
 delete from public.bko_clients where slug = 'autovaras-motors' and exists (select 1 from public.bko_clients where slug = 'autovaras' and published);
 
 commit;
+
+-- Corrección 17-11-2026 (ya aplicada): el trigger bko_client_revision desmarcó el logotipo al cambiar
+-- logo_local_path y Autovaras se mostraba sin él. client_logo_authorized exige la referencia.
+update public.bko_clients set
+  logo_verified = true, logo_authorized = true, verification_status = 'verified',
+  logo_authorization_reference = 'Instrucción del responsable del sitio, 13-11-2026, de mostrar el logotipo de Autovaras Motors.'
+where slug = 'autovaras' and logo_local_path = 'assets/clientes/autovaras-motors.jpg';
