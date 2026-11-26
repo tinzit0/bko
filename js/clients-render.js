@@ -6,9 +6,11 @@ export function clientLogoUrl(r,{base='',supabaseUrl='',publishableKey='',previe
  if(logoStoragePath(r.logo_storage_path))return preview?'':supabaseUrl+'/functions/v1/client-logo?id='+encodeURIComponent(r.id)+'&apikey='+encodeURIComponent(publishableKey);
  return logoLocalPath(r.logo_local_path)?base+r.logo_local_path:'';
 }
+// Teléfonos de contacto que el responsable del sitio pidió mostrar bajo el logotipo.
+export const clientPhones={'funeraria-reino-del-senor':'+56 9 9920 3562'};
 export function clientCard(r,options={}){
- const logo=clientLogoUrl(r,options),url=r.website_verified?websiteUrl(r.website_url):'',name=h(r.name);
- const content=`<span class="client-logo client-logo-${h(logo?(r.logo_background||'white'):'white')}">${logo?`<img src="${h(logo)}" alt="Logotipo de ${name}" width="${Number(r.logo_width)||240}" height="${Number(r.logo_height)||100}" loading="lazy" decoding="async"><span class="client-logo-fallback" hidden>${name}</span>`:`<span class="client-wordmark">${name}</span>`}</span>${logo?`<span class="client-caption">${name}</span>`:''}`;
+ const logo=clientLogoUrl(r,options),phone=h(clientPhones[r.slug]||''),url=r.website_verified?websiteUrl(r.website_url):'',name=h(r.name);
+ const content=`<span class="client-logo client-logo-${h(logo?(r.logo_background||'white'):'white')}">${logo?`<img src="${h(logo)}" alt="Logotipo de ${name}" width="${Number(r.logo_width)||240}" height="${Number(r.logo_height)||100}" loading="lazy" decoding="async"><span class="client-logo-fallback" hidden>${name}</span>`:`<span class="client-wordmark">${name}</span>`}</span>${logo||phone?`<span class="client-caption">${logo?name:''}${phone?`<span class="client-phone">Tel. ${phone}</span>`:''}</span>`:''}`;
  return `<li class="client-card" data-client-sector="${h(r.sector)}" data-client-slug="${h(r.slug)}" data-client-name="${name}">${url?`<a href="${h(url)}" target="_blank" rel="noopener noreferrer" aria-label="${name}: sitio oficial (abre otra pestaña)">${content}</a>`:`<div>${content}</div>`}</li>`;
 }
 export function clientsMarkup(rows,options={}){
