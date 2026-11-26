@@ -246,6 +246,50 @@
     }
   },
   {
+    "id": "francesca-valdivieso-montero",
+    "kind": "professional",
+    "sort_order": 35,
+    "active": true,
+    "published": true,
+    "data": {
+      "badge": "",
+      "image": "assets/personas/francesca.jpeg",
+      "imageAlt": "Retrato de Francesca Valdivieso Montero",
+      "areas": [
+        "familia"
+      ],
+      "specialties": [
+        "Pensión de alimentos",
+        "Cuidado personal",
+        "Relación directa y regular",
+        "Medidas de protección",
+        "Violencia intrafamiliar",
+        "Peritajes"
+      ],
+      "sections": [
+        {
+          "title": "Más de 600 causas de familia",
+          "body": "Más de 600 causas tramitadas significan más de 600 historias conocidas de cerca. Y esa experiencia hoy está al servicio de nuestros clientes."
+        },
+        {
+          "title": "Formación académica",
+          "body": "• Abogada de Familia.\n• Magíster en Derecho de Familia e Intervención Familiar.\n• Perito.\n• Diplomada en Derecho de Familia.\n• Diplomada en Actualización Profesional en Derecho.\n• Diplomada en Marco Jurídico para la Intervención Familiar."
+        }
+      ],
+      "timeline": [],
+      "email": "",
+      "contactAuthorized": false,
+      "seoTitle": "",
+      "seoDescription": "Francesca Valdivieso Montero: abogada de Familia, Magíster en Derecho de Familia e Intervención Familiar y Perito. Más de 600 causas de familia tramitadas.",
+      "name": "Francesca Valdivieso Montero",
+      "role": "Abogada de Familia | Magíster en Derecho de Familia e Intervención Familiar | Perito",
+      "intro": "Francesca Valdivieso Montero acompaña a sus clientes en los momentos más difíciles de su vida familiar, con la seriedad y cercanía que cada caso merece.\n\nEs abogada especializada en Derecho de Familia, Magíster en Derecho de Familia e Intervención Familiar y Perito, con amplia experiencia en asesoría y litigación de causas familiares de alta complejidad.\n\nA lo largo de su trayectoria ha tramitado más de 600 causas de familia, abordando materias como pensión de alimentos, cuidado personal, relación directa y regular, medidas de protección, violencia intrafamiliar y conflictos familiares de alta complejidad.\n\nSu ejercicio profesional se caracteriza por un enfoque técnico, humano y estratégico, centrado en la defensa técnica y estratégica de padres, resguardando siempre el interés superior de niños, niñas y adolescentes y el debido proceso.\n\nComo perito, integra el análisis jurídico con una mirada probatoria especializada, aportando rigor técnico y solidez a los procesos judiciales.\n\nLa rigen valores como el compromiso, la ética profesional, la responsabilidad y la convicción de que el Derecho de Familia debe ejercerse con sensibilidad, excelencia y profundo respeto por quienes atraviesan situaciones familiares complejas.",
+      "sharedInsurance": false,
+      "functions": "",
+      "discipline": "legal"
+    }
+  },
+  {
     "id": "estefania-benitez-garcia",
     "kind": "professional",
     "sort_order": 70,

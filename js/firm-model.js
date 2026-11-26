@@ -1,6 +1,6 @@
 import {mediaUrl} from './insurance-render.js';
 import {maritimeFirst} from './site-updates.js';
-export const knownProfiles=['makarena-andrea-ponce-villarroel','jorge-ivan-saavedra-bentjerodt','camila-alejandra-kopplin-lanata','fenella-reyes-gonzalo','luis-miranda-chavarria','roxana-ximena-oyarzun-bustamante','estefania-benitez-garcia'];
+export const knownProfiles=['makarena-andrea-ponce-villarroel','jorge-ivan-saavedra-bentjerodt','camila-alejandra-kopplin-lanata','fenella-reyes-gonzalo','luis-miranda-chavarria','roxana-ximena-oyarzun-bustamante','estefania-benitez-garcia','francesca-valdivieso-montero'];
 export const relatedAreas={corporativo:'Corporativo',mineria:'Minería, Construcción y Servicios Asociados',maritimo:'Marítimo, Naviero, Lacustre y Acuícola',turismo:'Turismo',inmobiliario:'Inmobiliario',familia:'Derecho de Familia',laboral:'Derecho Laboral',cauce:'CAUCE Gestión Integral',seguros:'Negocios y Seguros'};
 export const profilePath=id=>knownProfiles.includes(id)?`equipo/${id}.html`:`equipo/perfil.html?id=${encodeURIComponent(id)}`;
 export const areaPath=id=>id==='familia'?'index.html#personas':id==='cauce'?'cauce/index.html':id==='seguros'?'seguros/index.html':`index.html#${id}`;

@@ -5,6 +5,7 @@ export const teamOrder = [
   'jorge-ivan-saavedra-bentjerodt',
   'camila-alejandra-kopplin-lanata',
   'roxana-ximena-oyarzun-bustamante',
+  'francesca-valdivieso-montero',
   'luis-miranda-chavarria',
   'fenella-reyes-gonzalo',
   'makarena-andrea-ponce-villarroel',
