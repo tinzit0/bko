@@ -39,4 +39,4 @@
 @media(max-width:600px){.clients-grid.clients-featured,.clients-preview .clients-grid.clients-featured{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.clients-heading{gap:16px;margin-bottom:24px}.clients-lead{font-size:13px}.client-logo{min-height:88px;padding:14px}.clients-directory{margin-top:18px}}
 @media(max-width:600px){.clients-sort{justify-content:flex-start;flex-wrap:wrap}.clients-sector-stats dl{grid-template-columns:1fr}.clients-metrics>div{padding:18px}.clients-metrics strong{font-size:38px}}
 
-.client-caption:has(.client-phone){flex-direction:column;gap:2px}.client-phone{display:block;color:#071c2b;font-weight:600;letter-spacing:.2px;white-space:nowrap}
+.client-logo.has-corners{padding-top:26px}.client-corner{position:absolute;top:7px;font-size:9.5px;line-height:1.2;font-weight:600;color:#071c2b;letter-spacing:.2px;white-space:nowrap}.client-corner-left{left:9px}.client-corner-right{right:9px;color:#9a5a1c;text-transform:uppercase;letter-spacing:.8px}
